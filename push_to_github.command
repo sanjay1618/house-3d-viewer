@@ -11,16 +11,20 @@ echo "If you don't have one, create it in 30 seconds at: https://github.com/sett
 echo "Select scopes: 'repo'"
 echo ""
 
-git push -u origin main
+CURRENT_BRANCH=$(git branch --show-current)
+echo "Current branch: $CURRENT_BRANCH"
+echo ""
+
+git push -u origin "$CURRENT_BRANCH"
 
 if [ $? -eq 0 ]; then
   echo ""
   echo "========================================================"
-  echo "  SUCCESS! Code pushed to GitHub."
+  echo "  SUCCESS! Code pushed to branch '$CURRENT_BRANCH' on GitHub."
   echo ""
   echo "  To make it viewable online for your brother:"
   echo "  1. Open: https://github.com/sanjay1618/house-3d-viewer/settings/pages"
-  echo "  2. Under 'Branch', select 'main' and '/(root)'"
+  echo "  2. Under 'Branch', select '$CURRENT_BRANCH' and '/(root)'"
   echo "  3. Click 'Save'"
   echo "  4. Your live link will be:"
   echo "     https://sanjay1618.github.io/house-3d-viewer/"
