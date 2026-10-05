@@ -2,7 +2,9 @@
  * 3D DUPLEX RESIDENCE & COMMERCIAL COMPLEX - RAMNAGAR, MANCHERIAL (TELANGANA)
  * Updated Plan: KesariNandan Architectures & Constructions (Er. Pawan Kumar Velpula)
  * Client: Mr. Siddartha Uppugandla • Plot: 33'-0" × 60'-0" (220 Sq.Yds) • South Road Facing
- * Built-Up: Plinth: 1,454.87 Sq.Ft. | 1st Floor Slab: 1,567.87 Sq.Ft. | Head Room: 159.25 Sq.Ft.
+ *
+ * First Floor Front: Open Sky Garden Balcony Deck (Outdoor Sofa, Small Trees & Glass Balustrade)
+ * Ground Floor Front: Kirana General Store (16'x12'6") & Covered Car Parking Portico (12'3"x21'6")
  *
  * Minimalist & Clean Architectural Presentation:
  * - Architectural Studio Listing Mode (Minimal & Distraction-Free)
@@ -22,7 +24,7 @@ const POV_DATA = {
     dims: "33'-0\" Frontage × 60'-0\"",
     area: '1,980 Sq.Ft. Plot (220 Sq.Yds)',
     vastu: 'South Facing Road',
-    desc: 'Contemporary G+1 elevation with Sri Siddartha Kirana store on South-West, automated entrance gate and car parking on South-East, cantilevered 1st floor balcony with glass railings, and modern acoustic louvers.',
+    desc: 'Contemporary G+1 elevation featuring Sri Siddartha Kirana store on South-West, covered car parking portico with gate on South-East, and the open Sky Garden Balcony Terrace Deck above with outdoor lounge sofa, small trees, and glass balustrades.',
     camPos: { x: 0.0, y: 15.0, z: -48.0 },
     camLook: { x: 0.0, y: 12.0, z: -10.0 },
     floorLevel: 'all',
@@ -32,13 +34,51 @@ const POV_DATA = {
     name: 'Aerial Duplex Cutaway View',
     floor: 'ARCHITECTURAL 3D OVERVIEW',
     dims: "28'-3\" × 51'-6\" Plinth",
-    area: '3,182 Sq.Ft. Total Slab',
+    area: '3,182 Sq.Ft. Total Built Area',
     vastu: 'Vastu Compliant Layout',
-    desc: 'High-angle 3D cutaway showing the entire layout: Kirana store, car parking, entrance lobby, double-height living void, master suites, family lounge, study room, and rooftop terrace.',
+    desc: 'High-angle 3D cutaway showing the open front Sky Garden deck, Kirana store, car parking, entrance lobby, double-height living void, master suites, family lounge, study room, and rooftop terrace.',
     camPos: { x: 24.0, y: 36.0, z: -35.0 },
     camLook: { x: 0.0, y: 8.0, z: 2.0 },
     floorLevel: 'all',
     mapX: 80, mapY: 100
+  },
+
+  // 1st Floor Sky Garden Balcony Deck (Directly Above Kirana & Car Parking)
+  'sky-garden-sofa': {
+    name: 'Sky Garden: Outdoor Lounge Sofa',
+    floor: 'FIRST FLOOR (SKY GARDEN BALCONY)',
+    dims: "28'-3\" × 13'-6\" Open Deck",
+    area: '380.00 Sq.Ft.',
+    vastu: 'South Front Balcony Deck',
+    desc: 'Sitting on the luxury weatherproof rattan sectional sofa on the open timber deck directly above the Kirana shop and portico, surrounded by small potted trees and flowering planters overlooking the South Road.',
+    camPos: { x: -8.0, y: 17.5, z: -18.0 },
+    camLook: { x: 5.0, y: 16.5, z: -25.0 },
+    floorLevel: 'first',
+    mapX: 45, mapY: 140
+  },
+  'sky-garden-view': {
+    name: 'Sky Garden: Street Railing View',
+    floor: 'FIRST FLOOR (SKY GARDEN BALCONY)',
+    dims: "28'-3\" Wide Front Balcony",
+    area: '380.00 Sq.Ft.',
+    vastu: 'South Road View',
+    desc: 'Standing at the 12mm tempered safety glass balustrade looking out over the 30\' South Road, entrance gate, and avenue trees below.',
+    camPos: { x: 2.0, y: 18.0, z: -25.5 },
+    camLook: { x: 2.0, y: 15.5, z: -45.0 },
+    floorLevel: 'first',
+    mapX: 80, mapY: 160
+  },
+  'sky-garden-door': {
+    name: 'Lounge to Sky Garden Entrance',
+    floor: 'FIRST FLOOR',
+    dims: "10'-0\" Sliding Glass French Doors",
+    area: 'Deck Connection',
+    vastu: 'South Frontage',
+    desc: 'Stepping through the 10-foot wide sliding glass French doors from the interior family lounge and corridor out onto the sunlit sky garden balcony deck.',
+    camPos: { x: -1.0, y: 18.0, z: -10.5 },
+    camLook: { x: -1.0, y: 17.5, z: -22.0 },
+    floorLevel: 'first',
+    mapX: 75, mapY: 125
   },
 
   // Authentic Telangana Kirana General Store (Sample Reference Matched)
@@ -110,7 +150,7 @@ const POV_DATA = {
     dims: "12'-3\" × 6'-6\" Foyer",
     area: 'Foyer Connection',
     vastu: 'East Main Entry',
-    desc: 'Entrance lobby connecting the portico to the main teak double doors of the house and the external staircase leading independently to the 1st floor front suite and roof terrace.',
+    desc: 'Entrance lobby connecting the portico to the main teak double doors of the house and the external staircase leading independently to the 1st floor corridor and roof terrace.',
     camPos: { x: 4.0, y: 6.8, z: -14.0 },
     camLook: { x: 6.0, y: 6.5, z: -5.0 },
     floorLevel: 'ground',
@@ -189,7 +229,7 @@ const POV_DATA = {
     mapX: 50, mapY: 105
   },
 
-  // First Floor Duplex & Suites
+  // First Floor Duplex & Rear Suites
   'duplex-void-overlook': {
     name: 'Duplex Void: Overlooking Living',
     floor: 'FIRST FLOOR (DUPLEX)',
@@ -208,47 +248,11 @@ const POV_DATA = {
     dims: "13'-0\" × 9'-6\"",
     area: '123.50 Sq.Ft.',
     vastu: 'Central Family Living',
-    desc: 'First floor family lounge where the internal floating teak staircase lands, furnished with comfortable leather lounge seating, coffee table, and open sightlines to the duplex void.',
+    desc: 'First floor family lounge where the internal floating teak staircase lands, furnished with comfortable leather lounge seating, coffee table, and open sightlines to the duplex void and front sky garden.',
     camPos: { x: 4.5, y: 17.5, z: 8.0 },
     camLook: { x: 6.0, y: 17.0, z: 13.5 },
     floorLevel: 'first',
     mapX: 105, mapY: 85
-  },
-  'front-balcony': {
-    name: 'Front Balcony & Street View',
-    floor: 'FIRST FLOOR (FRONT)',
-    dims: "3'-6\" Wide Cantilevered Balcony",
-    area: 'Front Balcony',
-    vastu: 'South Road View',
-    desc: 'Cantilevered front balcony facing the 30\' South Road with stainless steel and glass balustrades, planters, and open breeze.',
-    camPos: { x: 3.0, y: 17.5, z: -27.0 },
-    camLook: { x: 3.0, y: 15.5, z: -45.0 },
-    floorLevel: 'first',
-    mapX: 85, mapY: 165
-  },
-  'front-suite-hall': {
-    name: 'Front Suite: Hall & Pantry',
-    floor: 'FIRST FLOOR',
-    dims: "8'-7\" × 9'-4\" Hall + 5'×6' Pantry",
-    area: 'Independent Suite',
-    vastu: 'Front Suite',
-    desc: 'Self-contained front guest suite hall with sofa, TV unit, and attached 5\'-0" × 6\'-0" kitchenette pantry, served by the external staircase corridor.',
-    camPos: { x: 4.0, y: 17.5, z: -17.5 },
-    camLook: { x: 5.5, y: 17.0, z: -22.5 },
-    floorLevel: 'first',
-    mapX: 95, mapY: 145
-  },
-  'front-suite-bed': {
-    name: 'Bedroom 03 (Front Suite)',
-    floor: 'FIRST FLOOR',
-    dims: "12'-6\" × 9'-0\"",
-    area: '112.50 Sq.Ft.',
-    vastu: 'South-West Upper',
-    desc: 'Front suite bedroom with queen-size bed, full wardrobes, attached bathroom (4\'-0" × 5\'-6"), and south window.',
-    camPos: { x: -8.0, y: 17.5, z: -17.5 },
-    camLook: { x: -8.0, y: 17.0, z: -23.0 },
-    floorLevel: 'first',
-    mapX: 50, mapY: 145
   },
   'bed1-master': {
     name: 'Bedroom 01 (Upper Master)',
@@ -388,9 +392,9 @@ class HouseViewerApp {
     // 4. Build 3D Architectural Scene
     this.buildScene();
 
-    // 5. Default to Minimalist Architectural Studio Listing Mode
+    // 5. Default to Minimalist Architectural Studio Listing Mode & 3D Ground Plan
     this.setLightingMode('listing');
-    this.setMode('ground', true); // Open directly into pristine 3D Ground Plan
+    this.setMode('ground', true);
 
     // 6. UI & Listeners
     this.setupUI();
@@ -533,13 +537,23 @@ class HouseViewerApp {
     this.mat.intWall = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.85 });
     this.mat.intWallAccent = new THREE.MeshStandardMaterial({ color: 0xf1f5f9, roughness: 0.85 });
 
-    // 2. Flooring (Italian Marble, Honey Teak, Terracotta)
+    // 2. Flooring (Italian Marble, Honey Teak, Timber Decking, Terracotta)
     this.mat.marbleFloor = new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.2, metalness: 0.06 });
     this.mat.woodFloor = new THREE.MeshStandardMaterial({ color: 0x9a6438, roughness: 0.45, metalness: 0.04 });
+    this.mat.deckFloor = new THREE.MeshStandardMaterial({ color: 0x8b5a2b, roughness: 0.65, metalness: 0.05 });
     this.mat.paverFloor = new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.9 });
     this.mat.terraceTile = new THREE.MeshStandardMaterial({ color: 0xc27756, roughness: 0.85 });
 
-    // 3. Glass & Metals
+    // 3. Outdoor Furniture Fabrics & Wicker
+    this.mat.wicker = new THREE.MeshStandardMaterial({ color: 0x4a3728, roughness: 0.9 });
+    this.mat.cushionCream = new THREE.MeshStandardMaterial({ color: 0xf1efe9, roughness: 0.85 });
+    this.mat.pillowOlive = new THREE.MeshStandardMaterial({ color: 0x4d7c0f, roughness: 0.8 });
+    this.mat.pillowTerra = new THREE.MeshStandardMaterial({ color: 0xc2410c, roughness: 0.8 });
+    this.mat.potWhite = new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.4 });
+    this.mat.potClay = new THREE.MeshStandardMaterial({ color: 0xb45309, roughness: 0.85 });
+    this.mat.plantGreen = new THREE.MeshStandardMaterial({ color: 0x15803d, roughness: 0.85 });
+
+    // 4. Glass & Metals
     this.mat.glass = new THREE.MeshPhysicalMaterial({
       color: 0xffffff,
       transparent: true,
@@ -558,14 +572,14 @@ class HouseViewerApp {
     this.mat.darkMetal = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.4, metalness: 0.8 });
     this.mat.brassGold = new THREE.MeshStandardMaterial({ color: 0xd4af37, roughness: 0.3, metalness: 0.85 });
 
-    // 4. Wood & Furniture
+    // 5. Wood & Furniture
     this.mat.teakWood = new THREE.MeshStandardMaterial({ color: 0x6b4423, roughness: 0.5, metalness: 0.05 });
     this.mat.blackGranite = new THREE.MeshStandardMaterial({ color: 0x111113, roughness: 0.2, metalness: 0.1 });
 
-    // 5. Studio Floor Material
+    // 6. Studio Floor Material
     this.studioFloorMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, roughness: 0.95, metalness: 0.02 });
 
-    // 6. Kirana Sample Photo Texture
+    // 7. Kirana Sample Photo Texture
     const loader = new THREE.TextureLoader();
     if (typeof window !== 'undefined' && window.KIRANA_SAMPLE_DATA_URL) {
       const tex = loader.load(window.KIRANA_SAMPLE_DATA_URL);
@@ -576,7 +590,7 @@ class HouseViewerApp {
       this.mat.kiranaSamplePoster = new THREE.MeshStandardMaterial({ color: 0x1e3a8a, roughness: 0.7 });
     }
 
-    // 7. Signboard Texture
+    // 8. Signboard Texture
     const signCanvas = document.createElement('canvas');
     signCanvas.width = 1536;
     signCanvas.height = 256;
@@ -608,6 +622,7 @@ class HouseViewerApp {
     this.siteGroup = new THREE.Group();
     this.boundaryGroup = new THREE.Group(); // Dedicated group to hide compound walls during 3D floor plan top views!
     this.groundGroup = new THREE.Group();
+    this.skyGardenGroup = new THREE.Group(); // Open front deck above Kirana & Portico
     this.firstGroup = new THREE.Group();
     this.terraceGroup = new THREE.Group();
     this.furnitureGroup = new THREE.Group();
@@ -617,6 +632,7 @@ class HouseViewerApp {
     this.scene.add(this.siteGroup);
     this.scene.add(this.boundaryGroup);
     this.scene.add(this.groundGroup);
+    this.scene.add(this.skyGardenGroup);
     this.scene.add(this.firstGroup);
     this.scene.add(this.terraceGroup);
     this.scene.add(this.furnitureGroup);
@@ -627,26 +643,29 @@ class HouseViewerApp {
     this.buildSiteAndRoad();
     this.buildBoundary();
 
-    // 2. Commercial Kirana General Store (Ground South-West)
+    // 2. Commercial Kirana General Store (Ground South-West: 16'x12'6")
     this.buildCommercialShopDetailed();
 
-    // 3. Ground Floor Residence
+    // 3. Ground Floor Residence (Plinth: 1,455 Sq.Ft.)
     this.buildGroundFloorShell();
 
-    // 4. First Floor Duplex & Front Suite
+    // 4. First Floor Front Sky Garden Balcony Deck (Outdoor Sofa, Small Trees & Railings)
+    this.buildSkyGardenDeck();
+
+    // 5. First Floor Interior Duplex & Rear Bedrooms
     this.buildFirstFloorRemaining();
 
-    // 5. Roof Terrace & Exterior Elevation
+    // 6. Roof Terrace & Exterior Elevation
     this.buildTerrace();
     this.buildElevationFacade();
 
-    // 6. Natural Greenery & Avenue Trees
+    // 7. Natural Greenery & Avenue Trees
     this.buildNaturalGreenery();
 
-    // 7. Interactive Floor Hotspots
+    // 8. Interactive Floor Hotspots
     this.buildFloorHotspots();
 
-    // 8. Minimalist 3D Room Dimension Badges (Apartment Listing Presentation)
+    // 9. Minimalist 3D Room Dimension Badges (Apartment Listing Presentation)
     this.buildRoomLabels();
   }
 
@@ -1207,22 +1226,178 @@ class HouseViewerApp {
   }
 
   // ==========================================================================
-  // FIRST FLOOR (SLAB: 1,567.87 SQ.FT.)
+  // FIRST FLOOR FRONT SKY GARDEN BALCONY DECK (EMPTY OUTDOOR SOFA & SMALL TREES)
+  // Replaces the front bedroom above Kirana & Car Parking with an open terrace!
+  // ==========================================================================
+  buildSkyGardenDeck() {
+    const g = this.skyGardenGroup;
+    const ffY = 13.0; // First floor level
+    const deckW = 28.25; // 28'-3" full front width (X: -15.0 to 13.25)
+    const deckD = 13.5;  // Depth from front glass railing to interior wall (Z: -27.5 to -14.0)
+
+    // 1. Weathered Outdoor Teak Timber Decking Floor
+    const deckFloor = new THREE.Mesh(new THREE.BoxGeometry(deckW, 0.35, deckD), this.mat.deckFloor);
+    deckFloor.position.set(-0.875, ffY - 0.17, -20.75);
+    deckFloor.receiveShadow = true;
+    g.add(deckFloor);
+
+    // 2. Frameless 12mm Tempered Safety Glass Balustrades
+    // South Front Railing (Width 28.25 ft at Z = -27.5)
+    this.buildGlassRailing(g, -15.0, ffY, -27.5, deckW, 3.8, 'x');
+    // West Side Railing (X = -15.0)
+    this.buildGlassRailing(g, -15.0, ffY, -27.5, deckD, 3.8, 'z');
+    // East Side Railing (X = 13.25)
+    this.buildGlassRailing(g, 13.25, ffY, -27.5, deckD, 3.8, 'z');
+
+    // 3. Back Interior Connection Wall (Z = -14.0) with Wide 10' Sliding Glass Doors
+    this.addWall(g, -15.0, ffY, -14.0, 7.0, 10.0, 0.75, this.mat.extWhite, true); // West section
+    this.addWall(g, 2.0, ffY, -14.0, 11.25, 10.0, 0.75, this.mat.extWhite, true); // East section
+    this.addWall(g, -8.0, ffY + 7.5, -14.0, 10.0, 2.5, 0.75, this.mat.extWhite, true); // Lintel beam
+
+    // 10-Foot Wide Sliding Glass French Doors (X = -8 to +2)
+    const frenchDoor1 = new THREE.Mesh(new THREE.BoxGeometry(5.0, 7.3, 0.15), this.mat.glass);
+    frenchDoor1.position.set(-5.5, ffY + 3.75, -14.0);
+    g.add(frenchDoor1);
+
+    const frenchDoor2 = new THREE.Mesh(new THREE.BoxGeometry(5.0, 7.3, 0.15), this.mat.glass);
+    frenchDoor2.position.set(-0.5, ffY + 3.75, -13.9);
+    g.add(frenchDoor2);
+
+    // Dark Powder Coated Door Frame
+    const frame = new THREE.Mesh(new THREE.BoxGeometry(10.2, 7.5, 0.3), this.mat.darkMetal);
+    frame.position.set(-3.0, ffY + 3.75, -14.0);
+    g.add(frame);
+
+    // 4. Outdoor Luxury Rattan Sectional Sofa (L-Shaped with Deep Cushions)
+    const sofaBase1 = new THREE.Mesh(new THREE.BoxGeometry(8.5, 0.8, 3.4), this.mat.wicker);
+    sofaBase1.position.set(-8.5, ffY + 0.4, -20.0);
+    g.add(sofaBase1);
+
+    const seatCushion1 = new THREE.Mesh(new THREE.BoxGeometry(8.1, 0.6, 3.0), this.mat.cushionCream);
+    seatCushion1.position.set(-8.5, ffY + 0.9, -20.0);
+    g.add(seatCushion1);
+
+    const backCushion1 = new THREE.Mesh(new THREE.BoxGeometry(8.1, 1.8, 0.6), this.mat.cushionCream);
+    backCushion1.position.set(-8.5, ffY + 1.8, -18.6);
+    g.add(backCushion1);
+
+    // L-Return Section
+    const sofaBase2 = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.8, 5.0), this.mat.wicker);
+    sofaBase2.position.set(-11.5, ffY + 0.4, -22.5);
+    g.add(sofaBase2);
+
+    const seatCushion2 = new THREE.Mesh(new THREE.BoxGeometry(3.0, 0.6, 4.6), this.mat.cushionCream);
+    seatCushion2.position.set(-11.5, ffY + 0.9, -22.5);
+    g.add(seatCushion2);
+
+    // Decorative Accent Throw Pillows
+    const p1 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 0.35), this.mat.pillowOlive);
+    p1.position.set(-6.5, ffY + 1.6, -19.5);
+    p1.rotation.y = -0.2;
+    g.add(p1);
+
+    const p2 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 0.35), this.mat.pillowTerra);
+    p2.position.set(-9.5, ffY + 1.6, -19.5);
+    p2.rotation.y = 0.2;
+    g.add(p2);
+
+    const p3 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 0.35), this.mat.pillowOlive);
+    p3.position.set(-11.5, ffY + 1.6, -24.0);
+    g.add(p3);
+
+    // 5. Low Outdoor Teak Coffee Table
+    const table = new THREE.Mesh(new THREE.BoxGeometry(4.5, 0.9, 2.5), this.mat.teakWood);
+    table.position.set(-7.5, ffY + 0.45, -23.5);
+    g.add(table);
+
+    // 6. Realistic Small Potted Trees (Domestic Size ~3.5 ft, Never Oversized)
+    // Small Areca Palm in White Ceramic Pot (South-West Corner)
+    this.createPottedTree(g, -13.0, ffY, -25.5, 'palm', 3.6);
+
+    // Small Ficus in Terracotta Pot (South-East Corner)
+    this.createPottedTree(g, 11.5, ffY, -25.5, 'ficus', 3.4);
+
+    // Small Potted Plants Flanking the Sliding Glass Doors
+    this.createPottedTree(g, -9.5, ffY, -15.5, 'palm', 3.0);
+    this.createPottedTree(g, 3.5, ffY, -15.5, 'ficus', 3.0);
+
+    // Flower Planter Troughs along Front Railing with Pink Bougainvillea
+    for (let x of [-3.0, 5.0]) {
+      const trough = new THREE.Mesh(new THREE.BoxGeometry(4.5, 0.8, 0.8), this.mat.potWhite);
+      trough.position.set(x, ffY + 0.4, -26.8);
+      g.add(trough);
+
+      const foliage = new THREE.Mesh(new THREE.BoxGeometry(4.3, 0.5, 0.7), this.mat.plantGreen);
+      foliage.position.set(x, ffY + 0.9, -26.8);
+      g.add(foliage);
+
+      // Pink flowers
+      const flowerMat = new THREE.MeshStandardMaterial({ color: 0xec4899, roughness: 0.5 });
+      for (let fx = -1.8; fx <= 1.8; fx += 0.9) {
+        const flower = new THREE.Mesh(new THREE.SphereGeometry(0.22, 8, 8), flowerMat);
+        flower.position.set(x + fx, ffY + 1.2, -26.8);
+        g.add(flower);
+      }
+    }
+
+    // 7. Modern Overhead Pergola Timber Rafters (Partial Shading Over Sofa)
+    for (let x = -14.0; x <= -2.0; x += 1.8) {
+      const rafter = new THREE.Mesh(new THREE.BoxGeometry(0.35, 0.8, 12.0), this.mat.teakWood);
+      rafter.position.set(x, ffY + 10.0, -21.0);
+      rafter.castShadow = true;
+      g.add(rafter);
+    }
+  }
+
+  createPottedTree(group, x, y, z, type = 'palm', height = 3.5) {
+    const potMat = type === 'palm' ? this.mat.potWhite : this.mat.potClay;
+    const potH = 1.0;
+    const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.35, potH, 16), potMat);
+    pot.position.set(x, y + potH / 2, z);
+    pot.castShadow = true;
+    group.add(pot);
+
+    // Soil
+    const soil = new THREE.Mesh(new THREE.CylinderGeometry(0.48, 0.48, 0.05, 16), new THREE.MeshStandardMaterial({ color: 0x2b1d0c }));
+    soil.position.set(x, y + potH, z);
+    group.add(soil);
+
+    // Trunk
+    const trunkH = height * 0.45;
+    const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.14, trunkH, 8), this.mat.teakWood);
+    trunk.position.set(x, y + potH + trunkH / 2, z);
+    group.add(trunk);
+
+    // Foliage (Small, domestic size ~3.5 ft)
+    if (type === 'palm') {
+      for (let i = 0; i < 5; i++) {
+        const frond = new THREE.Mesh(new THREE.ConeGeometry(0.8, 1.8, 8), this.mat.plantGreen);
+        const ang = (i / 5) * Math.PI * 2;
+        frond.rotation.z = 0.55;
+        frond.rotation.y = ang;
+        frond.position.set(x + Math.sin(ang) * 0.4, y + potH + trunkH + 0.5, z + Math.cos(ang) * 0.4);
+        group.add(frond);
+      }
+    } else {
+      const crown = new THREE.Mesh(new THREE.DodecahedronGeometry(height * 0.4, 1), this.mat.plantGreen);
+      crown.position.set(x, y + potH + trunkH + height * 0.3, z);
+      crown.scale.set(1.1, 1.3, 1.1);
+      group.add(crown);
+    }
+  }
+
+  // ==========================================================================
+  // FIRST FLOOR INTERIOR (DUPLEX, LOUNGE & REAR BEDROOMS)
   // ==========================================================================
   buildFirstFloorRemaining() {
     const ffY = 13.0;
     const floorH = 10.0;
     const f = this.firstGroup;
 
-    // Floor Slab with 94.47 Sq.Ft. Living Cutout
-    // Slab South (Front Suite)
-    const sFront = new THREE.Mesh(new THREE.BoxGeometry(28.25, 0.5, 13.5), this.mat.marbleFloor);
-    sFront.position.set(-0.875, ffY - 0.25, -17.75);
-    f.add(sFront);
-
-    // Slab West (Bedrooms & Passage)
-    const sWest = new THREE.Mesh(new THREE.BoxGeometry(15.0, 0.5, 38.0), this.mat.woodFloor);
-    sWest.position.set(-7.5, ffY - 0.25, 8.0);
+    // Floor Slab behind front deck (Z: -14.0 to +27.0)
+    // Slab West (Master Bedroom, Passage, Rear Bed 02)
+    const sWest = new THREE.Mesh(new THREE.BoxGeometry(15.0, 0.5, 41.0), this.mat.woodFloor);
+    sWest.position.set(-7.5, ffY - 0.25, 6.5);
     f.add(sWest);
 
     // Slab East (Lounge & Study)
@@ -1230,25 +1405,17 @@ class HouseViewerApp {
     sEast.position.set(6.625, ffY - 0.25, 15.25);
     f.add(sEast);
 
-    // Front Cantilevered Balcony (3'-6" Wide)
-    const fBalc = new THREE.Mesh(new THREE.BoxGeometry(16.0, 0.4, 4.0), this.mat.terraceTile);
-    fBalc.position.set(5.25, ffY - 0.2, -26.5);
-    f.add(fBalc);
-    this.buildGlassRailing(f, -2.75, ffY, -28.5, 16.0, 3.5, 'x');
-
-    // Duplex Glass Railing around 94.47 Sq.Ft. Cutout
+    // Duplex Glass Railing around 94.47 Sq.Ft. Cutout (Overlooking Living below)
     this.buildGlassRailing(f, 0.0, ffY, -5.5, 13.0, 3.5, 'x');
     this.buildGlassRailing(f, 0.0, ffY, 5.5, 13.0, 3.5, 'x');
     this.buildGlassRailing(f, 0.0, ffY, -5.5, 11.0, 3.5, 'z');
 
     // First Floor Upper Master (Bed 01)
     this.buildBedroomInterior(-8.5, ffY, 0.25, 'king');
-    // Front Suite Bed 03
-    this.buildBedroomInterior(-8.5, ffY, -19.5, 'queen');
     // Rear Bed 02
     this.buildBedroomInterior(-8.5, ffY, 19.5, 'queen');
 
-    // Family Lounge Furniture
+    // Family Lounge Furniture (Overlooking internal stairs & deck)
     const lSofa = new THREE.Mesh(new THREE.BoxGeometry(7.0, 1.8, 3.0), new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.8 }));
     lSofa.position.set(6.5, ffY + 0.9, 10.5);
     f.add(lSofa);
@@ -1258,12 +1425,12 @@ class HouseViewerApp {
     desk.position.set(9.0, ffY + 1.25, 20.0);
     f.add(desk);
 
-    // Rear Balcony Railing
+    // Rear Balcony Railing (North)
     this.buildGlassRailing(f, -14.5, ffY, 26.5, 27.5, 3.5, 'x');
 
-    // Outer Walls for First Floor
-    this.addWall(f, -15.0, ffY, -24.5, 0.75, floorH, 51.5, this.mat.extWhite, true);
-    this.addWall(f, 12.5, ffY, -24.5, 0.75, floorH, 51.5, this.mat.extWhite, true);
+    // Outer Walls for First Floor Interior (Z: -14.0 to +27.0)
+    this.addWall(f, -15.0, ffY, -14.0, 0.75, floorH, 41.0, this.mat.extWhite, true);
+    this.addWall(f, 12.5, ffY, -14.0, 0.75, floorH, 41.0, this.mat.extWhite, true);
     this.addWall(f, -15.0, ffY, 26.25, 28.25, floorH, 0.75, this.mat.extWhite, true);
   }
 
@@ -1288,14 +1455,15 @@ class HouseViewerApp {
 
   // ==========================================================================
   // ROOF TERRACE & HEAD ROOM (159.25 SQ.FT. SLAB)
+  // Covers only the interior zone (Z: -14.0 to +27.0); Front Deck is open to sky!
   // ==========================================================================
   buildTerrace() {
     const tY = 23.5;
     const t = this.terraceGroup;
 
-    // Roof Terrace Slab: 28'-3" × 51'-6"
-    this.roofSlab = new THREE.Mesh(new THREE.BoxGeometry(28.25, 0.6, 51.5), this.mat.terraceTile);
-    this.roofSlab.position.set(-0.875, tY - 0.3, 1.25);
+    // Roof Terrace Slab: 28'-3" × 41'-0" (Z: -14.0 to +27.0)
+    this.roofSlab = new THREE.Mesh(new THREE.BoxGeometry(28.25, 0.6, 41.0), this.mat.terraceTile);
+    this.roofSlab.position.set(-0.875, tY - 0.3, 6.5);
     t.add(this.roofSlab);
 
     // Staircase Head Room (Mumty): 13'-0" × 10'-0" (X: -15.0 to -2.0, Z: -12.0 to -2.0)
@@ -1317,10 +1485,10 @@ class HouseViewerApp {
 
     // Parapet Walls (3'-6" High)
     const parH = 3.5;
-    this.addWall(t, -15.0, tY, -24.5, 0.6, parH, 51.5, this.mat.extGrey, true);
-    this.addWall(t, 12.65, tY, -24.5, 0.6, parH, 51.5, this.mat.extGrey, true);
+    this.addWall(t, -15.0, tY, -14.0, 0.6, parH, 41.0, this.mat.extGrey, true);
+    this.addWall(t, 12.65, tY, -14.0, 0.6, parH, 41.0, this.mat.extGrey, true);
     this.addWall(t, -15.0, tY, 26.4, 28.25, parH, 0.6, this.mat.extGrey, true);
-    this.addWall(t, -15.0, tY, -24.5, 28.25, parH, 0.6, this.mat.extGrey, true);
+    this.addWall(t, -15.0, tY, -14.0, 28.25, parH, 0.6, this.mat.extGrey, true);
 
     // Rooftop Pergola with Seating
     for (let p = 0; p < 5; p++) {
@@ -1331,21 +1499,19 @@ class HouseViewerApp {
   }
 
   buildElevationFacade() {
-    // Architectural Facade Louvers & Modern Accents
+    // Architectural Facade Louvers
     for (let i = 0; i < 7; i++) {
       const louver = new THREE.Mesh(new THREE.BoxGeometry(0.2, 10.0, 0.4), this.mat.accentTeak);
-      louver.position.set(-2.5 + i * 0.8, 18.0, -24.4);
+      louver.position.set(-2.5 + i * 0.8, 18.0, -14.2);
       this.firstGroup.add(louver);
     }
   }
 
   buildNaturalGreenery() {
     const g = this.greeneryGroup;
-    // Potted palms in corridors and terrace
     const coords = [
       { x: -14.0, y: 2.5, z: -27.5 },
       { x: 12.0, y: 2.5, z: -27.5 },
-      { x: 11.5, y: 13.0, z: -26.0 },
       { x: 8.0, y: 23.5, z: 12.0 }
     ];
     coords.forEach(pt => {
@@ -1418,15 +1584,13 @@ class HouseViewerApp {
     this.groundLabels.add(this.createRoomLabel('DUPLEX STAIRS', "UP TO 1ST FLOOR", -5.375, 2.5, 10.375, 5.2, 1.8));
     this.groundLabels.add(this.createRoomLabel('REAR UTILITY', "5'-0\" WIDE", 0.0, 2.5, 24.5, 5.5, 1.8));
 
-    // First Floor Labels
-    this.firstLabels.add(this.createRoomLabel('FRONT 1BHK SUITE', "8'-7\" × 9'-4\" HALL", 5.5, 13.0, -18.5));
-    this.firstLabels.add(this.createRoomLabel('BEDROOM 03', "12'-6\" × 9'-0\"", -8.5, 13.0, -19.5));
-    this.firstLabels.add(this.createRoomLabel('FRONT BALCONY', "3'-6\" WIDE", 5.25, 13.0, -26.5));
+    // First Floor Labels (Featuring the open Sky Garden Balcony Deck)
+    this.firstLabels.add(this.createRoomLabel('SKY GARDEN BALCONY DECK', "28'-3\" × 13'-6\" (380 Sq.Ft.)", -0.875, 13.0, -20.5, 9.0, 2.5));
     this.firstLabels.add(this.createRoomLabel('DUPLEX VOID CUTOUT', "94.47 SQ.FT. OPEN", 6.5, 13.0, 2.35));
     this.firstLabels.add(this.createRoomLabel('UPPER MASTER SUITE', "13'-0\" × 11'-6\"", -8.5, 13.0, 0.25));
     this.firstLabels.add(this.createRoomLabel('WALK-IN CLOSET', "4'-6\" × 4'-6\"", -12.75, 13.0, 4.5, 5.0, 1.8));
     this.firstLabels.add(this.createRoomLabel('FAMILY LOUNGE', "13'-0\" × 9'-6\"", 6.5, 13.0, 10.5));
-    this.firstLabels.add(this.createRoomLabel('BEDROOM 02', "12'-6\" × 9'-0\"", -8.5, 13.0, 19.5));
+    this.firstLabels.add(this.createRoomLabel('BEDROOM 02 (REAR)', "12'-6\" × 9'-0\"", -8.5, 13.0, 19.5));
     this.firstLabels.add(this.createRoomLabel('STUDY / OFFICE', "9'-0\" × 9'-4\"", 8.5, 13.0, 19.5));
     this.firstLabels.add(this.createRoomLabel('REAR BALCONY', "4'-0\" WIDE", 0.0, 13.0, 26.5));
 
@@ -1738,6 +1902,7 @@ class HouseViewerApp {
     });
     document.getElementById('toggle-furniture')?.addEventListener('change', (e) => {
       this.furnitureGroup.visible = e.target.checked;
+      this.skyGardenGroup.visible = e.target.checked;
     });
     document.getElementById('toggle-walls-transparent')?.addEventListener('change', (e) => {
       const transparent = e.target.checked;
@@ -1787,6 +1952,7 @@ class HouseViewerApp {
     if (mode === 'full') {
       // Full exterior villa 3D
       this.groundGroup.visible = true;
+      this.skyGardenGroup.visible = true;
       this.firstGroup.visible = true;
       this.terraceGroup.visible = true;
       this.boundaryGroup.visible = true;
@@ -1799,6 +1965,7 @@ class HouseViewerApp {
     } else if (mode === 'ground') {
       // 3D Ground Plan Dollhouse View (Apartment Listing Style: 55° Angle, Unobstructed)
       this.groundGroup.visible = true;
+      this.skyGardenGroup.visible = false;
       this.firstGroup.visible = false;
       this.terraceGroup.visible = false;
       this.boundaryGroup.visible = false; // Hide tall boundary walls for clean presentation!
@@ -1809,8 +1976,9 @@ class HouseViewerApp {
         new TWEEN.Tween(this.controls.target).to({ x: -0.875, y: 2.5, z: 2.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
       }
     } else if (mode === 'first') {
-      // 3D First Floor Duplex Cutaway (Showcases Duplex Void Looking Down)
+      // 3D First Floor Duplex Cutaway (Showcases Open Front Sky Garden Deck & Duplex Void)
       this.groundGroup.visible = true;
+      this.skyGardenGroup.visible = true;
       this.firstGroup.visible = true;
       this.terraceGroup.visible = false;
       this.boundaryGroup.visible = false;
@@ -1823,6 +1991,7 @@ class HouseViewerApp {
     } else if (mode === 'top2d') {
       // Pure 2D Architectural Plan Top-Down View (Marketing Brochure Style)
       this.groundGroup.visible = true;
+      this.skyGardenGroup.visible = false;
       this.firstGroup.visible = false;
       this.terraceGroup.visible = false;
       this.boundaryGroup.visible = false;
@@ -1835,6 +2004,7 @@ class HouseViewerApp {
     } else if (mode === 'terrace') {
       // Roof Terrace Level
       this.groundGroup.visible = true;
+      this.skyGardenGroup.visible = true;
       this.firstGroup.visible = true;
       this.terraceGroup.visible = true;
       this.boundaryGroup.visible = true;
