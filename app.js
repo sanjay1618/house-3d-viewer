@@ -1,1079 +1,653 @@
 /**
- * 3D DUPLEX RESIDENCE & SKY GARDEN VILLA - NASPUR, MANCHERIAL (TELANGANA)
- * Ultra-Detailed Architectural Walkthrough & Multi-POV Engine
- * Featuring the New First-Floor Sky Garden Terrace Deck & Natural Landscape
+ * 3D DUPLEX RESIDENCE & COMMERCIAL COMPLEX - RAMNAGAR, MANCHERIAL (TELANGANA)
+ * Updated Plan: KesariNandan Architectures & Constructions (Er. Pawan Kumar Velpula)
+ * Client: Mr. Siddartha Uppugandla • Plot: 33'-0" × 60'-0" (220 Sq.Yds) • South Road Facing
+ * Built-Up: Plinth: 1,454.87 Sq.Ft. | 1st Floor Slab: 1,567.87 Sq.Ft. | Head Room: 159.25 Sq.Ft.
+ *
+ * Minimalist & Clean Architectural Presentation:
+ * - Architectural Studio Listing Mode (Minimal & Distraction-Free)
+ * - 3D Dollhouse Axonometric Cutaways (55° Perspective)
+ * - Pure 2D Architectural Plan View with Room Dimension Badges
+ * - Desktop-First Layout with Touch-Friendly Mobile Drawer & Continuous D-Pad
  */
 
 // ============================================================================
 // COMPREHENSIVE MULTI-POV TARGETS & ARCHITECTURAL METADATA
 // ============================================================================
 const POV_DATA = {
-  // New Sky Garden Terrace Deck (1st Floor Front)
-  'sky-garden-sofa': {
-    name: 'Sky Garden: Outdoor Lounge Sofa',
-    floor: 'FIRST FLOOR (SKY GARDEN)',
-    dims: "29'-0\" × 13'-6\" Open Deck",
-    area: '391.50 Sq.Ft.',
-    vastu: 'South Front Balcony',
-    desc: 'Sitting on the luxury outdoor rattan sectional sofa on the timber deck, surrounded by potted Areca palms, ficus trees, and flowering planters with views of the street below.',
-    camPos: { x: -8.0, y: 17.5, z: -18.0 },
-    camLook: { x: 5.0, y: 16.5, z: -25.0 },
-    floorLevel: 'first',
-    mapX: 45, mapY: 140
+  // Exterior & Elevation
+  'south-facade': {
+    name: 'South Road Villa Facade',
+    floor: 'EXTERIOR (STREET)',
+    dims: "33'-0\" Frontage × 60'-0\"",
+    area: '1,980 Sq.Ft. Plot (220 Sq.Yds)',
+    vastu: 'South Facing Road',
+    desc: 'Contemporary G+1 elevation with Sri Siddartha Kirana store on South-West, automated entrance gate and car parking on South-East, cantilevered 1st floor balcony with glass railings, and modern acoustic louvers.',
+    camPos: { x: 0.0, y: 15.0, z: -48.0 },
+    camLook: { x: 0.0, y: 12.0, z: -10.0 },
+    floorLevel: 'all',
+    mapX: 80, mapY: 185
   },
-  'sky-garden-view': {
-    name: 'Sky Garden: Street Glass Railing View',
-    floor: 'FIRST FLOOR (SKY GARDEN)',
-    dims: "29'-0\" Wide Frontage",
-    area: '391.50 Sq.Ft.',
-    vastu: 'South Road View',
-    desc: 'Standing at the 12mm tempered glass balustrade looking out over the 30\' South Road, avenue trees, and the entrance gate below.',
-    camPos: { x: 2.0, y: 18.0, z: -25.5 },
-    camLook: { x: 2.0, y: 16.0, z: -45.0 },
-    floorLevel: 'first',
-    mapX: 80, mapY: 160
-  },
-  'sky-garden-door': {
-    name: 'Lounge to Sky Garden Entrance',
-    floor: 'FIRST FLOOR',
-    dims: "10'-0\" Glass Sliding Doorway",
-    area: 'Deck Connection',
-    vastu: 'South Frontage',
-    desc: 'Stepping through the 10-foot wide sliding glass French doors from the interior family lounge out onto the sunlit wooden sky garden deck.',
-    camPos: { x: 0.0, y: 18.0, z: -11.0 },
-    camLook: { x: 0.0, y: 17.5, z: -22.0 },
-    floorLevel: 'first',
-    mapX: 80, mapY: 125
+  'aerial-duplex': {
+    name: 'Aerial Duplex Cutaway View',
+    floor: 'ARCHITECTURAL 3D OVERVIEW',
+    dims: "28'-3\" × 51'-6\" Plinth",
+    area: '3,182 Sq.Ft. Total Slab',
+    vastu: 'Vastu Compliant Layout',
+    desc: 'High-angle 3D cutaway showing the entire layout: Kirana store, car parking, entrance lobby, double-height living void, master suites, family lounge, study room, and rooftop terrace.',
+    camPos: { x: 24.0, y: 36.0, z: -35.0 },
+    camLook: { x: 0.0, y: 8.0, z: 2.0 },
+    floorLevel: 'all',
+    mapX: 80, mapY: 100
   },
 
-  // Authentic Telangana Kirana General Store POVs (Sample Reference Matching)
+  // Authentic Telangana Kirana General Store (Sample Reference Matched)
   'shop-street': {
     name: 'Kirana Store: Street Entrance View',
     floor: 'GROUND (COMMERCIAL)',
-    dims: "17'-0\" × 12'-6\"",
-    area: '212.50 Sq.Ft.',
+    dims: "16'-0\" × 12'-6\"",
+    area: '200.00 Sq.Ft.',
     vastu: 'South-West Road Front',
-    desc: 'Street perspective of Sri Siddarth Kirana & General Stores featuring the authentic Telugu & English signboard, open rolling shutter, hanging Kurkure/Lays snack strips, and open grain sacks welcoming customers.',
-    camPos: { x: -6.5, y: 5.5, z: -38.0 },
-    camLook: { x: -6.5, y: 4.8, z: -20.0 },
+    desc: 'Street viewpoint of Sri Siddartha Kirana & General Stores with the Telugu & English yellow/red signboard, open heavy-duty rolling shutter, hanging snack strips, and customer access platform.',
+    camPos: { x: -7.0, y: 5.5, z: -38.0 },
+    camLook: { x: -7.0, y: 5.0, z: -20.0 },
     floorLevel: 'ground',
-    mapX: 45, mapY: 155
-  },
-  'shop-entrance': {
-    name: 'Kirana Store: Customer Aisle & Grains',
-    floor: 'GROUND (COMMERCIAL)',
-    dims: "17'-0\" × 12'-6\"",
-    area: '212.50 Sq.Ft.',
-    vastu: 'South-West Aisle',
-    desc: 'Customer aisle perspective looking past open sacks of Basmati rice with metal scoop and golden Toor Dal toward the wooden counter and floor-to-ceiling blue goods shelves.',
-    camPos: { x: -3.0, y: 6.5, z: -25.8 },
-    camLook: { x: -8.0, y: 4.2, z: -18.0 },
-    floorLevel: 'ground',
-    mapX: 45, mapY: 145
+    mapX: 40, mapY: 160
   },
   'shop-counter': {
     name: 'Kirana Store: Shopkeeper Counter (Sample Photo POV)',
     floor: 'GROUND (COMMERCIAL)',
-    dims: "17'-0\" × 12'-6\"",
-    area: '212.50 Sq.Ft.',
+    dims: "16'-0\" × 12'-6\"",
+    area: '200.00 Sq.Ft.',
     vastu: 'South-West',
-    desc: 'The exact viewpoint of the sample photograph! Standing behind the wooden counter with the digital electronic weighing scale, glass candy jars with red lids, cash drawer (galla), and the blue-trimmed shelf unit densely stocked with Parle-G, Maggi, and Everest masalas.',
-    camPos: { x: -8.5, y: 5.0, z: -17.5 },
-    camLook: { x: -8.5, y: 4.5, z: -23.0 },
+    desc: 'Exact viewpoint of the sample photograph! Standing behind the wooden cash counter with the digital electronic weighing scale, red-lidded glass candy jars, cash drawer (galla), and royal blue trimmed goods shelving.',
+    camPos: { x: -9.0, y: 5.2, z: -17.5 },
+    camLook: { x: -9.0, y: 4.8, z: -23.0 },
     floorLevel: 'ground',
-    mapX: 35, mapY: 135
+    mapX: 35, mapY: 145
+  },
+  'shop-entrance': {
+    name: 'Kirana Store: Customer Aisle & Grains',
+    floor: 'GROUND (COMMERCIAL)',
+    dims: "16'-0\" × 12'-6\"",
+    area: '200.00 Sq.Ft.',
+    vastu: 'South-West Aisle',
+    desc: 'Customer aisle with open sacks of premium Basmati rice (with metal scoop) and golden Toor Dal, wooden display crates, and floor-to-ceiling grocery racks.',
+    camPos: { x: -3.5, y: 6.0, z: -25.5 },
+    camLook: { x: -8.0, y: 4.5, z: -18.0 },
+    floorLevel: 'ground',
+    mapX: 45, mapY: 150
   },
   'shop-shelf': {
-    name: 'Kirana Store: Blue Wall Shelves & Goods',
+    name: 'Kirana Store: Blue Trimmed Shelves',
     floor: 'GROUND (COMMERCIAL)',
-    dims: "17'-0\" × 12'-6\"",
-    area: '212.50 Sq.Ft.',
-    vastu: 'South-West Back Wall',
-    desc: 'Direct close-up view of the hero floor-to-ceiling wooden racks with bright royal blue shelf trims, filled with rows of Parle-G, Marie biscuits, Good Day, Maggi noodles, Everest masala boxes, and cooking oil bottles.',
-    camPos: { x: -7.0, y: 6.5, z: -22.2 },
-    camLook: { x: -7.0, y: 5.8, z: -15.0 },
+    dims: "16'-0\" × 12'-6\"",
+    area: '200.00 Sq.Ft.',
+    vastu: 'South-West Wall',
+    desc: 'Detailed close-up of the wooden rack system with vivid royal blue shelf lips, loaded with Parle-G, Marie biscuits, Maggi noodles, Everest masala packets, and oils.',
+    camPos: { x: -7.0, y: 6.2, z: -22.0 },
+    camLook: { x: -7.0, y: 5.8, z: -15.5 },
     floorLevel: 'ground',
-    mapX: 40, mapY: 130
+    mapX: 40, mapY: 140
   },
 
-  // Ground Floor Residence POVs
-  'living-entrance': {
-    name: 'Living Room: Main Entrance View',
+  // Ground Floor Residence
+  'car-portico': {
+    name: 'Car Parking & Portico',
     floor: 'GROUND FLOOR',
-    dims: "13'-3\" × 15'-6\"",
-    area: '205.37 Sq.Ft.',
+    dims: "12'-3\" × 21'-6\"",
+    area: '263.38 Sq.Ft.',
+    vastu: 'South-East Portico',
+    desc: 'Covered portico car parking with heavy interlocking pavers, automatic gate from South Road, modern SUV parked, and recessed LED ceiling downlights.',
+    camPos: { x: 7.5, y: 6.5, z: -32.0 },
+    camLook: { x: 7.5, y: 5.5, z: -16.0 },
+    floorLevel: 'ground',
+    mapX: 115, mapY: 160
+  },
+  'entrance-lobby': {
+    name: 'Entrance Lobby & External Stairs',
+    floor: 'GROUND FLOOR',
+    dims: "12'-3\" × 6'-6\" Foyer",
+    area: 'Foyer Connection',
+    vastu: 'East Main Entry',
+    desc: 'Entrance lobby connecting the portico to the main teak double doors of the house and the external staircase leading independently to the 1st floor front suite and roof terrace.',
+    camPos: { x: 4.0, y: 6.8, z: -14.0 },
+    camLook: { x: 6.0, y: 6.5, z: -5.0 },
+    floorLevel: 'ground',
+    mapX: 95, mapY: 130
+  },
+  'living-room': {
+    name: 'Living Room Hall',
+    floor: 'GROUND FLOOR',
+    dims: "13'-5\" × 15'-8\"",
+    area: '210.15 Sq.Ft.',
     vastu: 'East / North-East',
-    desc: 'Stepping through the teak wood main entrance door, looking across the Italian marble living hall toward the sectional sofa, Fiddle-Leaf Fig plant, and fluted TV wall.',
-    camPos: { x: 7.5, y: 7.8, z: -8.0 },
-    camLook: { x: 7.5, y: 7.5, z: 2.0 },
-    floorLevel: 'ground',
-    mapX: 110, mapY: 120
-  },
-  'living-sofa': {
-    name: 'Living Room: Sofa Seating POV',
-    floor: 'GROUND FLOOR',
-    dims: "13'-3\" × 15'-6\"",
-    area: '205.37 Sq.Ft.',
-    vastu: 'Living Hall',
-    desc: 'Sitting on the comfortable sectional sofa looking directly at the 65" TV mounted against the vertical fluted teak wood louver wall.',
+    desc: 'Main living hall with Italian marble flooring, 65" TV on fluted teak wall, L-shaped leather sectional sofa, and double-height ceiling cutout (94.47 sq.ft.) rising to the upper floor.',
     camPos: { x: 5.0, y: 6.8, z: -2.0 },
-    camLook: { x: 13.5, y: 7.2, z: -1.0 },
+    camLook: { x: 13.0, y: 7.0, z: 2.0 },
     floorLevel: 'ground',
-    mapX: 100, mapY: 105
+    mapX: 105, mapY: 110
   },
-  'living-up': {
-    name: 'Living Room: Look UP at Duplex Chandelier',
+  'living-chandelier': {
+    name: 'Living: Look UP at Duplex Void',
     floor: 'GROUND FLOOR',
-    dims: "Double-Height Void (20' High)",
-    area: '205.37 Sq.Ft.',
-    vastu: 'Ceiling Void',
-    desc: 'Standing in the center of the living hall looking straight up through the open duplex ceiling void at the multi-tier gold ring crystal chandelier and the 1st floor glass railing!',
-    camPos: { x: 7.375, y: 6.5, z: -1.25 },
-    camLook: { x: 7.375, y: 22.0, z: -1.25 },
+    dims: "94.47 Sq.Ft. Cutout Void (21' High)",
+    area: 'Double-Height Void',
+    vastu: 'Brahmasthan Openness',
+    desc: 'Looking directly up through the 94.47 sq.ft. duplex void cutout at the cascading crystal ring chandelier and the 1st floor glass balustrades.',
+    camPos: { x: 6.5, y: 6.5, z: 1.5 },
+    camLook: { x: 6.5, y: 22.0, z: 1.5 },
     floorLevel: 'ground',
-    mapX: 110, mapY: 100
+    mapX: 105, mapY: 100
   },
-  'puja': {
+  'puja-room': {
     name: 'Puja Mandir Sanctum',
     floor: 'GROUND FLOOR',
-    dims: "4'-0\" × 5'-0\"",
-    area: '20.00 Sq.Ft.',
+    dims: "6'-0\" × 5'-0\"",
+    area: '30.00 Sq.Ft.',
     vastu: 'North-East (Ishanya)',
-    desc: 'Close-up before the sacred white marble tiered altar, illuminated by the glowing gold backlit CNC jali screen and brass diya lamps.',
-    camPos: { x: 8.5, y: 7.8, z: 9.0 },
-    camLook: { x: 13.5, y: 7.8, z: 9.0 },
+    desc: 'Spiritual sanctum with CNC carved teak jali doors, white Makrana marble tiered altar, brass idols, hanging temple bell, and glowing diya oil lamps.',
+    camPos: { x: 7.5, y: 7.0, z: 7.5 },
+    camLook: { x: 13.0, y: 7.0, z: 7.5 },
     floorLevel: 'ground',
-    mapX: 125, mapY: 80
+    mapX: 125, mapY: 85
   },
-  'dining': {
-    name: 'Dining Hall View',
+  'dining-room': {
+    name: 'Dining Hall & Utility Access',
     floor: 'GROUND FLOOR',
-    dims: "14'-0\" × 9'-0\"",
-    area: '126.00 Sq.Ft.',
+    dims: "14'-0\" × 8'-8\"",
+    area: '121.33 Sq.Ft.',
     vastu: 'Central / East',
-    desc: 'Dining hall view featuring the solid teak 6-seater dining table, pendant lighting, potted palm, and open connectivity into the kitchen archway.',
-    camPos: { x: 3.5, y: 7.8, z: 12.5 },
-    camLook: { x: 7.5, y: 7.5, z: 16.5 },
+    desc: 'Dining hall with solid 6-seater teak dining table, contemporary pendant lighting, seamless archway to living room, and French doors leading out to the rear 5\'-0" wide utility.',
+    camPos: { x: 4.5, y: 7.5, z: 11.5 },
+    camLook: { x: 6.5, y: 7.2, z: 16.5 },
     floorLevel: 'ground',
-    mapX: 105, mapY: 65
+    mapX: 105, mapY: 70
   },
-  'kitchen': {
+  'kitchen-traditional': {
     name: 'Traditional Indian Kitchen',
     floor: 'GROUND FLOOR',
     dims: "12'-0\" × 9'-0\"",
     area: '108.00 Sq.Ft.',
-    vastu: 'North-West (Vayu)',
-    desc: 'Traditional Indian kitchen with extensive upper & lower teak cupboards, L-shaped Black Galaxy granite platform, 3-burner gas stove, pressure cooker, mixer-grinder (mixie), spice jar rack, and stainless steel utensil drainer.',
-    camPos: { x: -3.5, y: 7.8, z: 14.5 },
-    camLook: { x: -7.5, y: 7.2, z: 19.4 },
+    vastu: 'North-West (Agneya/Vayavya)',
+    desc: 'Authentic Indian kitchen featuring teak and ivory cupboards, black granite L-shaped counter, stainless steel sink under the rear window, 3-burner gas stove, spice dabba, mixer-grinder, and breakfast counter facing dining.',
+    camPos: { x: -3.5, y: 7.2, z: 16.5 },
+    camLook: { x: -7.5, y: 6.5, z: 22.0 },
     floorLevel: 'ground',
-    mapX: 55, mapY: 65
+    mapX: 55, mapY: 70
   },
   'master-bed-gf': {
-    name: 'Ground Master Bedroom',
+    name: 'Master Bedroom (Ground)',
     floor: 'GROUND FLOOR',
     dims: "13'-0\" × 11'-6\"",
     area: '149.50 Sq.Ft.',
-    vastu: 'South-West (Nairuti)',
-    desc: 'Ground floor master bedroom suite with teak wood plank flooring, king bed with cushioned headboard, reading nightstands, and 3-door mirrored wardrobe.',
-    camPos: { x: -4.0, y: 7.8, z: -3.0 },
-    camLook: { x: -10.5, y: 7.5, z: -6.5 },
+    vastu: 'South-West Zone',
+    desc: 'Spacious ground master bedroom with king-size teak bed, full-wall wooden wardrobes along the west wall, and attached luxury bathroom (4\'-6" × 8\'-9").',
+    camPos: { x: -8.0, y: 7.0, z: -3.0 },
+    camLook: { x: -8.0, y: 6.8, z: 3.5 },
     floorLevel: 'ground',
-    mapX: 45, mapY: 105
-  },
-  'portico': {
-    name: 'Car Portico & Driveway',
-    floor: 'GROUND FLOOR',
-    dims: "12'-0\" × 18'-0\"",
-    area: '216.00 Sq.Ft.',
-    vastu: 'South-East',
-    desc: 'Covered driveway with interlocking pavers, parked SUV, false ceiling downlights, and granite entrance steps rising to the raised residential plinth.',
-    camPos: { x: 8.0, y: 6.0, z: -28.0 },
-    camLook: { x: 8.0, y: 7.5, z: -12.0 },
-    floorLevel: 'ground',
-    mapX: 110, mapY: 155
+    mapX: 50, mapY: 105
   },
 
-  // First Floor Duplex POVs
+  // First Floor Duplex & Suites
   'duplex-void-overlook': {
-    name: 'Duplex Double-Height Void Overlook',
-    floor: 'FIRST FLOOR',
-    dims: "13'-3\" × 15'-6\" (Void)",
-    area: '205.37 Sq.Ft. (Overlook)',
-    vastu: 'Upper Corridor',
-    desc: 'Standing at the 1st floor corridor at the 12mm toughened glass railing, looking down directly through the hanging ring chandelier into the living room below!',
-    camPos: { x: 0.5, y: 18.0, z: -1.25 },
-    camLook: { x: 8.0, y: 7.5, z: -1.25 },
+    name: 'Duplex Void: Overlooking Living',
+    floor: 'FIRST FLOOR (DUPLEX)',
+    dims: "94.47 Sq.Ft. Cutout Void",
+    area: 'Upper Balustrade View',
+    vastu: 'Central Core',
+    desc: 'Standing at the 12mm toughened glass balustrade looking down into the ground floor living room, admiring the cascading crystal chandelier and Italian marble below.',
+    camPos: { x: 0.5, y: 17.5, z: 0.5 },
+    camLook: { x: 6.5, y: 8.5, z: 1.5 },
     floorLevel: 'first',
-    mapX: 95, mapY: 100
+    mapX: 85, mapY: 100
   },
-  'lounge': {
-    name: 'Upper Family Lounge',
+  'upper-lounge': {
+    name: 'Family Lounge & Duplex Landing',
     floor: 'FIRST FLOOR',
-    dims: "13'-0\" × 9'-0\"",
-    area: '117.00 Sq.Ft.',
-    vastu: 'Central Upper',
-    desc: 'Private upstairs family lounge situated at the staircase landing with wooden plank flooring, plush sofa, and open access to the study, bedrooms, and the new Sky Garden Deck!',
-    camPos: { x: 0.0, y: 18.3, z: 10.0 },
-    camLook: { x: 6.0, y: 18.0, z: 13.5 },
+    dims: "13'-0\" × 9'-6\"",
+    area: '123.50 Sq.Ft.',
+    vastu: 'Central Family Living',
+    desc: 'First floor family lounge where the internal floating teak staircase lands, furnished with comfortable leather lounge seating, coffee table, and open sightlines to the duplex void.',
+    camPos: { x: 4.5, y: 17.5, z: 8.0 },
+    camLook: { x: 6.0, y: 17.0, z: 13.5 },
     floorLevel: 'first',
-    mapX: 85, mapY: 70
+    mapX: 105, mapY: 85
   },
-  'study': {
-    name: 'Study / Home Office',
+  'front-balcony': {
+    name: 'Front Balcony & Street View',
+    floor: 'FIRST FLOOR (FRONT)',
+    dims: "3'-6\" Wide Cantilevered Balcony",
+    area: 'Front Balcony',
+    vastu: 'South Road View',
+    desc: 'Cantilevered front balcony facing the 30\' South Road with stainless steel and glass balustrades, planters, and open breeze.',
+    camPos: { x: 3.0, y: 17.5, z: -27.0 },
+    camLook: { x: 3.0, y: 15.5, z: -45.0 },
+    floorLevel: 'first',
+    mapX: 85, mapY: 165
+  },
+  'front-suite-hall': {
+    name: 'Front Suite: Hall & Pantry',
     floor: 'FIRST FLOOR',
-    dims: "9'-0\" × 9'-0\"",
-    area: '81.00 Sq.Ft.',
-    vastu: 'East (Morning Sunlight)',
-    desc: 'Executive study and home office room with custom desk, dual monitors, ergonomic chair, and floor-to-ceiling bookshelf filled with books.',
-    camPos: { x: 6.5, y: 18.3, z: 10.5 },
-    camLook: { x: 11.5, y: 18.0, z: 14.5 },
+    dims: "8'-7\" × 9'-4\" Hall + 5'×6' Pantry",
+    area: 'Independent Suite',
+    vastu: 'Front Suite',
+    desc: 'Self-contained front guest suite hall with sofa, TV unit, and attached 5\'-0" × 6\'-0" kitchenette pantry, served by the external staircase corridor.',
+    camPos: { x: 4.0, y: 17.5, z: -17.5 },
+    camLook: { x: 5.5, y: 17.0, z: -22.5 },
     floorLevel: 'first',
-    mapX: 120, mapY: 70
+    mapX: 95, mapY: 145
   },
-  'bed1': {
-    name: 'Bedroom 01 (Suite with Walk-In)',
-    floor: 'FIRST FLOOR',
-    dims: "13'-0\" × 11'-6\"",
-    area: '149.50 Sq.Ft.',
-    vastu: 'South-West Upper',
-    desc: 'Upper floor bedroom suite with king bed, walk-in dressing wardrobe, and ensuite bathroom, directly above the GF master bedroom.',
-    camPos: { x: -4.0, y: 18.3, z: -3.0 },
-    camLook: { x: -10.5, y: 18.0, z: -6.5 },
-    floorLevel: 'first',
-    mapX: 45, mapY: 105
-  },
-  'bed2': {
-    name: 'Bedroom 02 (Rear Bedroom)',
+  'front-suite-bed': {
+    name: 'Bedroom 03 (Front Suite)',
     floor: 'FIRST FLOOR',
     dims: "12'-6\" × 9'-0\"",
     area: '112.50 Sq.Ft.',
-    vastu: 'North-West Rear',
-    desc: 'Peaceful rear bedroom with attached toilet and sliding French door leading out to the 4\' wide rear balcony.',
-    camPos: { x: -3.0, y: 18.3, z: 19.5 },
-    camLook: { x: -8.0, y: 18.0, z: 24.5 },
+    vastu: 'South-West Upper',
+    desc: 'Front suite bedroom with queen-size bed, full wardrobes, attached bathroom (4\'-0" × 5\'-6"), and south window.',
+    camPos: { x: -8.0, y: 17.5, z: -17.5 },
+    camLook: { x: -8.0, y: 17.0, z: -23.0 },
     floorLevel: 'first',
-    mapX: 45, mapY: 45
+    mapX: 50, mapY: 145
+  },
+  'bed1-master': {
+    name: 'Bedroom 01 (Upper Master)',
+    floor: 'FIRST FLOOR',
+    dims: "13'-0\" × 11'-6\" + Walk-In (4'6\"×4'6\")",
+    area: '149.50 Sq.Ft. + Walk-In',
+    vastu: 'West Master Suite',
+    desc: 'Upper master bedroom suite with king-size teak bed, bedside reading lamps, dedicated 4\'-6" × 4\'-6" walk-in closet, and attached toilet (4\'-6" × 6\'-6").',
+    camPos: { x: -8.0, y: 17.5, z: -3.0 },
+    camLook: { x: -8.0, y: 17.0, z: 3.5 },
+    floorLevel: 'first',
+    mapX: 50, mapY: 105
+  },
+  'bed2-rear': {
+    name: 'Bedroom 02 (Rear)',
+    floor: 'FIRST FLOOR',
+    dims: "12'-6\" × 9'-0\"",
+    area: '112.50 Sq.Ft.',
+    vastu: 'North-West Upper',
+    desc: 'Rear bedroom with double bed, study nook, full-height wardrobes, and attached bathroom (4\'-6" × 6\'-6").',
+    camPos: { x: -8.0, y: 17.5, z: 16.5 },
+    camLook: { x: -8.0, y: 17.0, z: 22.5 },
+    floorLevel: 'first',
+    mapX: 50, mapY: 65
+  },
+  'study-room': {
+    name: 'Study / Home Office',
+    floor: 'FIRST FLOOR',
+    dims: "9'-0\" × 9'-4\"",
+    area: '84.00 Sq.Ft.',
+    vastu: 'North-East Upper',
+    desc: 'Quiet executive home office and study room with solid wood desk, dual monitor setup, full bookshelves, and double glass French doors opening onto the rear balcony.',
+    camPos: { x: 7.0, y: 17.5, z: 16.5 },
+    camLook: { x: 8.5, y: 17.2, z: 22.5 },
+    floorLevel: 'first',
+    mapX: 115, mapY: 65
+  },
+  'rear-balcony': {
+    name: 'Rear Balcony (North)',
+    floor: 'FIRST FLOOR (REAR)',
+    dims: "4'-0\" Wide Balcony",
+    area: 'Rear Balcony',
+    vastu: 'North Rear Breeze',
+    desc: 'Rear balcony running behind the study and bedroom 02 with protective safety railing and potted plants.',
+    camPos: { x: 0.0, y: 17.5, z: 25.5 },
+    camLook: { x: 0.0, y: 17.0, z: 32.0 },
+    floorLevel: 'first',
+    mapX: 80, mapY: 45
   },
 
-  // Terrace & Street
-  'terrace-open': {
-    name: 'Open Roof Terrace & Mumty',
-    floor: 'TERRACE FLOOR',
-    dims: "29'-0\" × 50'-0\"",
-    area: '1,450.00 Sq.Ft.',
-    vastu: 'Rooftop',
-    desc: 'Expansive rooftop terrace with cool white reflective tiles, 3\'-6" parapet walls with groove molding, modern pergola over the void, and staircase mumty tower with Sintex water tank.',
-    camPos: { x: 8.0, y: 28.0, z: 15.0 },
-    camLook: { x: 0.0, y: 27.5, z: -5.0 },
+  // Roof Terrace & Head Room
+  'stair-headroom': {
+    name: 'Staircase Head Room (Mumty)',
+    floor: 'TERRACE LEVEL',
+    dims: "13'-0\" × 10'-0\" Head Room",
+    area: '159.25 Sq.Ft. Slab',
+    vastu: 'Staircase Mumty',
+    desc: 'Weather-tight staircase head room structure with heavy steel door leading out onto the vast open roof terrace.',
+    camPos: { x: -6.0, y: 27.5, z: -16.0 },
+    camLook: { x: -8.0, y: 27.0, z: -7.0 },
     floorLevel: 'terrace',
-    mapX: 80, mapY: 70
+    mapX: 55, mapY: 130
   },
-  'south-facade': {
-    name: 'South Road Street Elevation',
-    floor: 'EXTERIOR (STREET)',
-    dims: "33'-0\" Wide Frontage",
-    area: 'Villa & Sky Garden',
-    vastu: 'South Road Facing',
-    desc: 'Full contemporary Telangana duplex villa facade showing the commercial shop, the expansive 1st floor Sky Garden Deck with trees, timber pergolas, and avenue street trees.',
-    camPos: { x: 0, y: 18, z: -68 },
-    camLook: { x: 0, y: 15, z: -10 },
-    floorLevel: 'ground',
-    orbit: true, // exterior overview: drag orbits around the building
-    mapX: 80, mapY: 180
-  },
-
-  // Dollhouse cut-away overviews (used by the Ground / First Floor tabs)
-  'dollhouse-ground': {
-    name: 'Ground Floor Dollhouse View',
-    floor: 'GROUND FLOOR (CUT-AWAY)',
-    dims: "33'-0\" × 60'-0\" Plot",
-    area: '1,625 Sq.Ft. Slab',
-    vastu: 'Overview',
-    desc: 'First floor and roof removed so you can see every ground floor room from above. Drag to orbit, scroll to zoom, and double-click any floor to step inside at that spot.',
-    camPos: { x: 30, y: 58, z: -42 },
-    camLook: { x: -1, y: 2, z: -2 },
-    floorLevel: 'ground',
-    orbit: true,
-    mapX: 80, mapY: 100
-  },
-  'dollhouse-first': {
-    name: 'First Floor Dollhouse View',
-    floor: 'FIRST FLOOR (CUT-AWAY)',
-    dims: "33'-0\" × 60'-0\" Plot",
-    area: '1,625 Sq.Ft. Slab',
-    vastu: 'Overview',
-    desc: 'Roof removed so you can see the first floor bedrooms, lounge, study, duplex void and Sky Garden deck from above. Double-click any floor to step inside at that spot.',
-    camPos: { x: 30, y: 66, z: -42 },
-    camLook: { x: -1, y: 13, z: -2 },
-    floorLevel: 'first',
-    orbit: true,
-    mapX: 80, mapY: 100
+  'roof-terrace': {
+    name: 'Open Roof Terrace',
+    floor: 'TERRACE LEVEL',
+    dims: "1,400+ Sq.Ft. Open Terrace",
+    area: 'Open Sky Terrace',
+    vastu: 'Rooftop Open Sky',
+    desc: 'Expansive open terrace featuring a shaded pergola with outdoor seating, 1000L overhead water tank tower, rooftop solar water heater and panels, with 360-degree panoramic views of Ramnagar, Mancherial.',
+    camPos: { x: 12.0, y: 30.0, z: 12.0 },
+    camLook: { x: -2.0, y: 25.0, z: -5.0 },
+    floorLevel: 'terrace',
+    mapX: 110, mapY: 90
   }
 };
 
 // ============================================================================
-// PROCEDURAL PBR TEXTURES
+// MAIN APPLICATION CLASS
 // ============================================================================
-class TextureBuilder {
-  static createMarble() {
-    const c = document.createElement('canvas');
-    c.width = 1024; c.height = 1024;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#f8f4ec';
-    ctx.fillRect(0, 0, 1024, 1024);
-
-    const drawVein = (color, width) => {
-      ctx.strokeStyle = color; ctx.lineWidth = width;
-      ctx.beginPath();
-      let x = Math.random() * 1024, y = 0;
-      ctx.moveTo(x, y);
-      for (let i = 0; i < 28; i++) {
-        x += (Math.random() - 0.45) * 60;
-        y += 35 + Math.random() * 20;
-        ctx.lineTo(x, y);
-      }
-      ctx.stroke();
-    };
-
-    for (let i = 0; i < 6; i++) {
-      ctx.globalAlpha = 0.2; drawVein('#b5a995', 8);
-      ctx.globalAlpha = 0.3; drawVein('#8c8270', 3);
-      ctx.globalAlpha = 0.15; drawVein('#d4af37', 5);
-    }
-    ctx.globalAlpha = 1.0;
-    ctx.strokeStyle = '#dfd7c9'; ctx.lineWidth = 2;
-    for (let p = 0; p <= 1024; p += 256) {
-      ctx.beginPath(); ctx.moveTo(p, 0); ctx.lineTo(p, 1024); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0, p); ctx.lineTo(1024, p); ctx.stroke();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(4, 4);
-    return tex;
-  }
-
-  static createTeakDeck() {
-    const c = document.createElement('canvas');
-    c.width = 1024; c.height = 1024;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#8f5326'; // Rich warm outdoor deck teak
-    ctx.fillRect(0, 0, 1024, 1024);
-
-    const plankH = 64; // Narrow outdoor deck boards
-    for (let y = 0; y < 1024; y += plankH) {
-      const tint = (Math.random() - 0.5) * 22;
-      ctx.fillStyle = `rgb(${143 + tint}, ${83 + tint * 0.7}, ${38 + tint * 0.5})`;
-      ctx.fillRect(0, y, 1024, plankH);
-
-      // Deck board grain
-      ctx.strokeStyle = 'rgba(50, 25, 8, 0.3)'; ctx.lineWidth = 1.5;
-      for (let g = 0; g < 6; g++) {
-        ctx.beginPath();
-        const gy = y + Math.random() * plankH;
-        ctx.moveTo(0, gy);
-        ctx.bezierCurveTo(300, gy + (Math.random() - 0.5) * 8, 700, gy + (Math.random() - 0.5) * 8, 1024, gy);
-        ctx.stroke();
-      }
-
-      // Deep groove between deck boards
-      ctx.strokeStyle = '#2b1406'; ctx.lineWidth = 3.5;
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1024, y); ctx.stroke();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(4, 4);
-    return tex;
-  }
-
-  static createWood() {
-    const c = document.createElement('canvas');
-    c.width = 1024; c.height = 1024;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#804820';
-    ctx.fillRect(0, 0, 1024, 1024);
-
-    const plankH = 128;
-    for (let y = 0; y < 1024; y += plankH) {
-      const tint = (Math.random() - 0.5) * 20;
-      ctx.fillStyle = `rgb(${128 + tint}, ${72 + tint * 0.7}, ${32 + tint * 0.5})`;
-      ctx.fillRect(0, y, 1024, plankH);
-      ctx.strokeStyle = 'rgba(60, 30, 10, 0.25)'; ctx.lineWidth = 1.5;
-      for (let g = 0; g < 14; g++) {
-        ctx.beginPath();
-        const gy = y + Math.random() * plankH;
-        ctx.moveTo(0, gy);
-        ctx.bezierCurveTo(300, gy + (Math.random() - 0.5) * 10, 700, gy + (Math.random() - 0.5) * 10, 1024, gy);
-        ctx.stroke();
-      }
-      ctx.strokeStyle = '#381e09'; ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1024, y); ctx.stroke();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(3, 3);
-    return tex;
-  }
-
-  static createShopTiles() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#f1f5f9';
-    ctx.fillRect(0, 0, 512, 512);
-    ctx.strokeStyle = '#cbd5e1'; ctx.lineWidth = 3;
-    for (let p = 0; p <= 512; p += 128) {
-      ctx.beginPath(); ctx.moveTo(p, 0); ctx.lineTo(p, 512); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0, p); ctx.lineTo(512, p); ctx.stroke();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(4, 4);
-    return tex;
-  }
-
-  static createPaver() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#64748b';
-    ctx.fillRect(0, 0, 512, 512);
-    ctx.strokeStyle = '#334155'; ctx.lineWidth = 3;
-    for (let y = 0; y <= 512; y += 32) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(512, y); ctx.stroke();
-    }
-    for (let x = 0; x <= 512; x += 48) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 512); ctx.stroke();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(6, 6);
-    return tex;
-  }
-
-  static createJali() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#1c1917';
-    ctx.fillRect(0, 0, 512, 512);
-    ctx.strokeStyle = '#f59e0b'; ctx.fillStyle = '#fbbf24'; ctx.lineWidth = 4;
-    for (let x = 32; x < 512; x += 64) {
-      for (let y = 32; y < 512; y += 64) {
-        ctx.beginPath();
-        ctx.moveTo(x, y - 24); ctx.lineTo(x + 24, y); ctx.lineTo(x, y + 24); ctx.lineTo(x - 24, y);
-        ctx.closePath(); ctx.stroke();
-        ctx.beginPath(); ctx.arc(x, y, 6, 0, Math.PI * 2); ctx.fill();
-      }
-    }
-    return new THREE.CanvasTexture(c);
-  }
-
-  static createKiranaPhotoTexture() {
-    if (typeof window !== 'undefined' && window.KIRANA_SAMPLE_DATA_URL) {
-      const loader = new THREE.TextureLoader();
-      const tex = loader.load(window.KIRANA_SAMPLE_DATA_URL);
-      tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping;
-      return tex;
-    }
-    // High quality procedural shelving fallback
-    const c = document.createElement('canvas');
-    c.width = 1024; c.height = 768;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, 1024, 768);
-    ctx.fillStyle = '#1d4ed8';
-    for (let y = 0; y < 768; y += 150) {
-      ctx.fillRect(0, y, 1024, 22);
-    }
-    return new THREE.CanvasTexture(c);
-  }
-
-  static createRice() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#f8f6f0';
-    ctx.fillRect(0, 0, 512, 512);
-    for (let i = 0; i < 4000; i++) {
-      const x = Math.random() * 512;
-      const y = Math.random() * 512;
-      const angle = Math.random() * Math.PI;
-      const len = 4 + Math.random() * 4;
-      const w = 1.6 + Math.random() * 0.8;
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.rotate(angle);
-      const shade = Math.random();
-      ctx.fillStyle = shade > 0.3 ? '#ffffff' : (shade > 0.1 ? '#f2ede0' : '#e5decb');
-      ctx.beginPath();
-      ctx.ellipse(0, 0, len / 2, w / 2, 0, 0, Math.PI * 2);
-      ctx.fill();
-      if (shade > 0.6) {
-        ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.fillRect(-len / 4, -w / 4, len / 2, w / 3);
-      }
-      ctx.restore();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(2, 2);
-    return tex;
-  }
-
-  static createDal() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#f59e0b';
-    ctx.fillRect(0, 0, 512, 512);
-    for (let i = 0; i < 3000; i++) {
-      const x = Math.random() * 512;
-      const y = Math.random() * 512;
-      const r = 2.5 + Math.random() * 2.5;
-      const shade = Math.random();
-      ctx.fillStyle = shade > 0.5 ? '#facc15' : (shade > 0.2 ? '#f59e0b' : '#d97706');
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.strokeStyle = '#b45309';
-      ctx.lineWidth = 0.8;
-      ctx.stroke();
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(2, 2);
-    return tex;
-  }
-
-  static createBurlap() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#b7894f';
-    ctx.fillRect(0, 0, 512, 512);
-    ctx.lineWidth = 2.5;
-    for (let y = 0; y < 512; y += 8) {
-      ctx.strokeStyle = (y % 16 === 0) ? '#d4a86a' : '#8d6332';
-      ctx.beginPath();
-      ctx.moveTo(0, y + (Math.random() - 0.5) * 1.5);
-      ctx.lineTo(512, y + (Math.random() - 0.5) * 1.5);
-      ctx.stroke();
-    }
-    for (let x = 0; x < 512; x += 8) {
-      ctx.strokeStyle = (x % 16 === 0) ? '#c49658' : '#7b5325';
-      ctx.beginPath();
-      ctx.moveTo(x + (Math.random() - 0.5) * 1.5, 0);
-      ctx.lineTo(x + (Math.random() - 0.5) * 1.5, 512);
-      ctx.stroke();
-    }
-    for (let i = 0; i < 600; i++) {
-      ctx.fillStyle = Math.random() > 0.5 ? '#5c3d18' : '#e2be85';
-      ctx.fillRect(Math.random() * 512, Math.random() * 512, 2, 2);
-    }
-    const tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(3, 3);
-    return tex;
-  }
-
-  static createGrainBagLabel() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#fde047';
-    ctx.fillRect(0, 0, 512, 512);
-    ctx.strokeStyle = '#eab308';
-    ctx.lineWidth = 1;
-    for (let p = 0; p < 512; p += 6) {
-      ctx.beginPath(); ctx.moveTo(p, 0); ctx.lineTo(p, 512); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0, p); ctx.lineTo(512, p); ctx.stroke();
-    }
-    ctx.strokeStyle = '#15803d';
-    ctx.lineWidth = 6;
-    ctx.strokeRect(30, 60, 452, 392);
-    ctx.strokeRect(40, 70, 432, 372);
-
-    ctx.fillStyle = '#15803d';
-    ctx.font = 'bold 36px "Plus Jakarta Sans", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('SUPER QUALITY', 256, 125);
-
-    ctx.fillStyle = '#dc2626';
-    ctx.font = '900 48px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('SONA MASOORI', 256, 190);
-    ctx.fillText('RAW RICE', 256, 245);
-
-    ctx.fillStyle = '#ca8a04';
-    ctx.beginPath();
-    ctx.arc(256, 305, 30, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.fillStyle = '#15803d';
-    ctx.font = 'bold 28px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('NET WT: 25 KG', 256, 375);
-    ctx.font = '600 20px "JetBrains Mono", monospace';
-    ctx.fillText('AGMARK GRADE 1 • TELANGANA', 256, 415);
-    return new THREE.CanvasTexture(c);
-  }
-
-  static createStoreSignboard() {
-    const c = document.createElement('canvas');
-    c.width = 1536; c.height = 320;
-    const ctx = c.getContext('2d');
-
-    const grad = ctx.createLinearGradient(0, 0, 0, 320);
-    grad.addColorStop(0, '#0a235c');
-    grad.addColorStop(0.5, '#1e3a8a');
-    grad.addColorStop(1, '#0c1e4a');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, 1536, 320);
-
-    ctx.strokeStyle = '#f59e0b';
-    ctx.lineWidth = 10;
-    ctx.strokeRect(10, 10, 1516, 300);
-    ctx.strokeStyle = '#fef08a';
-    ctx.lineWidth = 3;
-    ctx.strokeRect(20, 20, 1496, 280);
-
-    ctx.fillStyle = '#fef08a';
-    ctx.font = 'bold 26px "Plus Jakarta Sans", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('॥ శ్రీ లక్ష్మీ ప్రసన్న ॥   •   ॥ శ్రీ గణేశాయ నమః ॥', 768, 55);
-
-    ctx.fillStyle = '#fde047';
-    ctx.font = '900 68px "Plus Jakarta Sans", sans-serif';
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.8)';
-    ctx.shadowBlur = 10;
-    ctx.shadowOffsetX = 3;
-    ctx.shadowOffsetY = 3;
-    ctx.fillText('శ్రీ సిద్దార్థ కిరాణా & జనరల్ స్టోర్స్', 768, 135);
-    ctx.shadowBlur = 0;
-
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '800 46px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('SRI SIDDARTH KIRANA & GENERAL STORES', 768, 200);
-
-    ctx.fillStyle = '#f59e0b';
-    ctx.fillRect(25, 235, 1486, 55);
-
-    ctx.fillStyle = '#0f172a';
-    ctx.font = 'bold 24px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('ధాన్యాలు • పప్పులు • నూనెలు • బిస్కెట్లు • పూజా సామగ్రి • నిత్యావసర సరుకులు   |   D.No. 4-2-118, MAIN ROAD, NASPUR', 768, 272);
-
-    return new THREE.CanvasTexture(c);
-  }
-
-  static createSnackStrip(flavor) {
-    const c = document.createElement('canvas');
-    c.width = 160; c.height = 720;
-    const ctx = c.getContext('2d');
-
-    ctx.fillStyle = flavor === 'kurkure' ? '#ea580c' : (flavor === 'lays_blue' ? '#1d4ed8' : '#16a34a');
-    ctx.fillRect(0, 0, 160, 720);
-
-    const packetH = 135;
-    for (let i = 0; i < 5; i++) {
-      const y = 8 + i * (packetH + 8);
-      ctx.fillStyle = flavor === 'kurkure' ? '#f97316' : (flavor === 'lays_blue' ? '#2563eb' : '#22c55e');
-      ctx.fillRect(8, y, 144, packetH);
-      ctx.strokeStyle = '#ffffff';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(8, y, 144, packetH);
-
-      ctx.fillStyle = '#cbd5e1';
-      ctx.fillRect(8, y, 144, 10);
-      ctx.fillRect(8, y + packetH - 10, 144, 10);
-
-      ctx.textAlign = 'center';
-      if (flavor === 'kurkure') {
-        ctx.fillStyle = '#fef08a';
-        ctx.font = '900 24px "Plus Jakarta Sans", sans-serif';
-        ctx.fillText('Kurkure', 80, y + 48);
-        ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 15px sans-serif';
-        ctx.fillText('MASALA MUNCH', 80, y + 72);
-        ctx.fillStyle = '#dc2626';
-        ctx.font = 'bold 18px monospace';
-        ctx.fillText('₹ 5 /-', 80, y + 102);
-      } else if (flavor === 'lays_blue') {
-        ctx.fillStyle = '#facc15';
-        ctx.beginPath();
-        ctx.arc(80, y + 55, 24, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.fillStyle = '#dc2626';
-        ctx.font = '900 24px "Plus Jakarta Sans", sans-serif';
-        ctx.fillText("Lay's", 80, y + 62);
-        ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 14px sans-serif';
-        ctx.fillText('MAGIC MASALA', 80, y + 96);
-        ctx.fillText('₹ 10 /-', 80, y + 115);
-      } else {
-        ctx.fillStyle = '#facc15';
-        ctx.beginPath();
-        ctx.arc(80, y + 55, 24, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.fillStyle = '#dc2626';
-        ctx.font = '900 24px "Plus Jakarta Sans", sans-serif';
-        ctx.fillText("Lay's", 80, y + 62);
-        ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 13px sans-serif';
-        ctx.fillText('CREAM & ONION', 80, y + 96);
-        ctx.fillText('₹ 10 /-', 80, y + 115);
-      }
-    }
-    return new THREE.CanvasTexture(c);
-  }
-
-  static createOilTin() {
-    const c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
-    const ctx = c.getContext('2d');
-
-    ctx.fillStyle = '#facc15';
-    ctx.fillRect(0, 0, 512, 512);
-
-    ctx.strokeStyle = '#ca8a04';
-    ctx.lineWidth = 12;
-    ctx.strokeRect(12, 12, 488, 488);
-    ctx.strokeStyle = '#fef08a';
-    ctx.lineWidth = 4;
-    ctx.strokeRect(24, 24, 464, 464);
-
-    ctx.fillStyle = '#ea580c';
-    ctx.beginPath();
-    ctx.arc(256, 210, 48, 0, Math.PI * 2);
-    ctx.fill();
-    for (let a = 0; a < Math.PI * 2; a += Math.PI / 8) {
-      const px = 256 + Math.cos(a) * 75;
-      const py = 210 + Math.sin(a) * 75;
-      ctx.fillStyle = '#fbbf24';
-      ctx.beginPath();
-      ctx.arc(px, py, 22, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    ctx.fillStyle = '#78350f';
-    ctx.beginPath();
-    ctx.arc(256, 210, 36, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.fillStyle = '#1e3a8a';
-    ctx.font = '900 44px "Plus Jakarta Sans", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('FREEDOM', 256, 100);
-
-    ctx.fillStyle = '#dc2626';
-    ctx.font = 'bold 30px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('PURE SUNFLOWER OIL', 256, 330);
-
-    ctx.fillStyle = '#1e293b';
-    ctx.font = '800 52px "JetBrains Mono", monospace';
-    ctx.fillText('15 LITRES', 256, 395);
-
-    ctx.font = '600 22px sans-serif';
-    ctx.fillText('RICH IN VITAMIN A, D & E • ZERO CHOLESTEROL', 256, 440);
-
-    return new THREE.CanvasTexture(c);
-  }
-
-  static createScaleDisplay() {
-    const c = document.createElement('canvas');
-    c.width = 256; c.height = 128;
-    const ctx = c.getContext('2d');
-    ctx.fillStyle = '#090d16';
-    ctx.fillRect(0, 0, 256, 128);
-    ctx.strokeStyle = '#334155';
-    ctx.lineWidth = 4;
-    ctx.strokeRect(4, 4, 248, 120);
-
-    ctx.fillStyle = '#38bdf8';
-    ctx.font = 'bold 16px "JetBrains Mono", monospace';
-    ctx.fillText('WT (kg)', 20, 35);
-    ctx.font = '900 40px "JetBrains Mono", monospace';
-    ctx.fillText('2.450', 20, 82);
-
-    ctx.fillStyle = '#4ade80';
-    ctx.font = 'bold 14px "JetBrains Mono", monospace';
-    ctx.fillText('₹/kg: 65.00', 145, 45);
-    ctx.fillStyle = '#f87171';
-    ctx.fillText('TOTAL: 159', 145, 75);
-    ctx.fillStyle = '#38bdf8';
-    ctx.font = 'bold 12px "JetBrains Mono", monospace';
-    ctx.fillText('TARE: 0.000', 20, 112);
-    ctx.fillText('AC ON • 100%', 145, 112);
-
-    return new THREE.CanvasTexture(c);
-  }
-}
-
-// ============================================================================
-// MAIN APPLICATION
-// ============================================================================
-class CompleteDuplexApp {
+class HouseViewerApp {
   constructor() {
     this.container = document.getElementById('canvas-container');
-    this.scene = null;
-    this.camera = null;
-    this.renderer = null;
-    this.controls = null;
+    this.currentMode = 'ground'; // Default to Ground Plan Dollhouse
+    this.currentPOVKey = 'living-room';
+    this.isFPS = false;
+    this.fpsHeight = 5.5; // Eye height in feet
+    this.moveSpeed = 10.0;
+    this.turnSpeed = 1.6;
+    this.isSprinting = false;
+    this.showLabels = true;
 
-    // Groups
-    this.groundGroup = new THREE.Group();
-    this.firstGroup = new THREE.Group();
-    this.roofGroup = new THREE.Group();
-    this.siteGroup = new THREE.Group();
-    this.furnitureGroup = new THREE.Group();
-    this.shopGroup = new THREE.Group();
-    this.skyGardenGroup = new THREE.Group();
-    this.greeneryGroup = new THREE.Group();
-    this.hotspotsGroup = new THREE.Group();
-
-    this.interactiveObjects = [];
+    // Movement state (WASD & D-Pad)
+    this.moveState = { fwd: false, bwd: false, left: false, right: false, turnL: false, turnR: false };
+    this.clock = new THREE.Clock();
     this.allWalls = [];
     this.hotspots = [];
-
-    // Lighting
-    this.dirLight = null;
-    this.hemiLight = null;
-    this.ambientLight = null;
-    this.sconceLights = [];
+    this.sconces = [];
     this.interiorLights = [];
 
-    // State
-    this.currentMode = 'full';
-    this.isFPSMode = false;
-    this.currentPOVKey = 'sky-garden-sofa'; // Start right in the new Sky Garden Lounge!
-    this.keys = { w: false, a: false, s: false, d: false, ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
-    this.walkSpeed = 0.35;
-
-    // Mini-Map
-    this.mapCanvas = document.getElementById('minimap-canvas');
-    this.mapCtx = this.mapCanvas ? this.mapCanvas.getContext('2d') : null;
-
-    this.raycaster = new THREE.Raycaster();
-    this.mouse = new THREE.Vector2();
-
     this.init();
-    this.buildMaterials();
-    this.buildScene();
-    this.setupUI();
-    this.setupKeyboard();
-    this.animate();
-
-    // Default view: The stunning new Sky Garden Lounge!
-    this.switchToPOV('sky-garden-sofa');
   }
 
   init() {
+    // 1. Scene, Camera, Renderer
     this.scene = new THREE.Scene();
-    // Warm natural daylight sky with soft horizon
-    this.scene.background = new THREE.Color(0xa5d8f3);
-    this.scene.fog = new THREE.FogExp2(0xa5d8f3, 0.004);
 
     const aspect = window.innerWidth / window.innerHeight;
-    this.camera = new THREE.PerspectiveCamera(50, aspect, 0.4, 500);
+    this.camera = new THREE.PerspectiveCamera(50, aspect, 0.2, 500);
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1.15; // Natural listing exposure
+    this.renderer.toneMappingExposure = 1.05;
     this.container.appendChild(this.renderer.domElement);
 
+    // 2. Controls (Touch & Desktop OrbitControls)
     this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
-    this.controls.dampingFactor = 0.06;
-    this.controls.maxPolarAngle = Math.PI / 2 - 0.02;
-    this.controls.minDistance = 0.4;
-    this.controls.maxDistance = 200;
+    this.controls.dampingFactor = 0.08;
+    this.controls.maxPolarAngle = Math.PI / 2 + 0.02; // Prevent going underground
+    this.controls.minDistance = 2.0;
+    this.controls.maxDistance = 160.0;
+    // Enable full touch gesture ergonomics
+    this.controls.touches = {
+      ONE: THREE.TOUCH.ROTATE,
+      TWO: THREE.TOUCH.DOLLY_PAN
+    };
 
-    this.scene.add(this.siteGroup);
-    this.scene.add(this.groundGroup);
-    this.scene.add(this.firstGroup);
-    this.scene.add(this.roofGroup);
-    this.scene.add(this.furnitureGroup);
-    this.scene.add(this.shopGroup);
-    this.scene.add(this.skyGardenGroup);
-    this.scene.add(this.greeneryGroup);
-    this.scene.add(this.hotspotsGroup);
-
+    // 3. Lighting & Materials
     this.setupLighting();
+    this.buildMaterials();
 
-    window.addEventListener('resize', () => this.onResize(), false);
-    window.addEventListener('mousemove', (e) => this.onMouseMove(e), false);
-    window.addEventListener('click', (e) => this.onClick(e), false);
+    // 4. Build 3D Architectural Scene
+    this.buildScene();
+
+    // 5. Default to Minimalist Architectural Studio Listing Mode
+    this.setLightingMode('listing');
+    this.setMode('ground', true); // Open directly into pristine 3D Ground Plan
+
+    // 6. UI & Listeners
+    this.setupUI();
+    this.setupKeyboard();
+    this.updateMiniMap(POV_DATA['living-room']);
+
+    // 7. Event Listeners
+    window.addEventListener('resize', () => this.onResize());
+    window.addEventListener('mousemove', (e) => this.onMouseMove(e));
+    window.addEventListener('click', (e) => this.onClick(e));
+
+    // Animation Loop
+    this.animate();
   }
 
+  // ==========================================================================
+  // LIGHTING SYSTEM (MINIMAL LISTING STUDIO / DAY / SUNSET / NIGHT)
+  // ==========================================================================
   setupLighting() {
-    // Warm natural ambient & bounce light like real architectural listing photos
-    this.ambientLight = new THREE.AmbientLight(0xfff7ed, 0.75);
+    this.ambientLight = new THREE.AmbientLight(0xffffff, 1.05);
     this.scene.add(this.ambientLight);
 
-    this.hemiLight = new THREE.HemisphereLight(0xffffff, 0x475569, 0.45);
-    this.hemiLight.position.set(0, 50, 0);
-    this.scene.add(this.hemiLight);
+    this.sunLight = new THREE.DirectionalLight(0xfffaf0, 1.15);
+    this.sunLight.position.set(30, 60, -20);
+    this.sunLight.castShadow = true;
+    this.sunLight.shadow.mapSize.width = 2048;
+    this.sunLight.shadow.mapSize.height = 2048;
+    this.sunLight.shadow.camera.near = 1;
+    this.sunLight.shadow.camera.far = 160;
+    this.sunLight.shadow.camera.left = -40;
+    this.sunLight.shadow.camera.right = 40;
+    this.sunLight.shadow.camera.top = 40;
+    this.sunLight.shadow.camera.bottom = -40;
+    this.sunLight.shadow.bias = -0.0004;
+    this.scene.add(this.sunLight);
 
-    // Warm Sun
-    this.dirLight = new THREE.DirectionalLight(0xfffae8, 1.45);
-    this.dirLight.position.set(38, 55, -45);
-    this.dirLight.castShadow = true;
-    this.dirLight.shadow.mapSize.width = 2048;
-    this.dirLight.shadow.mapSize.height = 2048;
-    this.dirLight.shadow.bias = -0.0004;
-    const d = 45;
-    this.dirLight.shadow.camera.left = -d;
-    this.dirLight.shadow.camera.right = d;
-    this.dirLight.shadow.camera.top = d;
-    this.dirLight.shadow.camera.bottom = -d;
-    this.scene.add(this.dirLight);
+    this.skyFillLight = new THREE.DirectionalLight(0xe0f2fe, 0.45);
+    this.skyFillLight.position.set(-25, 35, 25);
+    this.scene.add(this.skyFillLight);
 
-    this.setLightingMode('day');
+    this.currentLighting = 'listing';
   }
 
   setLightingMode(mode) {
-    document.querySelectorAll('.lighting-controls .icon-btn').forEach(b => b.classList.remove('active'));
-    const btn = document.getElementById(`btn-${mode}`);
-    if (btn) btn.classList.add('active');
+    this.currentLighting = mode;
+    ['btn-listing', 'btn-day', 'btn-sunset', 'btn-night'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.classList.remove('active');
+    });
 
-    if (mode === 'day') {
-      this.scene.background.setHex(0xa5d8f3);
-      this.scene.fog.color.setHex(0xa5d8f3);
-      this.ambientLight.intensity = 0.75;
-      this.dirLight.intensity = 1.45;
-      this.dirLight.color.setHex(0xfffae8);
-      this.dirLight.position.set(38, 55, -45);
-      this.toggleSconces(false);
+    if (mode === 'listing') {
+      // Pristine architectural studio presentation: minimal, soft, shadowless, distraction-free
+      document.getElementById('btn-listing')?.classList.add('active');
+      this.scene.background = new THREE.Color(0xf1f5f9);
+      this.scene.fog = new THREE.FogExp2(0xf1f5f9, 0.002);
+      this.ambientLight.color.setHex(0xffffff);
+      this.ambientLight.intensity = 1.08;
+      this.sunLight.color.setHex(0xfffaf0);
+      this.sunLight.intensity = 1.15;
+      this.sunLight.position.set(30, 60, -20);
+      this.skyFillLight.color.setHex(0xe0f2fe);
+      this.skyFillLight.intensity = 0.45;
       this.toggleInteriorGlow(false);
+      this.toggleSconces(false);
+      if (this.studioFloorMat) {
+        this.studioFloorMat.color.setHex(0xe2e8f0);
+      }
+    } else if (mode === 'day') {
+      document.getElementById('btn-day')?.classList.add('active');
+      this.scene.background = new THREE.Color(0x0c1424);
+      this.scene.fog = new THREE.FogExp2(0x0c1424, 0.007);
+      this.ambientLight.color.setHex(0xffffff);
+      this.ambientLight.intensity = 0.88;
+      this.sunLight.color.setHex(0xfff8ee);
+      this.sunLight.intensity = 1.35;
+      this.sunLight.position.set(35, 55, -25);
+      this.skyFillLight.color.setHex(0x93c5fd);
+      this.skyFillLight.intensity = 0.45;
+      this.toggleInteriorGlow(false);
+      this.toggleSconces(false);
+      if (this.studioFloorMat) {
+        this.studioFloorMat.color.setHex(0x0f172a);
+      }
     } else if (mode === 'sunset') {
-      this.scene.background.setHex(0x351c36);
-      this.scene.fog.color.setHex(0x351c36);
-      this.ambientLight.intensity = 0.45;
-      this.dirLight.intensity = 1.15;
-      this.dirLight.color.setHex(0xff7733);
-      this.dirLight.position.set(50, 18, -50);
-      this.toggleSconces(true, 0.85);
-      this.toggleInteriorGlow(true, 0.75);
+      document.getElementById('btn-sunset')?.classList.add('active');
+      this.scene.background = new THREE.Color(0x180d1e);
+      this.scene.fog = new THREE.FogExp2(0x180d1e, 0.007);
+      this.ambientLight.color.setHex(0xfcd34d);
+      this.ambientLight.intensity = 0.72;
+      this.sunLight.color.setHex(0xf97316);
+      this.sunLight.intensity = 1.5;
+      this.sunLight.position.set(45, 20, -35);
+      this.skyFillLight.intensity = 0.35;
+      this.toggleInteriorGlow(true, 0.7);
+      this.toggleSconces(true, 0.8);
+      if (this.studioFloorMat) {
+        this.studioFloorMat.color.setHex(0x180d1e);
+      }
     } else if (mode === 'night') {
-      this.scene.background.setHex(0x060911);
-      this.scene.fog.color.setHex(0x060911);
-      this.ambientLight.intensity = 0.25;
-      this.dirLight.intensity = 0.25;
-      this.dirLight.color.setHex(0x38bdf8);
-      this.dirLight.position.set(-20, 40, -20);
-      this.toggleSconces(true, 1.6);
-      this.toggleInteriorGlow(true, 1.3);
+      document.getElementById('btn-night')?.classList.add('active');
+      this.scene.background = new THREE.Color(0x03060c);
+      this.scene.fog = new THREE.FogExp2(0x03060c, 0.007);
+      this.ambientLight.color.setHex(0x1e293b);
+      this.ambientLight.intensity = 0.35;
+      this.sunLight.color.setHex(0x38bdf8);
+      this.sunLight.intensity = 0.25;
+      this.skyFillLight.intensity = 0.15;
+      this.toggleInteriorGlow(true, 1.4);
+      this.toggleSconces(true, 1.5);
+      if (this.studioFloorMat) {
+        this.studioFloorMat.color.setHex(0x03060c);
+      }
     }
   }
 
   toggleSconces(active, intensity = 1.0) {
-    this.sconceLights.forEach(light => {
+    this.sconces.forEach(light => {
       light.visible = active;
-      light.intensity = intensity;
+      if (active) light.intensity = intensity;
     });
   }
 
   toggleInteriorGlow(active, intensity = 1.0) {
     this.interiorLights.forEach(light => {
       light.visible = active;
-      light.intensity = intensity;
+      if (active) light.intensity = intensity;
     });
   }
 
+  // ==========================================================================
+  // PROCEDURAL MATERIALS (ARCHITECTURAL MINIMALIST PALETTE)
+  // ==========================================================================
   buildMaterials() {
-    this.marbleTex = TextureBuilder.createMarble();
-    this.woodTex = TextureBuilder.createWood();
-    this.deckTex = TextureBuilder.createTeakDeck();
-    this.shopTilesTex = TextureBuilder.createShopTiles();
-    this.paverTex = TextureBuilder.createPaver();
-    this.jaliTex = TextureBuilder.createJali();
-    this.signboardTex = TextureBuilder.createStoreSignboard();
+    this.mat = {};
 
-    // Kirana store authentic textures matching reference sample photo
-    this.kiranaPhotoTex = TextureBuilder.createKiranaPhotoTexture();
-    this.riceTex = TextureBuilder.createRice();
-    this.dalTex = TextureBuilder.createDal();
-    this.burlapTex = TextureBuilder.createBurlap();
-    this.grainBagTex = TextureBuilder.createGrainBagLabel();
-    this.snackKurkureTex = TextureBuilder.createSnackStrip('kurkure');
-    this.snackLaysBlueTex = TextureBuilder.createSnackStrip('lays_blue');
-    this.snackLaysGreenTex = TextureBuilder.createSnackStrip('lays_green');
-    this.oilTinTex = TextureBuilder.createOilTin();
-    this.scaleDisplayTex = TextureBuilder.createScaleDisplay();
+    // 1. Plaster & Wall Finishes (Clean, crisp architectural white)
+    this.mat.extWhite = new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.8, metalness: 0.02 });
+    this.mat.extGrey = new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.75 });
+    this.mat.accentTeak = new THREE.MeshStandardMaterial({ color: 0x8b5a2b, roughness: 0.55, metalness: 0.08 });
+    this.mat.intWall = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.85 });
+    this.mat.intWallAccent = new THREE.MeshStandardMaterial({ color: 0xf1f5f9, roughness: 0.85 });
 
-    this.mat = {
-      marbleFloor: new THREE.MeshStandardMaterial({ map: this.marbleTex, roughness: 0.15 }),
-      woodFloor: new THREE.MeshStandardMaterial({ map: this.woodTex, roughness: 0.4 }),
-      deckFloor: new THREE.MeshStandardMaterial({ map: this.deckTex, roughness: 0.5, metalness: 0.05 }),
-      shopFloor: new THREE.MeshStandardMaterial({ map: this.shopTilesTex, roughness: 0.2, metalness: 0.05 }),
-      paverFloor: new THREE.MeshStandardMaterial({ map: this.paverTex, roughness: 0.85 }),
-      extWhite: new THREE.MeshStandardMaterial({ color: 0xf3f6f9, roughness: 0.85 }),
-      extGrey: new THREE.MeshStandardMaterial({ color: 0x242b38, roughness: 0.7 }),
-      intWall: new THREE.MeshStandardMaterial({ color: 0xfcfcfe, roughness: 0.9 }),
-      teakWood: new THREE.MeshStandardMaterial({ color: 0x9a5b1f, roughness: 0.45 }),
-      wicker: new THREE.MeshStandardMaterial({ color: 0x5a3e22, roughness: 0.85 }), // Rattan outdoor wicker
-      cushionCream: new THREE.MeshStandardMaterial({ color: 0xf5f3ee, roughness: 0.9 }),
-      pillowOlive: new THREE.MeshStandardMaterial({ color: 0x556b2f, roughness: 0.8 }),
-      pillowTerra: new THREE.MeshStandardMaterial({ color: 0xc86432, roughness: 0.8 }),
-      plantGreen: new THREE.MeshStandardMaterial({ color: 0x2e6b28, roughness: 0.6 }),
-      palmFrond: new THREE.MeshStandardMaterial({ color: 0x3d8c32, roughness: 0.5 }),
-      potClay: new THREE.MeshStandardMaterial({ color: 0xc87d55, roughness: 0.8 }),
-      potWhite: new THREE.MeshStandardMaterial({ color: 0xf1f5f9, roughness: 0.3 }),
-      graniteBlack: new THREE.MeshStandardMaterial({ color: 0x111317, roughness: 0.15 }),
-      glass: new THREE.MeshPhysicalMaterial({ color: 0xa5d8ff, transparent: true, opacity: 0.35, roughness: 0.05, transmission: 0.9 }),
-      steel: new THREE.MeshStandardMaterial({ color: 0xe2e8f0, roughness: 0.2, metalness: 0.95 }),
-      blackMetal: new THREE.MeshStandardMaterial({ color: 0x18181b, roughness: 0.35, metalness: 0.8 }),
-      jaliMat: new THREE.MeshStandardMaterial({ map: this.jaliTex, emissive: 0xf59e0b, emissiveIntensity: 0.4 }),
-      asphalt: new THREE.MeshStandardMaterial({ color: 0x1c212a, roughness: 0.95 }),
-      signboard: new THREE.MeshStandardMaterial({ map: this.signboardTex, roughness: 0.3, emissive: 0xf59e0b, emissiveIntensity: 0.15 }),
+    // 2. Flooring (Italian Marble, Honey Teak, Terracotta)
+    this.mat.marbleFloor = new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.2, metalness: 0.06 });
+    this.mat.woodFloor = new THREE.MeshStandardMaterial({ color: 0x9a6438, roughness: 0.45, metalness: 0.04 });
+    this.mat.paverFloor = new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.9 });
+    this.mat.terraceTile = new THREE.MeshStandardMaterial({ color: 0xc27756, roughness: 0.85 });
 
-      // Kirana store specific materials
-      kiranaBackdrop: new THREE.MeshStandardMaterial({ map: this.kiranaPhotoTex, roughness: 0.65 }),
-      blueShelfTrim: new THREE.MeshStandardMaterial({ color: 0x1d4ed8, roughness: 0.3, metalness: 0.1 }),
-      riceMat: new THREE.MeshStandardMaterial({ map: this.riceTex, roughness: 0.85 }),
-      dalMat: new THREE.MeshStandardMaterial({ map: this.dalTex, roughness: 0.8 }),
-      burlapMat: new THREE.MeshStandardMaterial({ map: this.burlapTex, roughness: 0.9 }),
-      grainBagMat: new THREE.MeshStandardMaterial({ map: this.grainBagTex, roughness: 0.7 }),
-      snackKurkureMat: new THREE.MeshStandardMaterial({ map: this.snackKurkureTex, roughness: 0.45, side: THREE.DoubleSide }),
-      snackLaysBlueMat: new THREE.MeshStandardMaterial({ map: this.snackLaysBlueTex, roughness: 0.45, side: THREE.DoubleSide }),
-      snackLaysGreenMat: new THREE.MeshStandardMaterial({ map: this.snackLaysGreenTex, roughness: 0.45, side: THREE.DoubleSide }),
-      oilTinMat: new THREE.MeshStandardMaterial({ map: this.oilTinTex, roughness: 0.25, metalness: 0.4 }),
-      scaleDisplayMat: new THREE.MeshBasicMaterial({ map: this.scaleDisplayTex }),
-      oilBottlePlastic: new THREE.MeshPhysicalMaterial({ color: 0xfacc15, transparent: true, opacity: 0.75, roughness: 0.1, transmission: 0.7 }),
-      candyJarGlass: new THREE.MeshPhysicalMaterial({ color: 0xffffff, transparent: true, opacity: 0.3, roughness: 0.05, transmission: 0.92 }),
-      lidRed: new THREE.MeshStandardMaterial({ color: 0xdc2626, roughness: 0.3 }),
-      lidYellow: new THREE.MeshStandardMaterial({ color: 0xfacc15, roughness: 0.3 })
-    };
+    // 3. Glass & Metals
+    this.mat.glass = new THREE.MeshPhysicalMaterial({
+      color: 0xffffff,
+      transparent: true,
+      opacity: 0.35,
+      roughness: 0.05,
+      transmission: 0.9,
+      thickness: 0.5
+    });
+    this.mat.balustradeGlass = new THREE.MeshPhysicalMaterial({
+      color: 0x93c5fd,
+      transparent: true,
+      opacity: 0.45,
+      roughness: 0.1,
+      metalness: 0.1
+    });
+    this.mat.darkMetal = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.4, metalness: 0.8 });
+    this.mat.brassGold = new THREE.MeshStandardMaterial({ color: 0xd4af37, roughness: 0.3, metalness: 0.85 });
+
+    // 4. Wood & Furniture
+    this.mat.teakWood = new THREE.MeshStandardMaterial({ color: 0x6b4423, roughness: 0.5, metalness: 0.05 });
+    this.mat.blackGranite = new THREE.MeshStandardMaterial({ color: 0x111113, roughness: 0.2, metalness: 0.1 });
+
+    // 5. Studio Floor Material
+    this.studioFloorMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, roughness: 0.95, metalness: 0.02 });
+
+    // 6. Kirana Sample Photo Texture
+    const loader = new THREE.TextureLoader();
+    if (typeof window !== 'undefined' && window.KIRANA_SAMPLE_DATA_URL) {
+      const tex = loader.load(window.KIRANA_SAMPLE_DATA_URL);
+      tex.wrapS = THREE.ClampToEdgeWrapping;
+      tex.wrapT = THREE.ClampToEdgeWrapping;
+      this.mat.kiranaSamplePoster = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.7 });
+    } else {
+      this.mat.kiranaSamplePoster = new THREE.MeshStandardMaterial({ color: 0x1e3a8a, roughness: 0.7 });
+    }
+
+    // 7. Signboard Texture
+    const signCanvas = document.createElement('canvas');
+    signCanvas.width = 1536;
+    signCanvas.height = 256;
+    const ctx = signCanvas.getContext('2d');
+    ctx.fillStyle = '#dc2626';
+    ctx.fillRect(0, 0, 1536, 256);
+    ctx.fillStyle = '#fef08a';
+    ctx.fillRect(14, 14, 1508, 228);
+    ctx.fillStyle = '#b91c1c';
+    ctx.font = 'bold 78px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('శ్రీ సిద్ధార్థ కిరాణం & జనరల్ స్టోర్స్', 768, 85);
+    ctx.fillStyle = '#1e3a8a';
+    ctx.font = 'bold 48px sans-serif';
+    ctx.fillText('SRI SIDDARTHA KIRANA & GENERAL STORES', 768, 175);
+    ctx.fillStyle = '#047857';
+    ctx.font = 'bold 26px sans-serif';
+    ctx.fillText('RAMNAGAR • MANCHERIAL • ALL PROVISIONS & RECHARGES', 768, 225);
+
+    const signTex = new THREE.CanvasTexture(signCanvas);
+    this.mat.kiranaSignboard = new THREE.MeshStandardMaterial({ map: signTex, roughness: 0.5 });
   }
 
   // ==========================================================================
   // SCENE BUILDER
   // ==========================================================================
   buildScene() {
-    // 1. Site, Road, Boundary & Gate
+    this.siteGroup = new THREE.Group();
+    this.boundaryGroup = new THREE.Group(); // Dedicated group to hide compound walls during 3D floor plan top views!
+    this.groundGroup = new THREE.Group();
+    this.firstGroup = new THREE.Group();
+    this.terraceGroup = new THREE.Group();
+    this.furnitureGroup = new THREE.Group();
+    this.greeneryGroup = new THREE.Group();
+    this.hotspotGroup = new THREE.Group();
+
+    this.scene.add(this.siteGroup);
+    this.scene.add(this.boundaryGroup);
+    this.scene.add(this.groundGroup);
+    this.scene.add(this.firstGroup);
+    this.scene.add(this.terraceGroup);
+    this.scene.add(this.furnitureGroup);
+    this.scene.add(this.greeneryGroup);
+    this.scene.add(this.hotspotGroup);
+
+    // 1. Site, Studio Floor, 30' South Road & Boundary
     this.buildSiteAndRoad();
     this.buildBoundary();
 
-    // 2. Ground Floor Shell & Residential Interior
-    this.buildGroundFloorShell();
-
-    // 3. Commercial Shop
+    // 2. Commercial Kirana General Store (Ground South-West)
     this.buildCommercialShopDetailed();
 
-    // 4. First Floor: THE NEW LUXURY SKY GARDEN BALCONY DECK & Duplex
-    this.buildSkyGardenDeck();
+    // 3. Ground Floor Residence
+    this.buildGroundFloorShell();
+
+    // 4. First Floor Duplex & Front Suite
     this.buildFirstFloorRemaining();
 
     // 5. Roof Terrace & Exterior Elevation
     this.buildTerrace();
     this.buildElevationFacade();
 
-    // 6. Natural Greenery & Avenue Trees (Apartment Listing Style)
+    // 6. Natural Greenery & Avenue Trees
     this.buildNaturalGreenery();
 
     // 7. Interactive Floor Hotspots
     this.buildFloorHotspots();
+
+    // 8. Minimalist 3D Room Dimension Badges (Apartment Listing Presentation)
+    this.buildRoomLabels();
   }
 
   addWall(group, x, y, z, w, h, d, mat = this.mat.extWhite, isExt = false) {
@@ -1103,1379 +677,833 @@ class CompleteDuplexApp {
   }
 
   // ==========================================================================
-  // SITE & ROAD
+  // SITE & ROAD (MINIMAL STUDIO PRESENTATION)
   // ==========================================================================
   buildSiteAndRoad() {
-    const road = new THREE.Mesh(new THREE.PlaneGeometry(120, 30), this.mat.asphalt);
+    // 1. Clean Studio Floor (Minimalist soft grey, seamless distraction-free background)
+    const siteBase = new THREE.Mesh(new THREE.PlaneGeometry(300, 300), this.studioFloorMat);
+    siteBase.rotation.x = -Math.PI / 2;
+    siteBase.position.set(0, -0.05, 0);
+    siteBase.receiveShadow = true;
+    this.siteGroup.add(siteBase);
+
+    // 2. 30' South Road
+    const road = new THREE.Mesh(new THREE.PlaneGeometry(160, 34), new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.85 }));
     road.rotation.x = -Math.PI / 2;
-    road.position.set(0, 0, -45);
+    road.position.set(0, 0.02, -50);
     road.receiveShadow = true;
     this.siteGroup.add(road);
 
-    for (let x = -45; x <= 45; x += 10) {
-      const stripe = new THREE.Mesh(new THREE.PlaneGeometry(5, 0.4), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+    // Road divider markings
+    for (let x = -60; x <= 60; x += 14) {
+      const stripe = new THREE.Mesh(new THREE.PlaneGeometry(6, 0.5), new THREE.MeshBasicMaterial({ color: 0xffffff }));
       stripe.rotation.x = -Math.PI / 2;
-      stripe.position.set(x, 0.02, -45);
+      stripe.position.set(x, 0.03, -50);
       this.siteGroup.add(stripe);
     }
 
-    const curb = new THREE.Mesh(new THREE.BoxGeometry(120, 0.4, 4), this.mat.paverFloor);
-    curb.position.set(0, 0.2, -31.5);
-    curb.receiveShadow = true;
+    // Road curb
+    const curb = new THREE.Mesh(new THREE.BoxGeometry(160, 0.6, 1.2), this.mat.extGrey);
+    curb.position.set(0, 0.3, -33.5);
     this.siteGroup.add(curb);
-
-    const plot = new THREE.Mesh(new THREE.PlaneGeometry(90, 100), new THREE.MeshStandardMaterial({ color: 0x244a22, roughness: 0.95 }));
-    plot.rotation.x = -Math.PI / 2;
-    plot.position.set(0, -0.05, 12);
-    plot.receiveShadow = true;
-    this.siteGroup.add(plot);
   }
 
   buildBoundary() {
-    const wallH = 4.5;
-    const wallT = 0.75;
-    const wallMat = this.mat.extGrey;
+    // Compound wall: 33' width (X: -16.5 to +16.5), 60' depth (Z: -33.0 to +27.0)
+    // Placed in this.boundaryGroup so it can be automatically hidden during top-down views!
+    const wallH = 6.0;
+    const b = this.boundaryGroup;
 
-    this.addWall(this.siteGroup, -16.5 - wallT, 0, -30, wallT, wallH, 60, wallMat);
-    this.addWall(this.siteGroup, 16.5, 0, -30, wallT, wallH, 60, wallMat);
-    this.addWall(this.siteGroup, -16.5, 0, 30, 33 + wallT * 2, wallH, wallT, wallMat);
+    // West Boundary (X = -16.5)
+    this.addWall(b, -16.5, 0, -33.0, 0.6, wallH, 60.0, this.mat.extGrey, true);
+    // East Boundary (X = 16.0)
+    this.addWall(b, 16.0, 0, -33.0, 0.6, wallH, 60.0, this.mat.extGrey, true);
+    // North Rear Boundary (Z = 27.0)
+    this.addWall(b, -16.5, 0, 27.0, 33.0, wallH, 0.6, this.mat.extGrey, true);
 
-    this.addWall(this.siteGroup, -16.5, 0, -30, 1.5, 6, 1.5, wallMat);
-    this.addWall(this.siteGroup, 1.5, 0, -30, 1.5, 6, 1.5, wallMat);
-    this.addWall(this.siteGroup, 15.5, 0, -30, 1.5, 6, 1.5, wallMat);
+    // Front Gate Pillars (South-East)
+    const pillar1 = new THREE.Mesh(new THREE.BoxGeometry(1.5, 7.5, 1.5), this.mat.darkMetal);
+    pillar1.position.set(1.0, 3.75, -33.0);
+    b.add(pillar1);
 
-    const gateFrame = new THREE.Mesh(new THREE.BoxGeometry(13.8, 5, 0.2), this.mat.blackMetal);
-    gateFrame.position.set(8.5, 2.5, -30);
-    this.siteGroup.add(gateFrame);
+    const pillar2 = new THREE.Mesh(new THREE.BoxGeometry(1.5, 7.5, 1.5), this.mat.darkMetal);
+    pillar2.position.set(13.25, 3.75, -33.0);
+    b.add(pillar2);
 
-    for (let y = 0.6; y <= 4.6; y += 0.55) {
-      const slat = new THREE.Mesh(new THREE.BoxGeometry(13.5, 0.22, 0.25), this.mat.teakWood);
-      slat.position.set(8.5, y, -30);
-      this.siteGroup.add(slat);
-    }
+    // Main Gate
+    const gate = new THREE.Mesh(new THREE.BoxGeometry(11.5, 6.0, 0.15), this.mat.darkMetal);
+    gate.position.set(7.125, 3.0, -33.0);
+    b.add(gate);
   }
 
   // ==========================================================================
-  // 🌿 THE NEW FIRST-FLOOR EXPANSIVE SKY GARDEN DECK & BALCONY LOUNGE
-  // ==========================================================================
-  buildSkyGardenDeck() {
-    const g = this.skyGardenGroup;
-    const ffY = 13.0; // First floor level
-    const deckW = 29.5; // Full width across front (X = -15.5 to +14)
-    const deckD = 13.5; // Depth from front railing to back glass door (Z = -27.5 to -14.0)
-
-    // 1. Weathered Outdoor Teak Timber Decking Floor
-    const deckFloorGeo = new THREE.BoxGeometry(deckW, 0.35, deckD);
-    const deckFloor = new THREE.Mesh(deckFloorGeo, this.mat.deckFloor);
-    deckFloor.position.set(-0.75, ffY - 0.17, -20.75);
-    deckFloor.receiveShadow = true;
-    g.add(deckFloor);
-
-    // 2. Frameless 12mm Tempered Safety Glass Balustrade (Full Front South Elevation)
-    // South Front Railing (Width 29.5 ft at Z = -27.5)
-    this.buildGlassRailing(g, -15.5, ffY, -27.5, deckW, 3.8, 'x');
-    // West Side Railing (X = -15.5)
-    this.buildGlassRailing(g, -15.5, ffY, -27.5, deckD, 3.8, 'z');
-    // East Side Railing (X = +14.0)
-    this.buildGlassRailing(g, 14.0, ffY, -27.5, deckD, 3.8, 'z');
-
-    // 3. Back Interior Connection Wall (Z = -14.0) with Wide 10' Sliding Glass Doors
-    this.addWall(g, -15.5, ffY, -14.0, 7.5, 10.0, 0.75, this.mat.extWhite, true); // West section
-    this.addWall(g, 2.0, ffY, -14.0, 12.0, 10.0, 0.75, this.mat.extWhite, true); // East section
-    this.addWall(g, -8.0, ffY + 7.5, -14.0, 10.0, 2.5, 0.75, this.mat.extWhite, true); // Lintel beam
-
-    // 10-Foot Wide Sliding Glass French Doors (X = -8 to +2)
-    const frenchDoor1 = new THREE.Mesh(new THREE.BoxGeometry(5.0, 7.3, 0.15), this.mat.glass);
-    frenchDoor1.position.set(-5.5, ffY + 3.75, -14.0);
-    g.add(frenchDoor1);
-
-    const frenchDoor2 = new THREE.Mesh(new THREE.BoxGeometry(5.0, 7.3, 0.15), this.mat.glass);
-    frenchDoor2.position.set(-0.5, ffY + 3.75, -13.9);
-    g.add(frenchDoor2);
-
-    // Black Powder Coated Door Frame
-    const frame = new THREE.Mesh(new THREE.BoxGeometry(10.2, 7.5, 0.3), this.mat.blackMetal);
-    frame.position.set(-3.0, ffY + 3.75, -14.0);
-    g.add(frame);
-
-    // 4. Outdoor Luxury Rattan Sectional Sofa (L-Shaped with Deep Cushions)
-    // Main Section (Length 8 ft, Depth 3.2 ft)
-    const sofaBase1 = new THREE.Mesh(new THREE.BoxGeometry(8.5, 0.8, 3.4), this.mat.wicker);
-    sofaBase1.position.set(-8.5, ffY + 0.4, -20.0);
-    g.add(sofaBase1);
-
-    const seatCushion1 = new THREE.Mesh(new THREE.BoxGeometry(8.1, 0.6, 3.0), this.mat.cushionCream);
-    seatCushion1.position.set(-8.5, ffY + 0.9, -20.0);
-    g.add(seatCushion1);
-
-    const backCushion1 = new THREE.Mesh(new THREE.BoxGeometry(8.1, 1.8, 0.6), this.mat.cushionCream);
-    backCushion1.position.set(-8.5, ffY + 1.8, -18.6);
-    g.add(backCushion1);
-
-    // L-Return Section (Length 5 ft)
-    const sofaBase2 = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.8, 5.0), this.mat.wicker);
-    sofaBase2.position.set(-11.5, ffY + 0.4, -22.5);
-    g.add(sofaBase2);
-
-    const seatCushion2 = new THREE.Mesh(new THREE.BoxGeometry(3.0, 0.6, 4.6), this.mat.cushionCream);
-    seatCushion2.position.set(-11.5, ffY + 0.9, -22.5);
-    g.add(seatCushion2);
-
-    // Decorative Accent Throw Pillows (Olive Green & Terracotta)
-    const p1 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 0.35), this.mat.pillowOlive);
-    p1.position.set(-6.5, ffY + 1.6, -19.5);
-    p1.rotation.y = -0.2;
-    g.add(p1);
-
-    const p2 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 0.35), this.mat.pillowTerra);
-    p2.position.set(-9.5, ffY + 1.6, -19.5);
-    p2.rotation.y = 0.2;
-    g.add(p2);
-
-    const p3 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 0.35), this.mat.pillowOlive);
-    p3.position.set(-11.5, ffY + 1.6, -24.0);
-    g.add(p3);
-
-    // 5. Low Outdoor Teak Coffee Table
-    const table = new THREE.Mesh(new THREE.BoxGeometry(4.5, 0.9, 2.5), this.mat.teakWood);
-    table.position.set(-7.5, ffY + 0.45, -23.5);
-    g.add(table);
-
-    // Open Magazine / Book on table
-    const mag = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.05, 0.9), new THREE.MeshStandardMaterial({ color: 0xffffff }));
-    mag.position.set(-7.8, ffY + 0.93, -23.5);
-    g.add(mag);
-
-    // 6. Lush Potted Terrace Plants on Deck (Scaled to natural, elegant domestic sizes ~3.5 ft)
-    // Small Areca Palm in White Ceramic Pot (South-West Corner)
-    this.createPottedTree(g, -13.5, ffY, -25.5, 'palm', 3.8);
-
-    // Ficus Benjamina in Terracotta Pot (South-East Corner)
-    this.createPottedTree(g, 12.0, ffY, -25.5, 'ficus', 3.5);
-
-    // Potted Terrace Plants flanking the Lounge Glass Doors
-    this.createPottedTree(g, -9.5, ffY, -15.5, 'palm', 3.0);
-    this.createPottedTree(g, 3.5, ffY, -15.5, 'ficus', 3.0);
-
-    // Flower Planter Trough Boxes along the Front Railing (with vibrant pink bougainvillea)
-    for (let x of [-3.0, 5.0]) {
-      const trough = new THREE.Mesh(new THREE.BoxGeometry(4.5, 0.9, 0.8), this.mat.potWhite);
-      trough.position.set(x, ffY + 0.45, -26.8);
-      g.add(trough);
-
-      // Green foliage inside trough
-      const foliage = new THREE.Mesh(new THREE.BoxGeometry(4.3, 0.6, 0.7), this.mat.plantGreen);
-      foliage.position.set(x, ffY + 1.0, -26.8);
-      g.add(foliage);
-
-      // Pink bougainvillea flowers
-      const flowerMat = new THREE.MeshStandardMaterial({ color: 0xec4899, roughness: 0.5 });
-      for (let fx = -1.8; fx <= 1.8; fx += 0.9) {
-        const flower = new THREE.Mesh(new THREE.SphereGeometry(0.25, 8, 8), flowerMat);
-        flower.position.set(x + fx, ffY + 1.3, -26.8);
-        g.add(flower);
-      }
-    }
-
-    // 7. Modern Overhead Pergola Timber Rafters (Partial sunshade over the sofa)
-    for (let x = -14.0; x <= -2.0; x += 1.8) {
-      const rafter = new THREE.Mesh(new THREE.BoxGeometry(0.35, 0.8, 12.0), this.mat.teakWood);
-      rafter.position.set(x, ffY + 10.0, -21.0);
-      rafter.castShadow = true;
-      g.add(rafter);
-    }
-
-    // Warm Ambient Deck Evening Sconces
-    const deckSpot1 = new THREE.PointLight(0xffedd5, 1.2, 15);
-    deckSpot1.position.set(-8.5, ffY + 8.0, -15.0);
-    g.add(deckSpot1);
-    this.interiorLights.push(deckSpot1);
-
-    const deckSpot2 = new THREE.PointLight(0xffedd5, 1.2, 15);
-    deckSpot2.position.set(6.0, ffY + 8.0, -15.0);
-    g.add(deckSpot2);
-    this.interiorLights.push(deckSpot2);
-  }
-
-  // Helper: Create Realistic Small Potted Plants
-  createPottedTree(group, x, y, z, type = 'palm', height = 3.5) {
-    const potMat = type === 'palm' ? this.mat.potWhite : this.mat.potClay;
-    const potH = 1.0;
-    const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.35, potH, 16), potMat);
-    pot.position.set(x, y + potH / 2, z);
-    pot.castShadow = true;
-    group.add(pot);
-
-    // Soil
-    const soil = new THREE.Mesh(new THREE.CylinderGeometry(0.48, 0.48, 0.05, 16), new THREE.MeshStandardMaterial({ color: 0x2b1d0c }));
-    soil.position.set(x, y + potH, z);
-    group.add(soil);
-
-    // Stem / Trunk
-    const trunkH = height * 0.4;
-    const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.12, trunkH, 10), this.mat.teakWood);
-    trunk.position.set(x, y + potH + trunkH / 2, z);
-    trunk.castShadow = true;
-    group.add(trunk);
-
-    // Foliage Canopy (compact & elegant)
-    if (type === 'palm') {
-      const frondCount = 6;
-      for (let i = 0; i < frondCount; i++) {
-        const angle = (i / frondCount) * Math.PI * 2;
-        const frond = new THREE.Mesh(new THREE.ConeGeometry(0.55, height * 0.55, 6), this.mat.palmFrond);
-        frond.position.set(x + Math.cos(angle) * 0.45, y + potH + trunkH + 0.3, z + Math.sin(angle) * 0.45);
-        frond.rotation.z = Math.cos(angle) * 0.45;
-        frond.rotation.x = Math.sin(angle) * 0.45;
-        frond.castShadow = true;
-        group.add(frond);
-      }
-    } else {
-      const canopy = new THREE.Mesh(new THREE.SphereGeometry(height * 0.3, 10, 10), this.mat.plantGreen);
-      canopy.position.set(x, y + potH + trunkH + height * 0.2, z);
-      canopy.scale.set(1.0, 1.15, 1.0);
-      canopy.castShadow = true;
-      group.add(canopy);
-    }
-  }
-
-  // ==========================================================================
-  // NATURAL GREENERY & AVENUE TREES (Scaled to neat ornamental heights)
-  // ==========================================================================
-  buildNaturalGreenery() {
-    const gr = this.greeneryGroup;
-
-    // Small, manicured ornamental avenue trees along the South Road (Height ~10-11 ft, sits below 1st floor)
-    const treePositions = [
-      { x: -28, z: -35 },
-      { x: -18, z: -35 },
-      { x: 18, z: -35 },
-      { x: 28, z: -35 }
-    ];
-
-    treePositions.forEach(pos => {
-      const trunkH = 5.0; // short neat trunk
-      const trunk = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.25, 0.35, trunkH, 10),
-        new THREE.MeshStandardMaterial({ color: 0x4a3525, roughness: 0.9 })
-      );
-      trunk.position.set(pos.x, trunkH / 2, pos.z);
-      trunk.castShadow = true;
-      gr.add(trunk);
-
-      // Neat ornamental conical canopy
-      const canopy = new THREE.Mesh(new THREE.ConeGeometry(2.2, 5.5, 10), this.mat.plantGreen);
-      canopy.position.set(pos.x, trunkH + 2.75, pos.z);
-      canopy.castShadow = true;
-      gr.add(canopy);
-    });
-
-    // Indoor Houseplants (Living Room, Dining, Master Bed)
-    this.createPottedTree(this.furnitureGroup, 12.0, 2.5, 3.5, 'ficus', 3.5);
-    this.createPottedTree(this.furnitureGroup, 12.0, 2.5, 18.0, 'palm', 3.2);
-
-    const sPot = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.25, 0.8, 12), this.mat.potClay);
-    sPot.position.set(-14.0, 2.5 + 0.4, -9.5);
-    this.furnitureGroup.add(sPot);
-    const sPlant = new THREE.Mesh(new THREE.ConeGeometry(0.4, 1.6, 6), this.mat.plantGreen);
-    sPlant.position.set(-14.0, 2.5 + 1.2, -9.5);
-    this.furnitureGroup.add(sPlant);
-  }
-
-  // ==========================================================================
-  // FIRST FLOOR (DUPLEX VOID & REMAINING ROOMS)
-  // ==========================================================================
-  buildFirstFloorRemaining() {
-    const ffY = 13.0;
-    const floorH = 10.0;
-    const f = this.firstGroup;
-
-    // Slabs around Living Cutout
-    const s1 = new THREE.Mesh(new THREE.BoxGeometry(15.75, 0.5, 40.0), this.mat.extWhite);
-    s1.position.set(-7.125, ffY - 0.25, 6.75);
-    f.add(s1);
-
-    const s2 = new THREE.Mesh(new THREE.BoxGeometry(13.25, 0.5, 20.25), this.mat.extWhite);
-    s2.position.set(7.375, ffY - 0.25, 16.625);
-    f.add(s2);
-
-    // Duplex Glass Railing Overlooking Living
-    this.buildGlassRailing(f, 0.75, ffY, -9, 15.5, 3.5, 'z');
-    this.buildGlassRailing(f, 0.75, ffY, 6.5, 13.25, 3.5, 'x');
-    this.buildGlassRailing(f, 0.75, ffY, -9, 13.25, 3.5, 'x');
-
-    // Lounge
-    const lSofa = new THREE.Mesh(new THREE.BoxGeometry(7, 1.8, 3.0), new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.8 }));
-    lSofa.position.set(4.5, ffY + 0.9, 13.5);
-    f.add(lSofa);
-
-    // Study Desk
-    const desk = new THREE.Mesh(new THREE.BoxGeometry(5.2, 2.5, 2.4), this.mat.teakWood);
-    desk.position.set(9.5, ffY + 1.25, 13.5);
-    f.add(desk);
-
-    // Upper Bedrooms
-    this.buildBedroomInterior(-8.5, ffY, -6, 'king');
-    this.buildBedroomInterior(-6.25, ffY, 22.25, 'queen');
-
-    // Rear Balcony Railing
-    this.buildGlassRailing(f, -12.5, ffY, 30.75, 16.5, 3.5, 'x');
-
-    // First Floor Outer Walls (North, East, West)
-    this.addWall(f, -15.75, ffY, -14.0, 0.75, floorH, 40.75, this.mat.extWhite, true);
-    this.addWall(f, 14, ffY, 6.5, 0.75, floorH, 20.25, this.mat.extWhite, true);
-    this.addWall(f, -15, ffY, 26.75, 29.75, floorH, 0.75, this.mat.extWhite, true);
-  }
-
-  // ==========================================================================
-  // COMMERCIAL SHOP
-  // ==========================================================================
-  // ==========================================================================
-  // AUTHENTIC TELANGANA KIRANA GENERAL STORE (MATCHING REFERENCE SAMPLE)
+  // COMMERCIAL KIRANA GENERAL STORE (GROUND SOUTH-WEST: 16'-0" × 12'-6")
   // ==========================================================================
   buildCommercialShopDetailed() {
-    const s = this.shopGroup;
-    const floorY = 1.0;
-    const shopH = 11.5;
+    const s = this.groundGroup;
+    const floorY = 2.5;
+    const shopH = 10.0;
 
-    // 1. Shop Floor & Entrance Ramp
-    const floorGeo = new THREE.BoxGeometry(17.0, 0.25, 12.5);
-    const floorMesh = new THREE.Mesh(floorGeo, this.mat.shopFloor);
-    floorMesh.position.set(-6.5, floorY - 0.12, -20.75);
-    floorMesh.receiveShadow = true;
-    s.add(floorMesh);
+    // Shop Floor Tile
+    const shopFloor = new THREE.Mesh(new THREE.BoxGeometry(16.0, 0.25, 12.5), this.mat.marbleFloor);
+    shopFloor.position.set(-7.0, floorY - 0.12, -18.25);
+    s.add(shopFloor);
 
-    const ramp = new THREE.Mesh(new THREE.BoxGeometry(17.0, 1.0, 3.0), this.mat.paverFloor);
-    ramp.position.set(-6.5, 0.5, -28.5);
-    ramp.receiveShadow = true;
-    s.add(ramp);
+    // 3'-0" Front Platform in front of shutter
+    const plat = new THREE.Mesh(new THREE.BoxGeometry(16.0, 0.6, 3.0), this.mat.paverFloor);
+    plat.position.set(-7.0, floorY - 0.3, -26.0);
+    s.add(plat);
 
-    // 2. Shop Perimeter Walls (West, East, North/Back Wall)
-    this.addWall(s, -15.75, floorY, -27.0, 0.75, shopH, 12.5, this.mat.extWhite, true);
-    this.addWall(s, 2.0, floorY, -27.0, 0.75, shopH, 12.5, this.mat.extGrey, true);
-    this.addWall(s, -15.75, floorY, -14.5, 18.5, shopH, 0.75, this.mat.intWall, false);
-
-    // 3. Shutter, Grand Bilingual Signboard & Exterior Entrance
+    // Signboard & Rolling Shutter
     this.buildKiranaEntranceAndSignboard(s, floorY, shopH);
-
-    // 4. Hero Back-Wall Shelving Rack (Blue-trimmed, densely stocked, exactly like sample photo)
+    // Blue Trimmed Shelves (Parle-G, Maggi, Everest)
     this.buildKiranaHeroShelving(s, floorY, shopH);
-
-    // 5. Authentic Wooden Shopkeeper Counter with Weighing Scale & Candy Jars
+    // Wooden Shopkeeper Counter with Digital Scale & Candy Jars
     this.buildKiranaShopkeeperCounter(s, floorY);
-
-    // 6. Foreground Open Grain Sacks (Basmati Rice, Toor Dal, Chana Dal with Scoop)
+    // Grain Sacks (Basmati Rice with Scoop, Golden Toor Dal)
     this.buildKiranaGrainSacks(s, floorY);
-
-    // 7. Side Wall Shelves (Detergents, Soaps, Oils, Sunflower Tins & Crates)
-    this.buildKiranaSideStorage(s, floorY, shopH);
-
-    // 8. Overhead Dangling Snack Strips (Kurkure, Lay's & Shampoo Sachets)
+    // Hanging Kurkure/Snack Strips
     this.buildKiranaHangingSnacks(s, floorY);
-
-    // 9. Authentic Commercial Shop Tube Lighting (Bright cool daylight tubes)
-    for (let x of [-11.0, -2.5]) {
-      const tubeLight = new THREE.PointLight(0xf8fafc, 1.45, 16);
-      tubeLight.position.set(x, floorY + shopH - 0.8, -20.5);
-      s.add(tubeLight);
-      this.interiorLights.push(tubeLight);
-
-      // 3D Fluorescent Tube Fixture
-      const fixture = new THREE.Mesh(new THREE.BoxGeometry(4.0, 0.15, 0.4), this.mat.steel);
-      fixture.position.set(x, floorY + shopH - 0.2, -20.5);
-      s.add(fixture);
-      const tube = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 3.8, 12), new THREE.MeshBasicMaterial({ color: 0xffffff }));
-      tube.rotation.z = Math.PI / 2;
-      tube.position.set(x, floorY + shopH - 0.35, -20.5);
-      s.add(tube);
-    }
   }
 
   buildKiranaEntranceAndSignboard(s, floorY, shopH) {
-    // Rolled Shutter Coil across the top entrance
-    const rolledShutter = new THREE.Mesh(new THREE.CylinderGeometry(0.85, 0.85, 16.6, 20), this.mat.blackMetal);
-    rolledShutter.rotation.z = Math.PI / 2;
-    rolledShutter.position.set(-6.5, floorY + shopH - 1.2, -27.0);
-    s.add(rolledShutter);
+    // Grand Signboard above shutter
+    const board = new THREE.Mesh(new THREE.BoxGeometry(16.0, 2.6, 0.3), this.mat.kiranaSignboard);
+    board.position.set(-7.0, floorY + shopH - 1.3, -24.65);
+    s.add(board);
 
-    // Shutter Guide Channels on left and right columns
-    for (let x of [-14.9, 1.9]) {
-      const channel = new THREE.Mesh(new THREE.BoxGeometry(0.3, shopH - 1.2, 0.3), this.mat.blackMetal);
-      channel.position.set(x, floorY + (shopH - 1.2) / 2, -27.0);
-      s.add(channel);
-    }
+    // Open Rolling Shutter
+    const shutterCanopy = new THREE.Mesh(new THREE.BoxGeometry(14.0, 1.4, 0.8), this.mat.darkMetal);
+    shutterCanopy.position.set(-7.0, floorY + shopH - 2.5, -24.5);
+    s.add(shutterCanopy);
 
-    // Grand Bilingual Telugu & English Signboard
-    const signGeo = new THREE.BoxGeometry(16.6, 2.6, 0.35);
-    const signMesh = new THREE.Mesh(signGeo, this.mat.signboard);
-    signMesh.position.set(-6.5, floorY + shopH + 0.3, -27.2);
-    s.add(signMesh);
-
-    // Twin Signboard Floodlights
-    for (let sx of [-11.0, -2.0]) {
-      const flood = new THREE.PointLight(0xfef08a, 1.3, 14);
-      flood.position.set(sx, floorY + shopH + 1.2, -28.2);
-      s.add(flood);
-
-      const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.2, 8), this.mat.steel);
-      arm.rotation.x = Math.PI / 3;
-      arm.position.set(sx, floorY + shopH + 1.4, -27.6);
-      s.add(arm);
-    }
+    // Rolled up shutter slats
+    const shutter = new THREE.Mesh(new THREE.BoxGeometry(13.6, 1.8, 0.2), new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.8, roughness: 0.4 }));
+    shutter.position.set(-7.0, floorY + shopH - 2.8, -24.4);
+    s.add(shutter);
   }
 
   buildKiranaHeroShelving(s, floorY, shopH) {
-    const rackW = 16.4;
-    const rackH = 9.8;
-    const rackDepth = 1.3;
-    const wallFace = -14.5;               // interior face of the shop's back (north) wall
-    const frontZ = wallFace - rackDepth;  // shelf front edge, facing customers (-z side)
-    const midZ = wallFace - rackDepth / 2;
-    const cx = -6.5;
+    const rackW = 12.0;
+    const rackH = 8.5;
+    const rackD = 1.6;
+    const shelfMat = new THREE.MeshStandardMaterial({ color: 0x6b4423, roughness: 0.6 });
+    const blueLipMat = new THREE.MeshStandardMaterial({ color: 0x1d4ed8, roughness: 0.4 });
 
-    // White backing board just in front of the wall
-    const backPanel = new THREE.Mesh(
-      new THREE.BoxGeometry(rackW, rackH, 0.1),
-      new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.85 })
-    );
-    backPanel.position.set(cx, floorY + rackH / 2, wallFace - 0.06);
+    // Back Panel
+    const backPanel = new THREE.Mesh(new THREE.BoxGeometry(rackW, rackH, 0.1), shelfMat);
+    backPanel.position.set(-7.0, floorY + rackH / 2, -12.2);
     s.add(backPanel);
 
-    // Reference-photo backdrop: three panels that reuse the left and right thirds of the
-    // sample photo (the stocked shelves) and skip the middle third (the shopkeeper).
-    const panelW = (rackW - 0.4) / 3;
-    const uRanges = [[0.0, 0.34], [0.66, 1.0], [0.0, 0.34]];
-    uRanges.forEach(([u0, u1], i) => {
-      const geo = new THREE.PlaneGeometry(panelW, rackH - 0.4);
-      const uv = geo.attributes.uv;
-      for (let k = 0; k < uv.count; k++) uv.setX(k, u0 + uv.getX(k) * (u1 - u0));
-      uv.needsUpdate = true;
-      const panel = new THREE.Mesh(geo, this.mat.kiranaBackdrop);
-      panel.rotation.y = Math.PI; // face customers looking toward the back wall (+z)
-      panel.position.set(cx - (rackW - 0.4) / 2 + panelW * (i + 0.5), floorY + rackH / 2, wallFace - 0.12);
-      s.add(panel);
-    });
+    // 5 Shelves with blue lips and products
+    for (let i = 0; i < 5; i++) {
+      const sy = floorY + 0.5 + i * 1.6;
+      const shelf = new THREE.Mesh(new THREE.BoxGeometry(rackW, 0.15, rackD), shelfMat);
+      shelf.position.set(-7.0, sy, -12.2 - rackD / 2);
+      s.add(shelf);
 
-    // Royal Blue Shelf Ledges (from the reference photo)
-    const shelfYs = [floorY + 1.6, floorY + 3.4, floorY + 5.2, floorY + 7.0, floorY + 8.8];
-    shelfYs.forEach(sy => {
-      const shelfLedge = new THREE.Mesh(new THREE.BoxGeometry(rackW, 0.18, rackDepth), this.mat.blueShelfTrim);
-      shelfLedge.position.set(cx, sy, midZ);
-      shelfLedge.receiveShadow = true;
-      shelfLedge.castShadow = true;
-      s.add(shelfLedge);
-    });
+      const lip = new THREE.Mesh(new THREE.BoxGeometry(rackW, 0.25, 0.1), blueLipMat);
+      lip.position.set(-7.0, sy + 0.08, -12.2 - rackD);
+      s.add(lip);
 
-    // Royal Blue Vertical Uprights
-    [-14.6, -10.5, -6.5, -2.5, 1.6].forEach(ux => {
-      const upright = new THREE.Mesh(new THREE.BoxGeometry(0.18, rackH, rackDepth + 0.05), this.mat.blueShelfTrim);
-      upright.position.set(ux, floorY + rackH / 2, midZ);
-      s.add(upright);
-    });
-
-    const itemZ = frontZ + 0.6; // sits on the ledge, in front of the backdrop
-
-    // Top Tier: Parle-G, Marie & Good Day biscuit stacks
-    const parleMat = new THREE.MeshStandardMaterial({ color: 0xfacc15, roughness: 0.4 });
-    const marieMat = new THREE.MeshStandardMaterial({ color: 0xf97316, roughness: 0.4 });
-    const goodDayMat = new THREE.MeshStandardMaterial({ color: 0x16a34a, roughness: 0.4 });
-    for (let x = -14.0; x <= 1.0; x += 0.8) {
-      const bMat = Math.sin(x * 3) > 0 ? parleMat : (Math.sin(x * 5) > 0 ? marieMat : goodDayMat);
-      for (let stack = 0; stack < 2; stack++) {
-        const pack = new THREE.Mesh(new THREE.BoxGeometry(0.65, 0.28, 0.75), bMat);
-        pack.position.set(x, shelfYs[4] + 0.2 + stack * 0.3, itemZ);
-        pack.castShadow = true;
-        s.add(pack);
+      // Groceries / Biscuit Packs / Masala boxes
+      const colors = [0xf59e0b, 0xef4444, 0x10b981, 0x3b82f6, 0x8b5cf6];
+      for (let j = 0; j < 8; j++) {
+        const itemMat = new THREE.MeshStandardMaterial({ color: colors[(i + j) % colors.length], roughness: 0.5 });
+        const box = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.9, 0.8), itemMat);
+        box.position.set(-12.0 + j * 1.4, sy + 0.55, -12.2 - rackD / 2);
+        s.add(box);
       }
     }
 
-    // 4th Tier: Maggi Noodles family packs & chocolate packs
-    const maggiMat = new THREE.MeshStandardMaterial({ color: 0xef4444, roughness: 0.4 });
-    const perkMat = new THREE.MeshStandardMaterial({ color: 0x3b82f6, roughness: 0.4 });
-    for (let x = -14.0; x <= 1.0; x += 0.9) {
-      const mPack = new THREE.Mesh(new THREE.BoxGeometry(0.75, 0.55, 0.7), Math.cos(x * 2) > 0 ? maggiMat : perkMat);
-      mPack.position.set(x, shelfYs[3] + 0.35, itemZ);
-      mPack.castShadow = true;
-      s.add(mPack);
-    }
-
-    // 3rd Tier: Cooking oil bottles
-    for (let x = -14.0; x <= 1.0; x += 0.75) {
-      const bottle = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.85, 12), this.mat.oilBottlePlastic);
-      bottle.position.set(x, shelfYs[2] + 0.5, itemZ);
-      s.add(bottle);
-      const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.12, 10), this.mat.lidRed);
-      cap.position.set(x, shelfYs[2] + 0.98, itemZ);
-      s.add(cap);
-    }
-
-    // 2nd Tier: Everest & MDH masala spice boxes
-    const masalaColors = [0xdc2626, 0xea580c, 0xf59e0b, 0x15803d, 0x991b1b, 0xca8a04];
-    for (let x = -14.2; x <= 1.2; x += 0.55) {
-      const col = masalaColors[Math.floor(Math.abs(x * 7)) % masalaColors.length];
-      const spiceBox = new THREE.Mesh(
-        new THREE.BoxGeometry(0.45, 0.65, 0.4),
-        new THREE.MeshStandardMaterial({ color: col, roughness: 0.35 })
-      );
-      spiceBox.position.set(x, shelfYs[1] + 0.4, itemZ);
-      spiceBox.castShadow = true;
-      s.add(spiceBox);
-    }
+    // Sample Photo Display Poster on side wall
+    const poster = new THREE.Mesh(new THREE.PlaneGeometry(6.5, 5.0), this.mat.kiranaSamplePoster);
+    poster.position.set(-14.85, floorY + 5.5, -18.25);
+    poster.rotation.y = Math.PI / 2;
+    s.add(poster);
   }
 
   buildKiranaShopkeeperCounter(s, floorY) {
-    const counterY = floorY + 3.0;
-    const counterZ = -19.5;
+    const f = this.furnitureGroup;
+    // Wooden L-counter
+    const c1 = new THREE.Mesh(new THREE.BoxGeometry(7.5, 3.2, 2.0), this.mat.teakWood);
+    c1.position.set(-9.0, floorY + 1.6, -19.5);
+    f.add(c1);
 
-    // Main Wooden Counter Base (Spans x = -13.5 to x = -4.5)
-    const counterBase = new THREE.Mesh(
-      new THREE.BoxGeometry(9.0, 2.9, 2.2),
-      this.mat.teakWood
-    );
-    counterBase.position.set(-9.0, floorY + 1.45, counterZ);
-    counterBase.castShadow = true;
-    counterBase.receiveShadow = true;
-    s.add(counterBase);
+    // Counter Top
+    const top = new THREE.Mesh(new THREE.BoxGeometry(7.8, 0.2, 2.3), this.mat.blackGranite);
+    top.position.set(-9.0, floorY + 3.25, -19.5);
+    f.add(top);
 
-    // Polished Countertop Lip
-    const counterTop = new THREE.Mesh(
-      new THREE.BoxGeometry(9.4, 0.15, 2.5),
-      new THREE.MeshStandardMaterial({ color: 0x451a03, roughness: 0.25 })
-    );
-    counterTop.position.set(-9.0, floorY + 2.95, counterZ);
-    counterTop.receiveShadow = true;
-    s.add(counterTop);
+    // Electronic Weighing Scale with Red LED
+    const scaleBase = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.4, 1.4), new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.6 }));
+    scaleBase.position.set(-11.0, floorY + 3.5, -19.5);
+    f.add(scaleBase);
 
-    // Pass-through flap on right
-    const flap = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.12, 2.3), this.mat.teakWood);
-    flap.position.set(-3.75, floorY + 2.95, counterZ);
-    s.add(flap);
+    const plate = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.1, 1.2), new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.9 }));
+    plate.position.set(-11.0, floorY + 3.75, -19.5);
+    f.add(plate);
 
-    // Shopkeeper Stool behind counter
-    const stoolSeat = new THREE.Mesh(new THREE.CylinderGeometry(0.7, 0.7, 0.15, 16), new THREE.MeshStandardMaterial({ color: 0x1e293b }));
-    stoolSeat.position.set(-8.5, floorY + 1.8, counterZ + 2.0);
-    s.add(stoolSeat);
-    const stoolLeg = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.1, 1.8, 8), this.mat.steel);
-    stoolLeg.position.set(-8.5, floorY + 0.9, counterZ + 2.0);
-    s.add(stoolLeg);
+    // Candy Jars with Red Lids (Matching Sample)
+    for (let k = 0; k < 4; k++) {
+      const jar = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.35, 0.9, 16), this.mat.glass);
+      jar.position.set(-8.0 + k * 0.9, floorY + 3.8, -19.5);
+      f.add(jar);
 
-    // 1. Digital Electronic Weighing Scale
-    const scaleBase = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.35, 1.3), this.mat.extGrey);
-    scaleBase.position.set(-8.5, counterY + 0.18, counterZ);
-    s.add(scaleBase);
-
-    const scalePlatter = new THREE.Mesh(new THREE.BoxGeometry(1.7, 0.05, 1.4), this.mat.steel);
-    scalePlatter.position.set(-8.5, counterY + 0.38, counterZ);
-    s.add(scalePlatter);
-
-    // Pole with Dual LED Display Tower
-    const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.4, 8), this.mat.steel);
-    pole.position.set(-9.2, counterY + 1.0, counterZ + 0.5);
-    s.add(pole);
-
-    const displayHead = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.5, 0.25), this.mat.scaleDisplayMat);
-    displayHead.position.set(-9.2, counterY + 1.6, counterZ + 0.5);
-    s.add(displayHead);
-
-    // Bag of lentils on the scale platter being weighed
-    const weighedItem = new THREE.Mesh(new THREE.SphereGeometry(0.35, 12, 10), this.mat.dalMat);
-    weighedItem.scale.set(1.2, 0.6, 1.0);
-    weighedItem.position.set(-8.5, counterY + 0.6, counterZ);
-    s.add(weighedItem);
-
-    // 2. Clear Glass Candy / Confectionery Jars with Red & Yellow Lids
-    const jarLids = [this.mat.lidRed, this.mat.lidYellow, this.mat.lidRed, this.mat.lidYellow];
-    const candyColors = [0xef4444, 0x22c55e, 0xf59e0b, 0x8b5cf6];
-
-    for (let i = 0; i < 4; i++) {
-      const jx = -12.4 + i * 0.85;
-      const jar = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 0.85, 12), this.mat.candyJarGlass);
-      jar.position.set(jx, counterY + 0.45, counterZ - 0.2);
-      s.add(jar);
-
-      const lid = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.12, 12), jarLids[i]);
-      lid.position.set(jx, counterY + 0.92, counterZ - 0.2);
-      s.add(lid);
-
-      const cCluster = new THREE.Mesh(new THREE.SphereGeometry(0.24, 8, 8), new THREE.MeshStandardMaterial({ color: candyColors[i] }));
-      cCluster.position.set(jx, counterY + 0.35, counterZ - 0.2);
-      s.add(cCluster);
+      const lid = new THREE.Mesh(new THREE.CylinderGeometry(0.38, 0.38, 0.15, 16), new THREE.MeshStandardMaterial({ color: 0xdc2626 }));
+      lid.position.set(-8.0 + k * 0.9, floorY + 4.3, -19.5);
+      f.add(lid);
     }
-
-    // 3. Traditional Teak Cash Box (Galla)
-    const galla = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.35, 1.2), this.mat.teakWood);
-    galla.position.set(-6.0, counterY + 0.2, counterZ - 0.1);
-    s.add(galla);
-
-    const brassLock = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.2, 0.05), new THREE.MeshStandardMaterial({ color: 0xf59e0b, metalness: 0.9 }));
-    brassLock.position.set(-6.0, counterY + 0.2, counterZ - 0.72);
-    s.add(brassLock);
-
-    // 4. Accounts Ledger (Bahi Khata) & Pen
-    const bahiKhata = new THREE.Mesh(
-      new THREE.BoxGeometry(0.8, 0.1, 1.1),
-      new THREE.MeshStandardMaterial({ color: 0xb91c1c, roughness: 0.6 })
-    );
-    bahiKhata.position.set(-4.9, counterY + 0.1, counterZ + 0.2);
-    s.add(bahiKhata);
-
-    const pen = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.7, 6), this.mat.steel);
-    pen.rotation.z = Math.PI / 4;
-    pen.position.set(-4.9, counterY + 0.18, counterZ + 0.2);
-    s.add(pen);
-
-    // 5. Agarbatti Incense Stand with Warm Diya Light
-    const agarbattiStand = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.18, 0.1, 10), new THREE.MeshStandardMaterial({ color: 0xf59e0b, metalness: 0.8 }));
-    agarbattiStand.position.set(-4.5, counterY + 0.1, counterZ - 0.6);
-    s.add(agarbattiStand);
-
-    const diyaLight = new THREE.PointLight(0xffa500, 0.6, 6);
-    diyaLight.position.set(-4.5, counterY + 0.5, counterZ - 0.6);
-    s.add(diyaLight);
-
-    // 6. Auspicious Lakshmi / Ganesha Shrine on back wall behind counter
-    const photoFrame = new THREE.Mesh(
-      new THREE.BoxGeometry(1.5, 2.0, 0.08),
-      new THREE.MeshStandardMaterial({ color: 0xf59e0b, roughness: 0.4 })
-    );
-    photoFrame.rotation.y = -Math.PI / 2; // hang on the east wall, facing into the shop
-    photoFrame.position.set(1.94, floorY + 8.2, -21.0);
-    s.add(photoFrame);
-
-    const marigoldGarland = new THREE.Mesh(
-      new THREE.TorusGeometry(0.8, 0.08, 6, 16, Math.PI),
-      new THREE.MeshStandardMaterial({ color: 0xf97316 })
-    );
-    marigoldGarland.rotation.set(0, -Math.PI / 2, Math.PI);
-    marigoldGarland.position.set(1.88, floorY + 9.0, -21.0);
-    s.add(marigoldGarland);
   }
 
   buildKiranaGrainSacks(s, floorY) {
-    const sackConfigs = [
-      { x: -12.0, z: -23.2, mat: this.mat.grainBagMat, grainMat: this.mat.riceMat, hasScoop: true },
-      { x: -9.5, z: -23.4, mat: this.mat.burlapMat, grainMat: this.mat.riceMat, hasScoop: false },
-      { x: -7.0, z: -23.2, mat: this.mat.burlapMat, grainMat: this.mat.dalMat, hasScoop: false },
-      { x: -4.5, z: -23.5, mat: this.mat.burlapMat, grainMat: this.mat.dalMat, hasScoop: false },
-      { x: -2.2, z: -23.2, mat: this.mat.grainBagMat, grainMat: this.mat.riceMat, hasScoop: false }
-    ];
+    const sackMat = new THREE.MeshStandardMaterial({ color: 0xd4a373, roughness: 0.95 });
+    const riceMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.8 });
+    const dalMat = new THREE.MeshStandardMaterial({ color: 0xfacc15, roughness: 0.8 });
 
-    sackConfigs.forEach(cfg => {
-      const sack = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.92, 0.82, 1.8, 16),
-        cfg.mat
-      );
-      sack.position.set(cfg.x, floorY + 0.9, cfg.z);
-      sack.castShadow = true;
-      sack.receiveShadow = true;
-      s.add(sack);
+    // Basmati Rice Sack
+    const riceSack = new THREE.Mesh(new THREE.CylinderGeometry(1.1, 1.2, 2.0, 16), sackMat);
+    riceSack.position.set(-4.5, floorY + 1.0, -22.5);
+    s.add(riceSack);
 
-      const rim = new THREE.Mesh(
-        new THREE.TorusGeometry(0.92, 0.12, 8, 16),
-        cfg.mat
-      );
-      rim.rotation.x = Math.PI / 2;
-      rim.position.set(cfg.x, floorY + 1.8, cfg.z);
-      s.add(rim);
+    const rice = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.0, 0.2, 16), riceMat);
+    rice.position.set(-4.5, floorY + 1.95, -22.5);
+    s.add(rice);
 
-      const grainMound = new THREE.Mesh(
-        new THREE.SphereGeometry(0.88, 16, 12, 0, Math.PI * 2, 0, Math.PI / 2),
-        cfg.grainMat
-      );
-      grainMound.position.set(cfg.x, floorY + 1.7, cfg.z);
-      s.add(grainMound);
+    // Scoop
+    const scoop = new THREE.Mesh(new THREE.BoxGeometry(0.4, 0.15, 0.8), new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.8 }));
+    scoop.position.set(-4.5, floorY + 2.1, -22.5);
+    s.add(scoop);
 
-      if (cfg.hasScoop) {
-        const scoopGroup = new THREE.Group();
-        const scoopBlade = new THREE.Mesh(
-          new THREE.CylinderGeometry(0.25, 0.35, 0.8, 12, 1, true, 0, Math.PI * 1.3),
-          this.mat.steel
-        );
-        scoopBlade.rotation.x = Math.PI / 2;
-        scoopGroup.add(scoopBlade);
+    // Toor Dal Sack
+    const dalSack = new THREE.Mesh(new THREE.CylinderGeometry(1.1, 1.2, 2.0, 16), sackMat);
+    dalSack.position.set(-2.5, floorY + 1.0, -22.5);
+    s.add(dalSack);
 
-        const scoopHandle = new THREE.Mesh(
-          new THREE.CylinderGeometry(0.04, 0.04, 0.7, 8),
-          this.mat.steel
-        );
-        scoopHandle.position.set(0, 0, 0.6);
-        scoopGroup.add(scoopHandle);
-
-        scoopGroup.rotation.x = -Math.PI / 5;
-        scoopGroup.rotation.y = Math.PI / 6;
-        scoopGroup.position.set(cfg.x + 0.2, floorY + 2.1, cfg.z - 0.1);
-        s.add(scoopGroup);
-      }
-    });
-  }
-
-  buildKiranaSideStorage(s, floorY, shopH) {
-    // 1. West Wall Shelving
-    const westWMat = new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.5 });
-    const westFrame = new THREE.Mesh(new THREE.BoxGeometry(1.2, 8.5, 9.5), westWMat);
-    westFrame.position.set(-14.9, floorY + 4.25, -21.0);
-    s.add(westFrame);
-
-    const soapColors = [0x0284c7, 0x16a34a, 0xdc2626, 0xf43f5e, 0xf59e0b];
-    for (let tier = 0; tier < 4; tier++) {
-      const sy = floorY + 1.5 + tier * 2.0;
-      const ledge = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.12, 9.5), westWMat);
-      ledge.position.set(-14.7, sy, -21.0);
-      s.add(ledge);
-
-      for (let i = 0; i < 8; i++) {
-        const sz = -24.8 + i * 1.1;
-        const col = soapColors[(tier + i) % soapColors.length];
-        const soapBox = new THREE.Mesh(
-          new THREE.BoxGeometry(0.6, 0.55, 0.8),
-          new THREE.MeshStandardMaterial({ color: col, roughness: 0.4 })
-        );
-        soapBox.position.set(-14.6, sy + 0.32, sz);
-        soapBox.castShadow = true;
-        s.add(soapBox);
-      }
-    }
-
-    // 2. East Wall Storage (15L Sunflower Oil Tins, Soft Drink Crates, Brooms)
-    for (let layer = 0; layer < 2; layer++) {
-      for (let pos = 0; pos < 3; pos++) {
-        const tin = new THREE.Mesh(new THREE.BoxGeometry(1.0, 1.3, 1.0), this.mat.oilTinMat);
-        tin.position.set(1.1, floorY + 0.65 + layer * 1.35, -24.5 + pos * 1.15);
-        tin.castShadow = true;
-        s.add(tin);
-
-        const handle = new THREE.Mesh(new THREE.TorusGeometry(0.2, 0.03, 6, 12, Math.PI), this.mat.steel);
-        handle.rotation.x = Math.PI / 2;
-        handle.position.set(1.1, floorY + 1.35 + layer * 1.35, -24.5 + pos * 1.15);
-        s.add(handle);
-      }
-    }
-
-    // Beverage Crates stacked behind oil tins
-    const crateColors = [0xdc2626, 0x1d4ed8, 0x16a34a];
-    for (let c = 0; c < 3; c++) {
-      const crate = new THREE.Mesh(
-        new THREE.BoxGeometry(1.2, 0.7, 1.6),
-        new THREE.MeshStandardMaterial({ color: crateColors[c], roughness: 0.5 })
-      );
-      crate.position.set(1.0, floorY + 0.35 + c * 0.75, -19.5);
-      s.add(crate);
-
-      for (let bx = -0.35; bx <= 0.35; bx += 0.35) {
-        for (let bz = -0.5; bz <= 0.5; bz += 0.5) {
-          const bottle = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.6, 8), this.mat.glass);
-          bottle.position.set(1.0 + bx, floorY + 0.7 + c * 0.75, -19.5 + bz);
-          s.add(bottle);
-        }
-      }
-    }
-
-    // Traditional Grass & Coconut Brooms in corner
-    for (let b = 0; b < 3; b++) {
-      const broom = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.06, 0.2, 4.2, 8),
-        new THREE.MeshStandardMaterial({ color: 0xca8a04, roughness: 0.9 })
-      );
-      broom.rotation.x = 0.15;
-      broom.rotation.z = -0.15 + b * 0.1;
-      broom.position.set(1.2, floorY + 2.0, -16.0 + b * 0.4);
-      s.add(broom);
-    }
+    const dal = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.0, 0.2, 16), dalMat);
+    dal.position.set(-2.5, floorY + 1.95, -22.5);
+    s.add(dal);
   }
 
   buildKiranaHangingSnacks(s, floorY) {
-    const strips = [
-      { x: -11.5, z: -26.0, mat: this.mat.snackKurkureMat },
-      { x: -8.5, z: -26.0, mat: this.mat.snackLaysBlueMat },
-      { x: -5.5, z: -26.0, mat: this.mat.snackLaysGreenMat },
-      { x: -2.5, z: -26.0, mat: this.mat.snackKurkureMat },
-      { x: -7.5, z: -20.5, mat: this.mat.snackLaysBlueMat },
-      { x: -10.5, z: -20.5, mat: this.mat.snackLaysGreenMat }
-    ];
-
-    strips.forEach(st => {
-      const wire = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.8, 6), this.mat.steel);
-      wire.position.set(st.x, floorY + 8.8, st.z);
-      s.add(wire);
-
-      const stripMesh = new THREE.Mesh(new THREE.PlaneGeometry(0.85, 3.8), st.mat);
-      stripMesh.position.set(st.x, floorY + 6.8, st.z);
-      stripMesh.rotation.y = (Math.random() - 0.5) * 0.2;
-      s.add(stripMesh);
-    });
+    const snackColors = [0xef4444, 0x3b82f6, 0x10b981, 0xf59e0b];
+    for (let i = 0; i < 4; i++) {
+      const stripMat = new THREE.MeshStandardMaterial({ color: snackColors[i % 4], roughness: 0.6 });
+      const strip = new THREE.Mesh(new THREE.PlaneGeometry(0.7, 3.2), stripMat);
+      strip.position.set(-11.0 + i * 2.2, floorY + 7.0, -24.3);
+      s.add(strip);
+    }
   }
 
   // ==========================================================================
-  // GROUND FLOOR RESIDENTIAL SHELL
+  // GROUND FLOOR RESIDENTIAL SHELL (PLINTH: 1,454.87 SQ.FT.)
   // ==========================================================================
   buildGroundFloorShell() {
     const plinthY = 2.5;
     const floorH = 10.0;
     const g = this.groundGroup;
 
-    const plinth = new THREE.Mesh(new THREE.BoxGeometry(29.5, plinthY, 54), this.mat.extGrey);
-    plinth.position.set(0.5, plinthY / 2, -1.0);
+    // Plinth: 28'-3" (X: -15.0 to +13.25), 51'-6" (Z: -24.5 to +27.0)
+    const plinth = new THREE.Mesh(new THREE.BoxGeometry(28.25, plinthY, 51.5), this.mat.extGrey);
+    plinth.position.set(-0.875, plinthY / 2, 1.25);
     g.add(plinth);
 
-    const porticoFloor = new THREE.Mesh(new THREE.BoxGeometry(12, 0.25, 18), this.mat.paverFloor);
-    porticoFloor.position.set(8, 0.25, -21);
+    // Portico & Car Parking (X: 1.0 to 13.25, Z: -33.5 to -12.0)
+    const porticoFloor = new THREE.Mesh(new THREE.BoxGeometry(12.25, 0.25, 21.5), this.mat.paverFloor);
+    porticoFloor.position.set(7.125, 0.25, -22.75);
     g.add(porticoFloor);
 
+    // Steps to Entrance Lobby
     for (let s = 0; s < 4; s++) {
-      const step = new THREE.Mesh(new THREE.BoxGeometry(8, 0.6, 1.2), this.mat.extGrey);
-      step.position.set(8, 0.3 + s * 0.6, -15.5 - s * 1.0);
+      const step = new THREE.Mesh(new THREE.BoxGeometry(7.0, 0.6, 1.2), this.mat.extGrey);
+      step.position.set(7.125, 0.3 + s * 0.6, -14.5 - s * 1.0);
       g.add(step);
     }
 
-    this.addDoorway(g, 6.5, plinthY, -9, 4.2, 7.5, 'x', 0.85);
+    // Entrance Lobby Floor
+    const lobbyFloor = new THREE.Mesh(new THREE.BoxGeometry(12.25, 0.25, 6.5), this.mat.marbleFloor);
+    lobbyFloor.position.set(7.125, plinthY - 0.12, -8.75);
+    g.add(lobbyFloor);
 
-    const livFloor = new THREE.Mesh(new THREE.BoxGeometry(13.25, 0.25, 15.5), this.mat.marbleFloor);
-    livFloor.position.set(7.375, plinthY - 0.12, -1.25);
+    // Main House Teak Double Door (X: 1.0, Z: -5.5)
+    this.addDoorway(g, 5.0, plinthY, -5.5, 4.2, 7.5, 'x', 0.85);
+
+    // Living Room Floor (13'-5" × 15'-8", X: -0.25 to 13.25, Z: -5.5 to 10.2)
+    const livFloor = new THREE.Mesh(new THREE.BoxGeometry(13.5, 0.25, 15.7), this.mat.marbleFloor);
+    livFloor.position.set(6.5, plinthY - 0.12, 2.35);
     g.add(livFloor);
     this.buildLivingRoomInterior(plinthY);
 
-    const pujaFloor = new THREE.Mesh(new THREE.BoxGeometry(4.0, 0.25, 5.0), this.mat.marbleFloor);
-    pujaFloor.position.set(12.0, plinthY - 0.12, 9.0);
+    // Puja Mandir Floor (6'-0" × 5'-0", X: 7.25 to 13.25, Z: 5.2 to 10.2)
+    const pujaFloor = new THREE.Mesh(new THREE.BoxGeometry(6.0, 0.25, 5.0), this.mat.marbleFloor);
+    pujaFloor.position.set(10.25, plinthY - 0.12, 7.7);
     g.add(pujaFloor);
     this.buildPujaMandirInterior(plinthY);
 
-    const dinFloor = new THREE.Mesh(new THREE.BoxGeometry(14.0, 0.25, 9.0), this.mat.marbleFloor);
-    dinFloor.position.set(7.0, plinthY - 0.12, 16.0);
+    // Dining Floor (14'-0" × 8'-8", X: -0.75 to 13.25, Z: 10.2 to 18.9)
+    const dinFloor = new THREE.Mesh(new THREE.BoxGeometry(14.0, 0.25, 8.7), this.mat.marbleFloor);
+    dinFloor.position.set(6.25, plinthY - 0.12, 14.55);
     g.add(dinFloor);
     this.buildDiningInterior(plinthY);
 
+    // Traditional Kitchen Floor (12'-0" × 9'-0", X: -12.75 to -0.75, Z: 14.75 to 23.75)
     const kitchFloor = new THREE.Mesh(new THREE.BoxGeometry(12.0, 0.25, 9.0), this.mat.marbleFloor);
-    kitchFloor.position.set(-6.0, plinthY - 0.12, 16.0);
+    kitchFloor.position.set(-6.75, plinthY - 0.12, 19.25);
     g.add(kitchFloor);
     this.buildKitchenInterior(plinthY);
-    this.addDoorway(g, -6, plinthY, 20.5, 3.0, 7.0, 'x', 0.7);
 
+    // Ground Master Bedroom Floor (13'-0" × 11'-6", X: -15.0 to -2.0, Z: -5.5 to 6.0)
     const bedFloor = new THREE.Mesh(new THREE.BoxGeometry(13.0, 0.25, 11.5), this.mat.woodFloor);
-    bedFloor.position.set(-8.5, plinthY - 0.12, -5.75);
+    bedFloor.position.set(-8.5, plinthY - 0.12, 0.25);
     g.add(bedFloor);
-    this.buildBedroomInterior(-8.5, plinthY, -6, 'king');
-    this.addDoorway(g, -2, plinthY, -3.5, 3.0, 7.0, 'z', 0.9);
+    this.buildBedroomInterior(-8.5, plinthY, 0.25, 'king');
+    this.addDoorway(g, -2.0, plinthY, 2.0, 3.0, 7.0, 'z', 0.9);
 
-    this.buildDuplexStaircase(-6.25, plinthY, 4.375, 10.5);
+    // Attached Master Toilet (4'-6" × 8'-9", X: -15.0 to -10.5, Z: 6.0 to 14.75)
+    const bathFloor = new THREE.Mesh(new THREE.BoxGeometry(4.5, 0.25, 8.75), this.mat.marbleFloor);
+    bathFloor.position.set(-12.75, plinthY - 0.12, 10.375);
+    g.add(bathFloor);
+
+    // Internal Duplex Staircase (X: -10.5 to -0.25, Z: 6.0 to 14.75)
+    this.buildDuplexStaircase(-5.375, plinthY, 10.375, 10.5);
+
+    // External Staircase (X: -15.0 to -8.5, Z: -12.0 to -5.5) in Lobby
+    this.buildExternalStaircase(-11.75, plinthY, -8.75, 10.5);
+
+    // Build Ground Walls
     this.buildGroundWalls(plinthY, floorH);
-    this.buildSUV(8.0, 0.25, -21.0);
+
+    // Parked Modern SUV in Portico
+    this.buildSUV(7.125, 0.25, -22.0);
+  }
+
+  buildExternalStaircase(cx, baseY, cz, totalH) {
+    const g = this.groundGroup;
+    const numSteps = 16;
+    const stepH = totalH / numSteps;
+    const stepW = 3.2;
+    const stepD = 1.0;
+    const graniteStep = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.3 });
+
+    for (let i = 0; i < numSteps / 2; i++) {
+      const step = new THREE.Mesh(new THREE.BoxGeometry(stepW, stepH, stepD), graniteStep);
+      step.position.set(cx + stepW / 2, baseY + (i + 0.5) * stepH, cz - 2.5 + i * stepD);
+      g.add(step);
+    }
+    // Mid Landing
+    const landing = new THREE.Mesh(new THREE.BoxGeometry(6.2, 0.4, 3.0), graniteStep);
+    landing.position.set(cx, baseY + 8 * stepH, cz + 1.5);
+    g.add(landing);
+
+    // Upper Flight
+    for (let i = 0; i < numSteps / 2; i++) {
+      const step = new THREE.Mesh(new THREE.BoxGeometry(stepW, stepH, stepD), graniteStep);
+      step.position.set(cx - stepW / 2, baseY + (8 + i + 0.5) * stepH, cz + 0.5 - i * stepD);
+      g.add(step);
+    }
   }
 
   buildLivingRoomInterior(plinthY) {
     const f = this.furnitureGroup;
     const sofaMat = new THREE.MeshStandardMaterial({ color: 0xd8d4cc, roughness: 0.8 });
 
-    const b1 = new THREE.Mesh(new THREE.BoxGeometry(8, 0.7, 3.2), this.mat.teakWood);
-    b1.position.set(6, plinthY + 0.35, -2);
+    // Sectional L-Sofa
+    const b1 = new THREE.Mesh(new THREE.BoxGeometry(8.0, 0.7, 3.2), this.mat.teakWood);
+    b1.position.set(4.5, plinthY + 0.35, 0.0);
     f.add(b1);
     const s1 = new THREE.Mesh(new THREE.BoxGeometry(7.6, 0.8, 2.8), sofaMat);
-    s1.position.set(6, plinthY + 0.9, -2);
+    s1.position.set(4.5, plinthY + 0.9, 0.0);
     f.add(s1);
     const bk1 = new THREE.Mesh(new THREE.BoxGeometry(7.6, 1.6, 0.6), sofaMat);
-    bk1.position.set(6, plinthY + 1.7, -3.3);
+    bk1.position.set(4.5, plinthY + 1.7, -1.3);
     f.add(bk1);
 
-    const b2 = new THREE.Mesh(new THREE.BoxGeometry(3.2, 0.7, 5), this.mat.teakWood);
-    b2.position.set(3.4, plinthY + 0.35, 1.2);
-    f.add(b2);
-    const s2 = new THREE.Mesh(new THREE.BoxGeometry(2.8, 0.8, 4.6), sofaMat);
-    s2.position.set(3.4, plinthY + 0.9, 1.2);
-    f.add(s2);
+    // Marble Coffee Table
+    const table = new THREE.Mesh(new THREE.BoxGeometry(4.2, 0.8, 2.4), this.mat.marbleFloor);
+    table.position.set(4.5, plinthY + 0.4, 3.0);
+    f.add(table);
 
-    const tableTop = new THREE.Mesh(new THREE.BoxGeometry(4.5, 0.15, 2.5), this.mat.glass);
-    tableTop.position.set(7.5, plinthY + 1.2, 1.0);
-    f.add(tableTop);
+    // TV Wall Panel (East Wall)
+    const tvWall = new THREE.Mesh(new THREE.BoxGeometry(0.3, 8.0, 9.0), this.mat.teakWood);
+    tvWall.position.set(13.1, plinthY + 4.0, 2.35);
+    f.add(tvWall);
 
-    const rug = new THREE.Mesh(new THREE.BoxGeometry(9, 0.05, 7), new THREE.MeshStandardMaterial({ color: 0x475569, roughness: 0.95 }));
-    rug.position.set(6.5, plinthY + 0.03, -0.5);
-    f.add(rug);
-
-    const tvPanel = new THREE.Mesh(new THREE.BoxGeometry(0.3, 8.5, 9.0), this.mat.extGrey);
-    tvPanel.position.set(13.8, plinthY + 4.25, -1.0);
-    f.add(tvPanel);
-
-    for (let z = -5.0; z <= 3.0; z += 0.4) {
-      const louver = new THREE.Mesh(new THREE.BoxGeometry(0.15, 8.0, 0.2), this.mat.teakWood);
-      louver.position.set(13.6, plinthY + 4.25, z);
-      f.add(louver);
-    }
-
-    const tv = new THREE.Mesh(
-      new THREE.BoxGeometry(0.1, 3.2, 5.8),
-      new THREE.MeshStandardMaterial({ color: 0x090d16, emissive: 0x38bdf8, emissiveIntensity: 0.15 })
-    );
-    tv.position.set(13.4, plinthY + 4.8, -1.0);
+    // 65" TV Screen
+    const tv = new THREE.Mesh(new THREE.BoxGeometry(0.1, 3.5, 6.0), new THREE.MeshStandardMaterial({ color: 0x050505, roughness: 0.1, metalness: 0.8 }));
+    tv.position.set(12.85, plinthY + 4.5, 2.35);
     f.add(tv);
 
-    const goldMat = new THREE.MeshStandardMaterial({ color: 0xf59e0b, metalness: 0.9, roughness: 0.2 });
-    for (let r = 1.2; r <= 3.6; r += 1.2) {
-      const ring = new THREE.Mesh(new THREE.TorusGeometry(r, 0.07, 8, 32), goldMat);
+    // Grand Crystal Chandelier in 94.47 Sq.Ft. Duplex Void
+    const chandelier = new THREE.Group();
+    for (let r = 0; r < 3; r++) {
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(2.2 - r * 0.6, 0.08, 16, 32), this.mat.brassGold);
       ring.rotation.x = Math.PI / 2;
-      ring.position.set(7.375, 18 - r * 1.6, -1.25);
-      f.add(ring);
+      ring.position.y = plinthY + 18.0 - r * 2.2;
+      chandelier.add(ring);
     }
-
-    const chLight = new THREE.PointLight(0xffedd5, 1.4, 28);
-    chLight.position.set(7.375, plinthY + 8.5, -1.25);
-    this.groundGroup.add(chLight);
-    this.interiorLights.push(chLight);
+    const glowLight = new THREE.PointLight(0xfef08a, 1.2, 22);
+    glowLight.position.set(6.5, plinthY + 15.0, 2.35);
+    this.interiorLights.push(glowLight);
+    chandelier.add(glowLight);
+    f.add(chandelier);
   }
 
   buildPujaMandirInterior(plinthY) {
     const f = this.furnitureGroup;
-    const mBase1 = new THREE.Mesh(new THREE.BoxGeometry(3.2, 1.4, 2.0), this.mat.marbleFloor);
-    mBase1.position.set(12.0, plinthY + 0.7, 9.0);
-    f.add(mBase1);
+    // White Makrana Marble Altar
+    const altar = new THREE.Mesh(new THREE.BoxGeometry(4.5, 3.0, 2.0), this.mat.marbleFloor);
+    altar.position.set(10.25, plinthY + 1.5, 9.2);
+    f.add(altar);
 
-    const jali = new THREE.Mesh(new THREE.BoxGeometry(0.1, 5.5, 3.8), this.mat.jaliMat);
-    jali.position.set(13.8, plinthY + 3.8, 9.0);
+    // Backlit Jali Panel
+    const jali = new THREE.Mesh(new THREE.BoxGeometry(4.8, 6.0, 0.1), this.mat.brassGold);
+    jali.position.set(10.25, plinthY + 4.5, 10.1);
     f.add(jali);
 
-    const diyaLight = new THREE.PointLight(0xf59e0b, 1.5, 12);
-    diyaLight.position.set(12.0, plinthY + 2.5, 9.0);
-    this.groundGroup.add(diyaLight);
-    this.interiorLights.push(diyaLight);
+    // Puja Glow Light
+    const pujaLight = new THREE.PointLight(0xfbbf24, 1.0, 10);
+    pujaLight.position.set(10.25, plinthY + 4.0, 8.5);
+    this.interiorLights.push(pujaLight);
+    f.add(pujaLight);
   }
 
   buildDiningInterior(plinthY) {
     const f = this.furnitureGroup;
-    const top = new THREE.Mesh(new THREE.BoxGeometry(6.8, 0.25, 3.8), this.mat.teakWood);
-    top.position.set(7.0, plinthY + 2.6, 16.0);
-    f.add(top);
+    // Solid Teak 6-Seater Table
+    const table = new THREE.Mesh(new THREE.BoxGeometry(6.5, 0.3, 3.8), this.mat.teakWood);
+    table.position.set(6.25, plinthY + 2.6, 14.55);
+    f.add(table);
 
-    const chairMat = new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.8 });
-    for (let dx of [-2.2, 0, 2.2]) {
-      const c1 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.6, 1.3), chairMat);
-      c1.position.set(7.0 + dx, plinthY + 1.5, 13.6);
-      f.add(c1);
-      const c2 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.6, 1.3), chairMat);
-      c2.position.set(7.0 + dx, plinthY + 1.5, 18.4);
-      f.add(c2);
+    // 4 Table Legs
+    for (let dx of [-2.8, 2.8]) {
+      for (let dz of [-1.5, 1.5]) {
+        const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.15, 2.5), this.mat.teakWood);
+        leg.position.set(6.25 + dx, plinthY + 1.25, 14.55 + dz);
+        f.add(leg);
+      }
+    }
+
+    // 6 Chairs
+    for (let c = 0; c < 3; c++) {
+      const chair1 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.6, 1.4), this.mat.accentTeak);
+      chair1.position.set(4.25 + c * 2.0, plinthY + 1.6, 12.2);
+      f.add(chair1);
+      const chair2 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.6, 1.4), this.mat.accentTeak);
+      chair2.position.set(4.25 + c * 2.0, plinthY + 1.6, 16.9);
+      f.add(chair2);
     }
   }
 
   buildKitchenInterior(plinthY) {
     const f = this.furnitureGroup;
+    // L-Shaped Black Granite Counter
+    const c1 = new THREE.Mesh(new THREE.BoxGeometry(11.0, 2.8, 2.2), this.mat.teakWood);
+    c1.position.set(-6.75, plinthY + 1.4, 22.5);
+    f.add(c1);
+    const top1 = new THREE.Mesh(new THREE.BoxGeometry(11.2, 0.2, 2.4), this.mat.blackGranite);
+    top1.position.set(-6.75, plinthY + 2.9, 22.5);
+    f.add(top1);
 
-    // 1. Traditional L-Shaped Black Galaxy Granite Platform along the walls (NO island, open center floor)
-    // Main North Cooking Platform (along back wall, Z = 19.4)
-    const northTop = new THREE.Mesh(new THREE.BoxGeometry(10.8, 0.25, 2.2), this.mat.graniteBlack);
-    northTop.position.set(-6.0, plinthY + 2.8, 19.4);
-    f.add(northTop);
+    // Breakfast Counter facing Dining
+    const bc = new THREE.Mesh(new THREE.BoxGeometry(2.0, 3.2, 6.0), this.mat.teakWood);
+    bc.position.set(-1.0, plinthY + 1.6, 17.5);
+    f.add(bc);
+    const bcTop = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.2, 6.2), this.mat.blackGranite);
+    bcTop.position.set(-1.0, plinthY + 3.3, 17.5);
+    f.add(bcTop);
 
-    // Return West Platform (along west wall, X = -11.1, housing the sink)
-    const westTop = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.25, 5.5), this.mat.graniteBlack);
-    westTop.position.set(-11.1, plinthY + 2.8, 15.5);
-    f.add(westTop);
+    // 3-Burner Gas Stove
+    const stove = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.15, 1.6), new THREE.MeshStandardMaterial({ color: 0x111827, metalness: 0.8 }));
+    stove.position.set(-8.5, plinthY + 3.05, 22.5);
+    f.add(stove);
 
-    // 2. Traditional Indian Lower Under-Counter Cupboards (Base Cabinets)
-    // North Wall Base Cupboards (Teak Wood Finish with individual cabinet doors)
-    const northBase = new THREE.Mesh(new THREE.BoxGeometry(10.6, 2.65, 2.1), this.mat.teakWood);
-    northBase.position.set(-6.0, plinthY + 1.32, 19.4);
-    f.add(northBase);
-
-    // West Wall Base Cupboards
-    const westBase = new THREE.Mesh(new THREE.BoxGeometry(2.1, 2.65, 5.3), this.mat.teakWood);
-    westBase.position.set(-11.1, plinthY + 1.32, 15.5);
-    f.add(westBase);
-
-    // Chrome Bar Handles on Lower Cupboard Doors
-    for (let x = -10.0; x <= -2.0; x += 1.8) {
-      const handle = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.8, 8), this.mat.steel);
-      handle.position.set(x, plinthY + 1.8, 18.3);
-      f.add(handle);
-    }
-
-    // 3. Traditional Wall-Mounted Overhead Cupboards (Upper Cabinets up to ceiling)
-    // North Wall Overhead Cabinets (Height: 3.5 ft, from Y = plinthY + 5.8 to 9.3)
-    const upperNorth = new THREE.Mesh(new THREE.BoxGeometry(10.6, 3.5, 1.4), this.mat.teakWood);
-    upperNorth.position.set(-6.0, plinthY + 7.5, 19.8);
-    f.add(upperNorth);
-
-    // Frosted Glass / Wooden Shutter Panels on Upper Cupboards
-    for (let x = -10.0; x <= -2.0; x += 2.4) {
-      const shutter = new THREE.Mesh(new THREE.BoxGeometry(2.1, 3.1, 0.08), this.mat.glass);
-      shutter.position.set(x + 0.8, plinthY + 7.5, 19.05);
-      f.add(shutter);
-
-      // Cupboard Knob
-      const knob = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 8), this.mat.steel);
-      knob.position.set(x + 1.6, plinthY + 6.3, 19.0);
-      f.add(knob);
-    }
-
-    // West Wall Overhead Cupboard
-    const upperWest = new THREE.Mesh(new THREE.BoxGeometry(1.4, 3.5, 4.5), this.mat.teakWood);
-    upperWest.position.set(-11.5, plinthY + 7.5, 15.5);
-    f.add(upperWest);
-
-    // 4. Open Wooden Spice Rack Shelf underneath Upper Cupboards (for Daily Masala Dabbas)
-    const spiceShelf = new THREE.Mesh(new THREE.BoxGeometry(7.0, 0.12, 0.8), this.mat.teakWood);
-    spiceShelf.position.set(-4.5, plinthY + 5.2, 19.7);
-    f.add(spiceShelf);
-
-    // Stainless Steel & Glass Spice Jars (Haldi, Mirchi, Jeera, Rai, Garam Masala)
-    const spiceColors = [0xeab308, 0xef4444, 0x78350f, 0x16a34a, 0xd97706];
-    for (let i = 0; i < 5; i++) {
-      const jar = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.5, 12), new THREE.MeshStandardMaterial({ color: spiceColors[i], roughness: 0.3 }));
-      jar.position.set(-6.8 + i * 1.0, plinthY + 5.5, 19.7);
-      f.add(jar);
-    }
-
-    // 5. Stainless Steel Bartan / Plate Drainer Rack (Wall-Mounted next to sink)
-    const rackFrame = new THREE.Mesh(new THREE.BoxGeometry(0.1, 2.8, 2.2), this.mat.steel);
-    rackFrame.position.set(-11.8, plinthY + 4.8, 14.5);
-    f.add(rackFrame);
-
-    for (let r = 0; r < 4; r++) {
-      const plate = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.04, 16), this.mat.steel);
-      plate.rotation.z = Math.PI / 2;
-      plate.position.set(-11.6, plinthY + 4.0 + r * 0.5, 14.5);
-      f.add(plate);
-    }
-
-    // 6. Stainless Steel Double Sink with Swan-Neck Chrome Swivel Faucet
-    const sink = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.4, 2.8), this.mat.steel);
-    sink.position.set(-11.1, plinthY + 2.85, 15.5);
+    // Stainless Steel Sink
+    const sink = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.05, 1.6), new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.9 }));
+    sink.position.set(-4.5, plinthY + 3.02, 22.5);
     f.add(sink);
 
-    const faucet = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.04, 8, 16, Math.PI), this.mat.steel);
-    faucet.rotation.z = Math.PI;
-    faucet.position.set(-11.8, plinthY + 3.4, 15.5);
-    f.add(faucet);
-
-    // 7. Traditional Indian 3-Burner Gas Stove (Stainless Steel with black burners)
-    const stoveBase = new THREE.Mesh(new THREE.BoxGeometry(2.8, 0.15, 1.8), this.mat.steel);
-    stoveBase.position.set(-4.0, plinthY + 2.95, 19.4);
-    f.add(stoveBase);
-
-    // 3 Gas Burners (2 main, 1 small center simmer burner)
-    for (let bx of [-0.8, 0, 0.8]) {
-      const burner = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.28, 0.08, 16), this.mat.blackMetal);
-      burner.position.set(-4.0 + bx, plinthY + 3.06, 19.4);
-      f.add(burner);
-    }
-
-    // Red LPG Gas Pipe connection
-    const pipe = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.0, 8), new THREE.MeshStandardMaterial({ color: 0xef4444 }));
-    pipe.rotation.x = Math.PI / 2;
-    pipe.position.set(-2.5, plinthY + 2.7, 19.4);
-    f.add(pipe);
-
-    // 8. Traditional Prestige / Hawkins Stainless Steel Pressure Cooker on Stove!
-    const cooker = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.7, 16), this.mat.steel);
-    cooker.position.set(-4.8, plinthY + 3.45, 19.4);
-    f.add(cooker);
-
-    const whistle = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.25, 8), this.mat.blackMetal);
-    whistle.position.set(-4.8, plinthY + 3.9, 19.4);
-    f.add(whistle);
-
-    const cookerHandle = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.1, 0.15), this.mat.blackMetal);
-    cookerHandle.position.set(-5.35, plinthY + 3.7, 19.4);
-    f.add(cookerHandle);
-
-    // 9. Indian Mixer-Grinder (Mixie) with Stainless Steel Jar on Counter!
-    const mixieBase = new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.6, 0.8), new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.3 }));
-    mixieBase.position.set(-1.8, plinthY + 3.15, 19.4);
-    f.add(mixieBase);
-
-    const mixieJar = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.22, 0.7, 16), this.mat.steel);
-    mixieJar.position.set(-1.8, plinthY + 3.75, 19.4);
-    f.add(mixieJar);
-
-    const mixieLid = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 0.08, 16), this.mat.glass);
-    mixieLid.position.set(-1.8, plinthY + 4.12, 19.4);
-    f.add(mixieLid);
-
-    // 10. Stainless Steel Chimney Hood over Stove
-    const chimney = new THREE.Mesh(new THREE.BoxGeometry(3.0, 1.4, 1.8), this.mat.steel);
-    chimney.position.set(-4.0, plinthY + 6.2, 19.4);
-    f.add(chimney);
+    // Overhead Teak Cupboards
+    const cup = new THREE.Mesh(new THREE.BoxGeometry(11.0, 2.4, 1.4), this.mat.teakWood);
+    cup.position.set(-6.75, plinthY + 7.5, 22.9);
+    f.add(cup);
   }
 
   buildBedroomInterior(cx, baseY, cz, bedType = 'king') {
     const f = this.furnitureGroup;
-    const w = bedType === 'king' ? 6.8 : 5.8;
-    const l = 7.0;
+    const w = bedType === 'king' ? 6.5 : 5.2;
+    const d = 7.0;
 
-    const frame = new THREE.Mesh(new THREE.BoxGeometry(w, 0.8, l), this.mat.teakWood);
-    frame.position.set(cx, baseY + 0.4, cz);
-    f.add(frame);
+    // Bed frame
+    const bedFrame = new THREE.Mesh(new THREE.BoxGeometry(w, 1.2, d), this.mat.teakWood);
+    bedFrame.position.set(cx, baseY + 0.6, cz);
+    f.add(bedFrame);
 
-    const headboard = new THREE.Mesh(new THREE.BoxGeometry(w + 0.4, 3.8, 0.4), this.mat.teakWood);
-    headboard.position.set(cx, baseY + 1.9, cz - l / 2 - 0.2);
-    f.add(headboard);
+    // Mattress
+    const mattress = new THREE.Mesh(new THREE.BoxGeometry(w - 0.2, 0.8, d - 0.2), new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.9 }));
+    mattress.position.set(cx, baseY + 1.4, cz);
+    f.add(mattress);
 
-    const mat = new THREE.Mesh(new THREE.BoxGeometry(w - 0.4, 1.0, l - 0.4), new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.9 }));
-    mat.position.set(cx, baseY + 1.2, cz);
-    f.add(mat);
-
-    for (let dx of [-w / 2 - 1.2, w / 2 + 1.2]) {
-      const stand = new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.5, 1.6), this.mat.teakWood);
-      stand.position.set(cx + dx, baseY + 0.75, cz - l / 2 + 1.0);
-      f.add(stand);
+    // Pillows
+    for (let p of [-1.5, 1.5]) {
+      const pillow = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.35, 1.2), new THREE.MeshStandardMaterial({ color: 0xe2e8f0 }));
+      pillow.position.set(cx + p, baseY + 1.9, cz + 2.4);
+      f.add(pillow);
     }
+
+    // Full-height Cupboards along West Wall
+    const cup = new THREE.Mesh(new THREE.BoxGeometry(1.8, 9.0, 8.5), this.mat.teakWood);
+    cup.position.set(cx - 5.5, baseY + 4.5, cz);
+    f.add(cup);
   }
 
   buildDuplexStaircase(cx, baseY, cz, totalH) {
     const g = this.groundGroup;
-    const steps = 18;
-    const stepH = totalH / steps;
-    const treadD = 0.95;
-    const w = 3.6;
+    const numSteps = 16;
+    const stepH = totalH / numSteps;
+    const stepW = 3.6;
+    const stepD = 1.0;
 
-    for (let i = 0; i < 9; i++) {
-      const step = new THREE.Mesh(new THREE.BoxGeometry(w, 0.22, treadD), this.mat.teakWood);
-      step.position.set(cx - w / 2, baseY + (i + 1) * stepH, cz - 4.0 + i * treadD);
+    for (let i = 0; i < numSteps; i++) {
+      const step = new THREE.Mesh(new THREE.BoxGeometry(stepW, 0.25, stepD), this.mat.teakWood);
+      step.position.set(cx, baseY + (i + 1) * stepH, cz - 4.0 + i * stepD * 0.65);
       g.add(step);
-    }
-
-    const landing = new THREE.Mesh(new THREE.BoxGeometry(7.8, 0.35, 3.8), this.mat.teakWood);
-    landing.position.set(cx, baseY + 9 * stepH, cz + 4.8);
-    g.add(landing);
-
-    for (let i = 0; i < 9; i++) {
-      const step = new THREE.Mesh(new THREE.BoxGeometry(w, 0.22, treadD), this.mat.teakWood);
-      step.position.set(cx + w / 2, baseY + (9 + i + 1) * stepH, cz + 4.0 - i * treadD);
-      this.firstGroup.add(step);
     }
   }
 
   buildGroundWalls(plinthY, h) {
     const g = this.groundGroup;
-    const t = 0.75;
-    const pt = 0.38;
-
-    this.addWall(g, -15 - t, plinthY, -14.5, t, h, 40, this.mat.extWhite, true);
-    this.addWall(g, 14, plinthY, -14.5, t, h, 40, this.mat.extWhite, true);
-    this.addWall(g, -15, plinthY, 25.5, 29 + t, h, t, this.mat.extWhite, true);
-
-    this.addWall(g, 0, plinthY, -9, 6.5, h, t, this.mat.extWhite, true);
-    this.addWall(g, 10.7, plinthY, -9, 3.3, h, t, this.mat.extWhite, true);
-    this.addWall(g, 6.5, plinthY + 7.5, -9, 4.2, h - 7.5, t, this.mat.extWhite, true);
-
-    this.addWall(g, -2 - pt, plinthY, -11.5, pt, h, 8.0, this.mat.intWall, false);
-    this.addWall(g, -15, plinthY, 0, 13, h, pt, this.mat.intWall, false);
-    this.addWall(g, -10.5, plinthY, 0, pt, h, 8.75, this.mat.intWall, false);
-    this.addWall(g, -15, plinthY, 8.75, 13, h, pt, this.mat.intWall, false);
+    // Outer Walls: 28'-3" wide (X: -15.0 to 13.25), 51'-6" deep (Z: -24.5 to 27.0)
+    this.addWall(g, -15.0, plinthY, -24.5, 0.75, h, 51.5, this.mat.extWhite, true);
+    this.addWall(g, 12.5, plinthY, -12.0, 0.75, h, 39.0, this.mat.extWhite, true);
+    this.addWall(g, -15.0, plinthY, 26.25, 28.25, h, 0.75, this.mat.extWhite, true);
+    this.addWall(g, -15.0, plinthY, -12.0, 16.0, h, 0.75, this.mat.intWall, false);
+    this.addWall(g, -2.0, plinthY, -5.5, 0.75, h, 11.5, this.mat.intWall, false);
   }
 
   buildSUV(x, y, z) {
-    const carGroup = new THREE.Group();
-    const carPaint = new THREE.MeshStandardMaterial({ color: 0x0284c7, roughness: 0.2, metalness: 0.8 });
-    const body = new THREE.Mesh(new THREE.BoxGeometry(6.4, 1.8, 12.5), carPaint);
-    body.position.set(0, 1.4, 0);
-    carGroup.add(body);
+    const car = new THREE.Group();
+    // Body
+    const bodyMat = new THREE.MeshStandardMaterial({ color: 0x1e3a8a, metalness: 0.8, roughness: 0.2 });
+    const b = new THREE.Mesh(new THREE.BoxGeometry(6.2, 2.2, 14.0), bodyMat);
+    b.position.set(x, y + 1.8, z);
+    car.add(b);
 
-    const cabin = new THREE.Mesh(new THREE.BoxGeometry(5.6, 1.6, 7.5), this.mat.glass);
-    cabin.position.set(0, 2.9, -0.5);
-    carGroup.add(cabin);
+    // Cabin Glass
+    const cab = new THREE.Mesh(new THREE.BoxGeometry(5.8, 1.8, 8.0), this.mat.glass);
+    cab.position.set(x, y + 3.4, z - 0.5);
+    car.add(cab);
 
-    carGroup.position.set(x, y, z);
-    this.siteGroup.add(carGroup);
+    // 4 Wheels
+    const tireMat = new THREE.MeshStandardMaterial({ color: 0x111827, roughness: 0.9 });
+    for (let dx of [-3.1, 3.1]) {
+      for (let dz of [-4.2, 4.2]) {
+        const wheel = new THREE.Mesh(new THREE.CylinderGeometry(1.2, 1.2, 0.8, 24), tireMat);
+        wheel.rotation.z = Math.PI / 2;
+        wheel.position.set(x + dx, y + 1.2, z + dz);
+        car.add(wheel);
+      }
+    }
+    this.furnitureGroup.add(car);
+  }
+
+  // ==========================================================================
+  // FIRST FLOOR (SLAB: 1,567.87 SQ.FT.)
+  // ==========================================================================
+  buildFirstFloorRemaining() {
+    const ffY = 13.0;
+    const floorH = 10.0;
+    const f = this.firstGroup;
+
+    // Floor Slab with 94.47 Sq.Ft. Living Cutout
+    // Slab South (Front Suite)
+    const sFront = new THREE.Mesh(new THREE.BoxGeometry(28.25, 0.5, 13.5), this.mat.marbleFloor);
+    sFront.position.set(-0.875, ffY - 0.25, -17.75);
+    f.add(sFront);
+
+    // Slab West (Bedrooms & Passage)
+    const sWest = new THREE.Mesh(new THREE.BoxGeometry(15.0, 0.5, 38.0), this.mat.woodFloor);
+    sWest.position.set(-7.5, ffY - 0.25, 8.0);
+    f.add(sWest);
+
+    // Slab East (Lounge & Study)
+    const sEast = new THREE.Mesh(new THREE.BoxGeometry(13.25, 0.5, 23.5), this.mat.marbleFloor);
+    sEast.position.set(6.625, ffY - 0.25, 15.25);
+    f.add(sEast);
+
+    // Front Cantilevered Balcony (3'-6" Wide)
+    const fBalc = new THREE.Mesh(new THREE.BoxGeometry(16.0, 0.4, 4.0), this.mat.terraceTile);
+    fBalc.position.set(5.25, ffY - 0.2, -26.5);
+    f.add(fBalc);
+    this.buildGlassRailing(f, -2.75, ffY, -28.5, 16.0, 3.5, 'x');
+
+    // Duplex Glass Railing around 94.47 Sq.Ft. Cutout
+    this.buildGlassRailing(f, 0.0, ffY, -5.5, 13.0, 3.5, 'x');
+    this.buildGlassRailing(f, 0.0, ffY, 5.5, 13.0, 3.5, 'x');
+    this.buildGlassRailing(f, 0.0, ffY, -5.5, 11.0, 3.5, 'z');
+
+    // First Floor Upper Master (Bed 01)
+    this.buildBedroomInterior(-8.5, ffY, 0.25, 'king');
+    // Front Suite Bed 03
+    this.buildBedroomInterior(-8.5, ffY, -19.5, 'queen');
+    // Rear Bed 02
+    this.buildBedroomInterior(-8.5, ffY, 19.5, 'queen');
+
+    // Family Lounge Furniture
+    const lSofa = new THREE.Mesh(new THREE.BoxGeometry(7.0, 1.8, 3.0), new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.8 }));
+    lSofa.position.set(6.5, ffY + 0.9, 10.5);
+    f.add(lSofa);
+
+    // Study Desk & Bookshelf
+    const desk = new THREE.Mesh(new THREE.BoxGeometry(5.0, 2.5, 2.4), this.mat.teakWood);
+    desk.position.set(9.0, ffY + 1.25, 20.0);
+    f.add(desk);
+
+    // Rear Balcony Railing
+    this.buildGlassRailing(f, -14.5, ffY, 26.5, 27.5, 3.5, 'x');
+
+    // Outer Walls for First Floor
+    this.addWall(f, -15.0, ffY, -24.5, 0.75, floorH, 51.5, this.mat.extWhite, true);
+    this.addWall(f, 12.5, ffY, -24.5, 0.75, floorH, 51.5, this.mat.extWhite, true);
+    this.addWall(f, -15.0, ffY, 26.25, 28.25, floorH, 0.75, this.mat.extWhite, true);
   }
 
   buildGlassRailing(group, x, y, z, len, h, axis = 'x') {
-    const t = 0.08;
-    const geo = axis === 'x' ? new THREE.BoxGeometry(len, h, t) : new THREE.BoxGeometry(t, h, len);
-    const railing = new THREE.Mesh(geo, this.mat.glass);
-    railing.position.set(axis === 'x' ? x + len / 2 : x, y + h / 2, axis === 'z' ? z + len / 2 : z);
-    group.add(railing);
+    const glassMat = this.mat.balustradeGlass;
 
-    const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, len, 8), this.mat.steel);
-    if (axis === 'x') cap.rotation.z = Math.PI / 2;
-    else cap.rotation.x = Math.PI / 2;
-    cap.position.set(axis === 'x' ? x + len / 2 : x, y + h, axis === 'z' ? z + len / 2 : z);
-    group.add(cap);
+    const glass = new THREE.Mesh(
+      new THREE.BoxGeometry(axis === 'x' ? len : 0.08, h - 0.4, axis === 'x' ? 0.08 : len),
+      glassMat
+    );
+    glass.position.set(axis === 'x' ? x + len / 2 : x, y + h / 2, axis === 'x' ? z : z + len / 2);
+    group.add(glass);
+
+    // Top Handrail
+    const rail = new THREE.Mesh(
+      new THREE.BoxGeometry(axis === 'x' ? len : 0.25, 0.2, axis === 'x' ? 0.25 : len),
+      this.mat.brassGold
+    );
+    rail.position.set(axis === 'x' ? x + len / 2 : x, y + h - 0.1, axis === 'x' ? z : z + len / 2);
+    group.add(rail);
   }
 
   // ==========================================================================
-  // TERRACE & ELEVATION
+  // ROOF TERRACE & HEAD ROOM (159.25 SQ.FT. SLAB)
   // ==========================================================================
   buildTerrace() {
-    const tfY = 23.0;
-    const r = this.roofGroup;
+    const tY = 23.5;
+    const t = this.terraceGroup;
 
-    // Roof covers the residential portion (leaving Sky Garden open to sky!)
-    const roof = new THREE.Mesh(new THREE.BoxGeometry(30, 0.5, 40), this.mat.shopFloor);
-    roof.position.set(0, tfY + 0.25, 6);
-    r.add(roof);
+    // Roof Terrace Slab: 28'-3" × 51'-6"
+    this.roofSlab = new THREE.Mesh(new THREE.BoxGeometry(28.25, 0.6, 51.5), this.mat.terraceTile);
+    this.roofSlab.position.set(-0.875, tY - 0.3, 1.25);
+    t.add(this.roofSlab);
 
-    this.addWall(r, -15, tfY + 0.5, -14, 0.5, 3.5, 40, this.mat.extWhite, true);
-    this.addWall(r, 14.5, tfY + 0.5, -14, 0.5, 3.5, 40, this.mat.extWhite, true);
-    this.addWall(r, -15, tfY + 0.5, -14, 30, 3.5, 0.5, this.mat.extWhite, true);
-    this.addWall(r, -15, tfY + 0.5, 25.5, 30, 3.5, 0.5, this.mat.extWhite, true);
+    // Staircase Head Room (Mumty): 13'-0" × 10'-0" (X: -15.0 to -2.0, Z: -12.0 to -2.0)
+    const mumtyH = 9.5;
+    this.addWall(t, -15.0, tY, -12.0, 13.0, mumtyH, 0.75, this.mat.extWhite, true);
+    this.addWall(t, -15.0, tY, -2.0, 13.0, mumtyH, 0.75, this.mat.extWhite, true);
+    this.addWall(t, -2.0, tY, -12.0, 0.75, mumtyH, 10.0, this.mat.extWhite, true);
+    this.addDoorway(t, -2.0, tY, -7.0, 3.2, 7.0, 'z', 0.9);
 
-    this.addWall(r, -11, tfY + 0.5, 0, 11, 8.0, 12, this.mat.extGrey, true);
-    const mumtyRoof = new THREE.Mesh(new THREE.BoxGeometry(13, 0.5, 14), this.mat.extWhite);
-    mumtyRoof.position.set(-5.5, tfY + 8.75, 6);
-    r.add(mumtyRoof);
+    // Head Room Roof Slab (159.25 Sq.Ft.)
+    this.mumtyRoof = new THREE.Mesh(new THREE.BoxGeometry(14.0, 0.5, 11.0), this.mat.extWhite);
+    this.mumtyRoof.position.set(-8.5, tY + mumtyH + 0.25, -7.0);
+    t.add(this.mumtyRoof);
 
-    const tank = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 2.0, 4.5, 24), new THREE.MeshStandardMaterial({ color: 0x1e293b }));
-    tank.position.set(-5.5, tfY + 11.25, 6);
-    r.add(tank);
+    // Water Tank Tower (1000L Sintex on Mumty Roof)
+    const tank = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 2.0, 4.0, 24), new THREE.MeshStandardMaterial({ color: 0x0284c7, roughness: 0.4 }));
+    tank.position.set(-8.5, tY + mumtyH + 2.5, -7.0);
+    t.add(tank);
+
+    // Parapet Walls (3'-6" High)
+    const parH = 3.5;
+    this.addWall(t, -15.0, tY, -24.5, 0.6, parH, 51.5, this.mat.extGrey, true);
+    this.addWall(t, 12.65, tY, -24.5, 0.6, parH, 51.5, this.mat.extGrey, true);
+    this.addWall(t, -15.0, tY, 26.4, 28.25, parH, 0.6, this.mat.extGrey, true);
+    this.addWall(t, -15.0, tY, -24.5, 28.25, parH, 0.6, this.mat.extGrey, true);
+
+    // Rooftop Pergola with Seating
+    for (let p = 0; p < 5; p++) {
+      const beam = new THREE.Mesh(new THREE.BoxGeometry(10.0, 0.3, 0.3), this.mat.accentTeak);
+      beam.position.set(5.0, tY + 8.5, 8.0 + p * 2.2);
+      t.add(beam);
+    }
   }
 
   buildElevationFacade() {
-    const pillar = new THREE.Mesh(new THREE.BoxGeometry(2.0, 13.0, 2.0), this.mat.graniteBlack);
-    pillar.position.set(13.0, 6.5, -26.0);
-    this.groundGroup.add(pillar);
-
-    this.createSconce(13.0, 7.0, -24.8);
-    this.createSconce(-15.8, 7.0, -26.0);
+    // Architectural Facade Louvers & Modern Accents
+    for (let i = 0; i < 7; i++) {
+      const louver = new THREE.Mesh(new THREE.BoxGeometry(0.2, 10.0, 0.4), this.mat.accentTeak);
+      louver.position.set(-2.5 + i * 0.8, 18.0, -24.4);
+      this.firstGroup.add(louver);
+    }
   }
 
-  createSconce(x, y, z) {
-    const sconceMesh = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.8, 0.3), this.mat.blackMetal);
-    sconceMesh.position.set(x, y, z);
-    this.siteGroup.add(sconceMesh);
+  buildNaturalGreenery() {
+    const g = this.greeneryGroup;
+    // Potted palms in corridors and terrace
+    const coords = [
+      { x: -14.0, y: 2.5, z: -27.5 },
+      { x: 12.0, y: 2.5, z: -27.5 },
+      { x: 11.5, y: 13.0, z: -26.0 },
+      { x: 8.0, y: 23.5, z: 12.0 }
+    ];
+    coords.forEach(pt => {
+      const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.6, 1.4, 16), this.mat.darkMetal);
+      pot.position.set(pt.x, pt.y + 0.7, pt.z);
+      g.add(pot);
 
-    const lightUp = new THREE.SpotLight(0xffedd5, 0, 16, Math.PI / 4, 0.4);
-    lightUp.position.set(x, y + 0.4, z);
-    lightUp.target.position.set(x, y + 6, z);
-    this.siteGroup.add(lightUp);
-    this.siteGroup.add(lightUp.target);
-    this.sconceLights.push(lightUp);
-
-    const lightDown = new THREE.SpotLight(0xffedd5, 0, 16, Math.PI / 4, 0.4);
-    lightDown.position.set(x, y - 0.4, z);
-    lightDown.target.position.set(x, y - 6, z);
-    this.siteGroup.add(lightDown);
-    this.siteGroup.add(lightDown.target);
-    this.sconceLights.push(lightDown);
+      const plant = new THREE.Mesh(new THREE.SphereGeometry(1.4, 12, 12), new THREE.MeshStandardMaterial({ color: 0x15803d, roughness: 0.9 }));
+      plant.position.set(pt.x, pt.y + 2.2, pt.z);
+      g.add(plant);
+    });
   }
 
   // ==========================================================================
-  // MATTERPORT-STYLE 3D FLOOR NAVIGATION HOTSPOTS
+  // MINIMALIST 3D ROOM BADGES (REAL ESTATE LISTING STYLE)
+  // ==========================================================================
+  createRoomLabel(title, subtitle, x, y, z, width = 7.0, height = 2.4) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 512;
+    canvas.height = 160;
+    const ctx = canvas.getContext('2d');
+
+    // Rounded card pill
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
+    ctx.beginPath();
+    ctx.roundRect(8, 8, 496, 144, 20);
+    ctx.fill();
+
+    ctx.strokeStyle = '#38bdf8';
+    ctx.lineWidth = 3.5;
+    ctx.stroke();
+
+    // Room title
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 36px "Plus Jakarta Sans", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(title, 256, 52);
+
+    // Dimensions
+    ctx.fillStyle = '#38bdf8';
+    ctx.font = 'bold 26px "JetBrains Mono", monospace';
+    ctx.fillText(subtitle, 256, 108);
+
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.minFilter = THREE.LinearFilter;
+    const mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false });
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(width, height), mat);
+    mesh.rotation.x = -Math.PI / 2;
+    mesh.position.set(x, y + 0.35, z);
+    return mesh;
+  }
+
+  buildRoomLabels() {
+    this.groundLabels = new THREE.Group();
+    this.firstLabels = new THREE.Group();
+    this.scene.add(this.groundLabels);
+    this.scene.add(this.firstLabels);
+
+    // Ground Floor Labels
+    this.groundLabels.add(this.createRoomLabel('KIRANA GENERAL STORE', "16'-0\" × 12'-6\"", -7.0, 2.5, -18.25));
+    this.groundLabels.add(this.createRoomLabel('CAR PARKING & PORTICO', "12'-3\" × 21'-6\"", 7.125, 0.25, -22.75));
+    this.groundLabels.add(this.createRoomLabel('ENTRANCE LOBBY', "12'-3\" × 6'-6\"", 7.125, 2.5, -8.75));
+    this.groundLabels.add(this.createRoomLabel('LIVING ROOM HALL', "13'-5\" × 15'-8\"", 6.5, 2.5, 2.35));
+    this.groundLabels.add(this.createRoomLabel('PUJA MANDIR', "6'-0\" × 5'-0\"", 10.25, 2.5, 7.7, 5.2, 1.8));
+    this.groundLabels.add(this.createRoomLabel('DINING HALL', "14'-0\" × 8'-8\"", 6.25, 2.5, 14.55));
+    this.groundLabels.add(this.createRoomLabel('TRADITIONAL KITCHEN', "12'-0\" × 9'-0\"", -6.75, 2.5, 19.25));
+    this.groundLabels.add(this.createRoomLabel('MASTER BEDROOM', "13'-0\" × 11'-6\"", -8.5, 2.5, 0.25));
+    this.groundLabels.add(this.createRoomLabel('ATTACHED BATH', "4'-6\" × 8'-9\"", -12.75, 2.5, 10.375, 5.0, 1.8));
+    this.groundLabels.add(this.createRoomLabel('DUPLEX STAIRS', "UP TO 1ST FLOOR", -5.375, 2.5, 10.375, 5.2, 1.8));
+    this.groundLabels.add(this.createRoomLabel('REAR UTILITY', "5'-0\" WIDE", 0.0, 2.5, 24.5, 5.5, 1.8));
+
+    // First Floor Labels
+    this.firstLabels.add(this.createRoomLabel('FRONT 1BHK SUITE', "8'-7\" × 9'-4\" HALL", 5.5, 13.0, -18.5));
+    this.firstLabels.add(this.createRoomLabel('BEDROOM 03', "12'-6\" × 9'-0\"", -8.5, 13.0, -19.5));
+    this.firstLabels.add(this.createRoomLabel('FRONT BALCONY', "3'-6\" WIDE", 5.25, 13.0, -26.5));
+    this.firstLabels.add(this.createRoomLabel('DUPLEX VOID CUTOUT', "94.47 SQ.FT. OPEN", 6.5, 13.0, 2.35));
+    this.firstLabels.add(this.createRoomLabel('UPPER MASTER SUITE', "13'-0\" × 11'-6\"", -8.5, 13.0, 0.25));
+    this.firstLabels.add(this.createRoomLabel('WALK-IN CLOSET', "4'-6\" × 4'-6\"", -12.75, 13.0, 4.5, 5.0, 1.8));
+    this.firstLabels.add(this.createRoomLabel('FAMILY LOUNGE', "13'-0\" × 9'-6\"", 6.5, 13.0, 10.5));
+    this.firstLabels.add(this.createRoomLabel('BEDROOM 02', "12'-6\" × 9'-0\"", -8.5, 13.0, 19.5));
+    this.firstLabels.add(this.createRoomLabel('STUDY / OFFICE', "9'-0\" × 9'-4\"", 8.5, 13.0, 19.5));
+    this.firstLabels.add(this.createRoomLabel('REAR BALCONY', "4'-0\" WIDE", 0.0, 13.0, 26.5));
+
+    this.groundLabels.visible = true;
+    this.firstLabels.visible = false;
+  }
+
+  // ==========================================================================
+  // INTERACTIVE FLOOR HOTSPOTS (CLICK TO WALK)
   // ==========================================================================
   buildFloorHotspots() {
-    const hotspotData = [
-      { pov: 'sky-garden-sofa', label: '🌿 Sky Garden Sofa', x: -8.0, y: 13.1, z: -18.0 },
-      { pov: 'sky-garden-view', label: '🌅 Street Railing', x: 2.0, y: 13.1, z: -25.5 },
-      { pov: 'shop-street', label: '🏬 Kirana Front & Board', x: -6.5, y: 0.35, z: -32.0 },
-      { pov: 'shop-entrance', label: '🌾 Rice & Dal Sacks', x: -4.5, y: 1.1, z: -25.0 },
-      { pov: 'shop-counter', label: '⚖️ Shopkeeper Counter', x: -8.5, y: 1.1, z: -17.5 },
-      { pov: 'shop-shelf', label: '📦 Blue Goods Shelves', x: -7.0, y: 1.1, z: -20.0 },
-      { pov: 'living-entrance', label: '🛋️ Living Room', x: 7.5, y: 2.6, z: -8.0 },
-      { pov: 'living-sofa', label: '🛋️ Sofa & TV', x: 5.0, y: 2.6, z: -2.0 },
-      { pov: 'living-up', label: '✨ Chandelier View', x: 7.375, y: 2.6, z: -1.25 },
-      { pov: 'puja', label: '🛕 Puja Mandir', x: 8.5, y: 2.6, z: 9.0 },
-      { pov: 'dining', label: '🍽️ Dining Hall', x: 3.5, y: 2.6, z: 12.5 },
-      { pov: 'kitchen', label: '🍳 Kitchen', x: -3.0, y: 2.6, z: 14.5 },
-      { pov: 'master-bed-gf', label: '🛏️ Master Bed', x: -4.0, y: 2.6, z: -3.0 },
-      { pov: 'portico', label: '🚗 Car Portico', x: 8.0, y: 0.35, z: -28.0 },
-      { pov: 'duplex-void-overlook', label: '🕳️ Duplex Overlook', x: 0.5, y: 13.1, z: -1.25 },
-      { pov: 'lounge', label: '🛋️ Upper Lounge', x: 0.0, y: 13.1, z: 10.0 },
-      { pov: 'study', label: '📚 Study Office', x: 6.5, y: 13.1, z: 10.5 },
-      { pov: 'terrace-open', label: '🌇 Roof Terrace', x: 8.0, y: 23.6, z: 15.0 }
-    ];
+    this.hotspotMeshes = [];
+    const ringGeo = new THREE.RingGeometry(0.8, 1.2, 32);
+    ringGeo.rotateX(-Math.PI / 2);
 
-    hotspotData.forEach(h => {
-      const ringGeo = new THREE.RingGeometry(0.8, 1.1, 32);
-      const ringMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, side: THREE.DoubleSide, transparent: true, opacity: 0.8 });
-      const ringMesh = new THREE.Mesh(ringGeo, ringMat);
-      ringMesh.rotation.x = -Math.PI / 2;
-      ringMesh.position.set(h.x, h.y + 0.04, h.z);
-      ringMesh.userData = { isHotspot: true, pov: h.pov };
-      this.hotspotsGroup.add(ringMesh);
-      this.interactiveObjects.push(ringMesh);
+    Object.keys(POV_DATA).forEach(key => {
+      const data = POV_DATA[key];
+      if (key === 'aerial-duplex' || key === 'south-facade') return;
 
-      const div = document.createElement('div');
-      div.className = 'hotspot-3d-tag';
-      div.innerHTML = `<span class="hotspot-ring-icon"></span><span>${h.label}</span>`;
-      div.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.switchToPOV(h.pov);
-      });
-      document.body.appendChild(div);
+      const ringMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, side: THREE.DoubleSide });
+      const ring = new THREE.Mesh(ringGeo, ringMat);
+      ring.position.set(data.camPos.x, data.camPos.y - 4.5, data.camPos.z);
+      ring.userData = { isHotspot: true, povKey: key };
 
-      this.hotspots.push({
-        element: div,
-        mesh: ringMesh,
-        pos: new THREE.Vector3(h.x, h.y + 0.8, h.z),
-        pov: h.pov
-      });
-    });
-  }
-
-  updateHotspots() {
-    const show = document.getElementById('toggle-hotspots') ? document.getElementById('toggle-hotspots').checked : true;
-    const tempV = new THREE.Vector3();
-
-    this.hotspots.forEach(h => {
-      if (!show || this.isFPSMode) {
-        h.element.style.display = 'none';
-        h.mesh.visible = false;
-        return;
-      }
-      h.mesh.visible = true;
-
-      tempV.copy(h.pos);
-      tempV.project(this.camera);
-
-      if (tempV.z > 1) {
-        h.element.style.display = 'none';
-        return;
-      }
-
-      const x = (tempV.x * 0.5 + 0.5) * window.innerWidth;
-      const y = (tempV.y * -0.5 + 0.5) * window.innerHeight;
-
-      h.element.style.display = 'flex';
-      h.element.style.left = `${x}px`;
-      h.element.style.top = `${y}px`;
+      this.hotspotGroup.add(ring);
+      this.hotspotMeshes.push(ring);
     });
   }
 
   // ==========================================================================
-  // POV SWITCHER & CAMERA ANIMATION
+  // VIEWPOINT SWITCHING & CAMERA ANIMATION
   // ==========================================================================
   switchToPOV(povKey) {
-    const pov = POV_DATA[povKey];
-    if (!pov) return;
+    const data = POV_DATA[povKey];
+    if (!data) return;
 
     this.currentPOVKey = povKey;
-    document.getElementById('hud-current-room').textContent = pov.name;
-    const fpsLabel = document.getElementById('fps-current-pov-label');
-    if (fpsLabel) fpsLabel.textContent = `${pov.name.toUpperCase()} • EYE LEVEL (5'6")`;
 
-    document.querySelectorAll('.room-nav-btn').forEach(b => b.classList.remove('active'));
-    const btn = document.querySelector(`[data-pov="${povKey}"]`);
-    if (btn) btn.classList.add('active');
+    // Update active state in room selector sidebar
+    document.querySelectorAll('.room-nav-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-pov') === povKey);
+    });
 
-    if (pov.floorLevel === 'ground') {
-      this.groundGroup.visible = true;
-      this.shopGroup.visible = true;
-    } else if (pov.floorLevel === 'first') {
-      this.groundGroup.visible = true;
-      this.shopGroup.visible = true;
-      this.firstGroup.visible = true;
-      this.skyGardenGroup.visible = true;
-    } else if (pov.floorLevel === 'terrace') {
-      this.groundGroup.visible = true;
-      this.firstGroup.visible = true;
-      this.roofGroup.visible = true;
+    // Update HUD
+    const hudRoom = document.getElementById('hud-current-room');
+    if (hudRoom) hudRoom.textContent = data.name;
+
+    // Update Floor Visibility based on POV level
+    if (data.floorLevel === 'ground') {
+      this.setMode('ground', false);
+    } else if (data.floorLevel === 'first') {
+      this.setMode('first', false);
+    } else if (data.floorLevel === 'terrace') {
+      this.setMode('terrace', false);
     }
 
-    this.displayRoomCard(pov);
-    this.updateMiniMap(pov);
-
-    const targetPos = new THREE.Vector3(pov.camPos.x, pov.camPos.y, pov.camPos.z);
-    const targetLook = new THREE.Vector3(pov.camLook.x, pov.camLook.y, pov.camLook.z);
-
+    // Camera Smooth Transition with TWEEN
     new TWEEN.Tween(this.camera.position)
-      .to(targetPos, 1200)
+      .to({ x: data.camPos.x, y: data.camPos.y, z: data.camPos.z }, 900)
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
 
     new TWEEN.Tween(this.controls.target)
-      .to(targetLook, 1200)
+      .to({ x: data.camLook.x, y: data.camLook.y, z: data.camLook.z }, 900)
       .easing(TWEEN.Easing.Cubic.Out)
-      .onComplete(() => {
-        this.controls.minDistance = 0.4;
-      })
       .start();
+
+    this.updateMiniMap(data);
+    this.displayRoomCard(data);
+
+    // Auto-close mobile drawer on selection
+    const sidebar = document.getElementById('left-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    if (window.innerWidth <= 960 && sidebar) {
+      sidebar.classList.remove('open');
+      backdrop?.classList.remove('active');
+    }
   }
 
   nextPOV() {
@@ -2486,114 +1514,141 @@ class CompleteDuplexApp {
   }
 
   // ==========================================================================
-  // INTERACTIVE 2D MINI-MAP
+  // 2D MINI-MAP DRAWING (MATCHING RAMNAGAR PLAN)
   // ==========================================================================
   updateMiniMap(pov) {
-    if (!this.mapCtx) return;
-    const ctx = this.mapCtx;
-    const w = 154, h = 180;
+    const canvas = document.getElementById('minimap-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width;
+    const h = canvas.height;
 
     ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#0f172a';
+    ctx.fillRect(0, 0, w, h);
 
-    const badge = document.getElementById('minimap-floor-name');
-    if (badge) badge.textContent = pov.floorLevel.toUpperCase();
-
-    // Plot Boundary
+    // Draw Plot Boundary (33' × 60')
     ctx.strokeStyle = '#38bdf8';
     ctx.lineWidth = 1.5;
-    ctx.strokeRect(10, 10, w - 20, h - 20);
+    ctx.strokeRect(15, 20, 130, 160);
 
-    // Layout outlines
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    // Draw Rooms (Ramnagar Plan layout)
+    ctx.fillStyle = '#1e293b';
+    ctx.strokeStyle = '#64748b';
     ctx.lineWidth = 1;
 
-    // Sky Garden Deck (Front)
-    ctx.strokeRect(14, 110, 126, 50);
-    ctx.fillStyle = 'rgba(16, 185, 129, 0.15)';
-    ctx.fillRect(14, 110, 126, 50);
+    // Commercial Shutter (South-West)
+    ctx.fillRect(15, 120, 65, 45);
+    ctx.strokeRect(15, 120, 65, 45);
 
-    // Living / Dining (Center-East)
-    ctx.strokeRect(74, 50, 66, 60);
+    // Car Parking (South-East)
+    ctx.fillRect(80, 110, 65, 55);
+    ctx.strokeRect(80, 110, 65, 55);
 
-    // Master Bed / Kitchen (Center-West)
-    ctx.strokeRect(14, 50, 60, 60);
+    // Living Room (Center East)
+    ctx.fillRect(70, 65, 75, 45);
+    ctx.strokeRect(70, 65, 75, 45);
 
-    // Vision Cone
-    const px = pov.mapX;
-    const py = pov.mapY;
+    // Master Bedroom (Center West)
+    ctx.fillRect(15, 65, 55, 40);
+    ctx.strokeRect(15, 65, 55, 40);
 
-    ctx.fillStyle = 'rgba(56, 189, 248, 0.25)';
-    ctx.beginPath();
-    ctx.moveTo(px, py);
-    const angle = this.controls.getAzimuthalAngle() - Math.PI / 2;
-    ctx.arc(px, py, 25, angle - 0.5, angle + 0.5);
-    ctx.closePath();
-    ctx.fill();
+    // Dining (Rear East)
+    ctx.fillRect(70, 30, 75, 35);
+    ctx.strokeRect(70, 30, 75, 35);
 
-    // Player Red Dot
-    ctx.fillStyle = '#ef4444';
-    ctx.beginPath();
-    ctx.arc(px, py, 4, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.strokeStyle = '#ffffff';
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
+    // Kitchen (Rear West)
+    ctx.fillRect(15, 30, 55, 35);
+    ctx.strokeRect(15, 30, 55, 35);
+
+    // Draw Player Dot & View Cone
+    if (pov && pov.mapX !== undefined && pov.mapY !== undefined) {
+      ctx.fillStyle = '#f59e0b';
+      ctx.beginPath();
+      ctx.arc(pov.mapX, pov.mapY, 4.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = 'rgba(245, 158, 11, 0.4)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(pov.mapX, pov.mapY, 8.0, 0, Math.PI * 2);
+      ctx.stroke();
+    }
   }
 
   // ==========================================================================
-  // KEYBOARD & CONTINUOUS D-PAD WALKING
+  // KEYBOARD & TOUCH NAVIGATION CONTROLS
   // ==========================================================================
   setupKeyboard() {
     window.addEventListener('keydown', (e) => {
       const k = e.key.toLowerCase();
-      if (this.keys.hasOwnProperty(k)) this.keys[k] = true;
-      if (this.keys.hasOwnProperty(e.key)) this.keys[e.key] = true;
-      if (this.keys.hasOwnProperty(e.code)) this.keys[e.code] = true;
+      if (k === 'w' || k === 'arrowup') this.moveState.fwd = true;
+      if (k === 's' || k === 'arrowdown') this.moveState.bwd = true;
+      if (k === 'a' || k === 'arrowleft') this.moveState.left = true;
+      if (k === 'd' || k === 'arrowright') this.moveState.right = true;
+      if (k === 'q') this.moveState.turnL = true;
+      if (k === 'e') this.moveState.turnR = true;
       if (e.shiftKey) this.isSprinting = true;
     });
 
     window.addEventListener('keyup', (e) => {
       const k = e.key.toLowerCase();
-      if (this.keys.hasOwnProperty(k)) this.keys[k] = false;
-      if (this.keys.hasOwnProperty(e.key)) this.keys[e.key] = false;
-      if (this.keys.hasOwnProperty(e.code)) this.keys[e.code] = false;
+      if (k === 'w' || k === 'arrowup') this.moveState.fwd = false;
+      if (k === 's' || k === 'arrowdown') this.moveState.bwd = false;
+      if (k === 'a' || k === 'arrowleft') this.moveState.left = false;
+      if (k === 'd' || k === 'arrowright') this.moveState.right = false;
+      if (k === 'q') this.moveState.turnL = false;
+      if (k === 'e') this.moveState.turnR = false;
       if (!e.shiftKey) this.isSprinting = false;
     });
   }
 
-  updateFPSWalk() {
-    const forward = (this.keys.w || this.keys.ArrowUp) ? 1 : (this.keys.s || this.keys.ArrowDown) ? -1 : 0;
-    const strafe = (this.keys.d || this.keys.ArrowRight) ? 1 : (this.keys.a || this.keys.ArrowLeft) ? -1 : 0;
+  bindContinuousNav(btnId, actionFn) {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
 
-    if (forward === 0 && strafe === 0) return;
+    let active = false;
+    let timer = null;
 
-    const speed = this.isSprinting ? this.walkSpeed * 1.8 : this.walkSpeed;
+    const start = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (active) return;
+      active = true;
+      actionFn();
+      timer = setInterval(actionFn, 60);
+    };
 
-    const dir = new THREE.Vector3();
-    this.camera.getWorldDirection(dir);
-    dir.y = 0;
-    dir.normalize();
+    const stop = (e) => {
+      if (!active) return;
+      active = false;
+      if (timer) clearInterval(timer);
+    };
 
-    const sideDir = new THREE.Vector3(-dir.z, 0, dir.x);
-
-    const move = new THREE.Vector3();
-    move.addScaledVector(dir, forward * speed);
-    move.addScaledVector(sideDir, strafe * speed);
-
-    this.camera.position.add(move);
-    this.controls.target.add(move);
+    btn.addEventListener('pointerdown', start);
+    window.addEventListener('pointerup', stop);
+    window.addEventListener('pointercancel', stop);
   }
 
   step(direction) {
-    const dir = new THREE.Vector3();
-    this.camera.getWorldDirection(dir);
-    dir.y = 0;
-    dir.normalize();
+    const forward = new THREE.Vector3();
+    this.camera.getWorldDirection(forward);
+    forward.y = 0;
+    forward.normalize();
 
-    const dist = direction * 2.2;
-    dir.multiplyScalar(dist);
-    this.camera.position.add(dir);
-    this.controls.target.add(dir);
+    const right = new THREE.Vector3();
+    right.crossVectors(forward, this.camera.up).normalize();
+
+    const speed = (this.isSprinting ? 2.2 : 1.0) * 0.9;
+    const move = new THREE.Vector3();
+
+    if (direction === 'fwd') move.addScaledVector(forward, speed);
+    if (direction === 'bwd') move.addScaledVector(forward, -speed);
+    if (direction === 'left') move.addScaledVector(right, -speed);
+    if (direction === 'right') move.addScaledVector(right, speed);
+
+    this.camera.position.add(move);
+    this.controls.target.add(move);
   }
 
   turn(angleRad) {
@@ -2602,103 +1657,125 @@ class CompleteDuplexApp {
     this.controls.target.copy(this.camera.position).add(offset);
   }
 
-  bindContinuousNav(btnId, actionFn) {
-    const btn = document.getElementById(btnId);
-    if (!btn) return;
-    let timer = null;
-    const start = (e) => {
-      e.preventDefault();
-      actionFn();
-      clearInterval(timer);
-      timer = setInterval(actionFn, 70);
-    };
-    const stop = () => {
-      clearInterval(timer);
-      timer = null;
-    };
-    btn.addEventListener('mousedown', start);
-    btn.addEventListener('mouseup', stop);
-    btn.addEventListener('mouseleave', stop);
-    btn.addEventListener('touchstart', start, { passive: false });
-    btn.addEventListener('touchend', stop);
-    btn.addEventListener('touchcancel', stop);
-  }
-
   // ==========================================================================
-  // UI SETUP
+  // UI & BUTTON BINDINGS (DESKTOP & MOBILE)
   // ==========================================================================
   setupUI() {
-    document.querySelectorAll('#view-tabs .tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => this.setMode(btn.dataset.mode));
-    });
+    // 1. Mobile Menu Drawer Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const sidebar = document.getElementById('left-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    const closeBtn = document.getElementById('sidebar-close-btn');
 
+    const openDrawer = () => {
+      sidebar?.classList.add('open');
+      backdrop?.classList.add('active');
+    };
+    const closeDrawer = () => {
+      sidebar?.classList.remove('open');
+      backdrop?.classList.remove('active');
+    };
+
+    mobileBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    backdrop?.addEventListener('click', closeDrawer);
+
+    // 2. Room Navigation Buttons
     document.querySelectorAll('.room-nav-btn').forEach(btn => {
-      btn.addEventListener('click', () => this.switchToPOV(btn.dataset.pov));
-    });
-
-    // Continuous on-screen navigation buttons (click or press-and-hold)
-    this.bindContinuousNav('nav-step-fwd', () => this.step(0.35));
-    this.bindContinuousNav('nav-step-back', () => this.step(-0.35));
-    this.bindContinuousNav('nav-turn-left', () => this.turn(0.05));
-    this.bindContinuousNav('nav-turn-right', () => this.turn(-0.05));
-    document.getElementById('nav-next-pov').addEventListener('click', () => this.nextPOV());
-
-    document.getElementById('card-teleport-btn').addEventListener('click', () => {
-      this.switchToPOV(this.currentPOVKey);
-      this.toggleFPSMode(true);
-    });
-
-    document.getElementById('exit-fps-btn').addEventListener('click', () => {
-      this.setMode('full');
-    });
-
-    document.getElementById('btn-day').addEventListener('click', () => this.setLightingMode('day'));
-    document.getElementById('btn-sunset').addEventListener('click', () => this.setLightingMode('sunset'));
-    document.getElementById('btn-night').addEventListener('click', () => this.setLightingMode('night'));
-
-    document.getElementById('toggle-roof').addEventListener('change', (e) => {
-      this.roofGroup.visible = e.target.checked;
-    });
-
-    document.getElementById('toggle-greenery').addEventListener('change', (e) => {
-      this.greeneryGroup.visible = e.target.checked;
-      this.skyGardenGroup.visible = e.target.checked;
-    });
-
-    const toggleHotspots = document.getElementById('toggle-hotspots');
-    if (toggleHotspots) {
-      toggleHotspots.addEventListener('change', (e) => {
-        this.hotspotsGroup.visible = e.target.checked;
-        this.updateHotspots();
+      btn.addEventListener('click', (e) => {
+        const povKey = btn.getAttribute('data-pov');
+        this.switchToPOV(povKey);
       });
-    }
+    });
 
-    document.getElementById('toggle-furniture').addEventListener('change', (e) => {
+    // 3. View Tabs (Floor Modes)
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const mode = btn.getAttribute('data-mode');
+        this.setMode(mode, true);
+      });
+    });
+
+    // 4. Lighting Modes
+    document.getElementById('btn-listing')?.addEventListener('click', () => this.setLightingMode('listing'));
+    document.getElementById('btn-day')?.addEventListener('click', () => this.setLightingMode('day'));
+    document.getElementById('btn-sunset')?.addEventListener('click', () => this.setLightingMode('sunset'));
+    document.getElementById('btn-night')?.addEventListener('click', () => this.setLightingMode('night'));
+
+    // 5. Continuous D-Pad Touch Navigation
+    this.bindContinuousNav('nav-step-fwd', () => this.step('fwd'));
+    this.bindContinuousNav('nav-step-back', () => this.step('bwd'));
+    this.bindContinuousNav('nav-step-left', () => this.step('left'));
+    this.bindContinuousNav('nav-step-right', () => this.step('right'));
+    document.getElementById('nav-next-pov')?.addEventListener('click', () => this.nextPOV());
+
+    // 6. Mobile Quick Turn & Sprint Buttons
+    this.bindContinuousNav('btn-turn-left', () => this.turn(0.08));
+    this.bindContinuousNav('btn-turn-right', () => this.turn(-0.08));
+    const sprintBtn = document.getElementById('btn-sprint-toggle');
+    sprintBtn?.addEventListener('click', () => {
+      this.isSprinting = !this.isSprinting;
+      sprintBtn.classList.toggle('active', this.isSprinting);
+    });
+
+    // 7. Visual Options Toggles
+    document.getElementById('toggle-roof')?.addEventListener('change', (e) => {
+      this.terraceGroup.visible = e.target.checked;
+    });
+    document.getElementById('toggle-labels')?.addEventListener('change', (e) => {
+      this.showLabels = e.target.checked;
+      if (this.currentMode === 'ground' || this.currentMode === 'top2d') {
+        this.groundLabels.visible = this.showLabels;
+      } else if (this.currentMode === 'first') {
+        this.firstLabels.visible = this.showLabels;
+      }
+    });
+    document.getElementById('toggle-greenery')?.addEventListener('change', (e) => {
+      this.greeneryGroup.visible = e.target.checked;
+    });
+    document.getElementById('toggle-hotspots')?.addEventListener('change', (e) => {
+      this.hotspotGroup.visible = e.target.checked;
+    });
+    document.getElementById('toggle-furniture')?.addEventListener('change', (e) => {
       this.furnitureGroup.visible = e.target.checked;
     });
-
-    document.getElementById('toggle-walls-transparent').addEventListener('change', (e) => {
-      const trans = e.target.checked;
-      this.allWalls.forEach(w => {
-        w.material = trans ? this.mat.glass : w.userData.origMat;
+    document.getElementById('toggle-walls-transparent')?.addEventListener('change', (e) => {
+      const transparent = e.target.checked;
+      this.allWalls.forEach(wall => {
+        if (transparent) {
+          wall.material = this.mat.glass;
+        } else {
+          wall.material = wall.userData.origMat;
+        }
       });
     });
-
-    document.getElementById('toggle-auto-rotate').addEventListener('change', (e) => {
+    document.getElementById('toggle-auto-rotate')?.addEventListener('change', (e) => {
       this.controls.autoRotate = e.target.checked;
-      this.controls.autoRotateSpeed = 1.0;
+      this.controls.autoRotateSpeed = 0.8;
     });
 
-    document.getElementById('close-card-btn').addEventListener('click', () => {
-      document.getElementById('room-card').classList.add('hidden');
+    // 8. Exit FPS Button
+    document.getElementById('exit-fps-btn')?.addEventListener('click', () => {
+      this.toggleFPSMode(false);
+    });
+
+    // 9. Close Room Details Card
+    document.getElementById('close-card-btn')?.addEventListener('click', () => {
+      document.getElementById('room-card')?.classList.add('hidden');
+    });
+    document.getElementById('card-teleport-btn')?.addEventListener('click', () => {
+      this.switchToPOV(this.currentPOVKey);
     });
   }
 
-  setMode(mode) {
+  // ==========================================================================
+  // FLOOR MODE SWITCHER (ELEVATED 3D DOLLHOUSE & 2D TOP VIEW)
+  // ==========================================================================
+  setMode(mode, updateCam = true) {
     this.currentMode = mode;
-    document.querySelectorAll('#view-tabs .tab-btn').forEach(b => b.classList.remove('active'));
-    const btn = document.querySelector(`[data-mode="${mode}"]`);
-    if (btn) btn.classList.add('active');
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+    });
 
     if (mode === 'fps') {
       this.toggleFPSMode(true);
@@ -2708,92 +1785,114 @@ class CompleteDuplexApp {
     }
 
     if (mode === 'full') {
+      // Full exterior villa 3D
       this.groundGroup.visible = true;
-      this.shopGroup.visible = true;
       this.firstGroup.visible = true;
-      this.skyGardenGroup.visible = true;
-      this.roofGroup.visible = true;
-      this.furnitureGroup.visible = true;
-      this.switchToPOV('south-facade');
+      this.terraceGroup.visible = true;
+      this.boundaryGroup.visible = true;
+      this.groundLabels.visible = false;
+      this.firstLabels.visible = false;
+      if (updateCam) {
+        new TWEEN.Tween(this.camera.position).to({ x: 26.0, y: 30.0, z: -40.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+        new TWEEN.Tween(this.controls.target).to({ x: 0.0, y: 10.0, z: 0.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+      }
     } else if (mode === 'ground') {
+      // 3D Ground Plan Dollhouse View (Apartment Listing Style: 55° Angle, Unobstructed)
       this.groundGroup.visible = true;
-      this.shopGroup.visible = true;
       this.firstGroup.visible = false;
-      this.skyGardenGroup.visible = false;
-      this.roofGroup.visible = false;
-      this.furnitureGroup.visible = true;
-      this.switchToPOV('shop-entrance');
+      this.terraceGroup.visible = false;
+      this.boundaryGroup.visible = false; // Hide tall boundary walls for clean presentation!
+      this.groundLabels.visible = this.showLabels;
+      this.firstLabels.visible = false;
+      if (updateCam) {
+        new TWEEN.Tween(this.camera.position).to({ x: 0.0, y: 38.0, z: -26.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+        new TWEEN.Tween(this.controls.target).to({ x: -0.875, y: 2.5, z: 2.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+      }
     } else if (mode === 'first') {
+      // 3D First Floor Duplex Cutaway (Showcases Duplex Void Looking Down)
       this.groundGroup.visible = true;
-      this.shopGroup.visible = true;
       this.firstGroup.visible = true;
-      this.skyGardenGroup.visible = true;
-      this.roofGroup.visible = false;
-      this.furnitureGroup.visible = true;
-      this.switchToPOV('sky-garden-sofa');
+      this.terraceGroup.visible = false;
+      this.boundaryGroup.visible = false;
+      this.groundLabels.visible = false;
+      this.firstLabels.visible = this.showLabels;
+      if (updateCam) {
+        new TWEEN.Tween(this.camera.position).to({ x: 0.0, y: 44.0, z: -24.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+        new TWEEN.Tween(this.controls.target).to({ x: -0.875, y: 13.0, z: 2.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+      }
+    } else if (mode === 'top2d') {
+      // Pure 2D Architectural Plan Top-Down View (Marketing Brochure Style)
+      this.groundGroup.visible = true;
+      this.firstGroup.visible = false;
+      this.terraceGroup.visible = false;
+      this.boundaryGroup.visible = false;
+      this.groundLabels.visible = this.showLabels;
+      this.firstLabels.visible = false;
+      if (updateCam) {
+        new TWEEN.Tween(this.camera.position).to({ x: -0.875, y: 56.0, z: 1.25 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+        new TWEEN.Tween(this.controls.target).to({ x: -0.875, y: 2.5, z: 1.25 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+      }
     } else if (mode === 'terrace') {
+      // Roof Terrace Level
       this.groundGroup.visible = true;
-      this.shopGroup.visible = true;
       this.firstGroup.visible = true;
-      this.skyGardenGroup.visible = true;
-      this.roofGroup.visible = true;
-      this.furnitureGroup.visible = false;
-      this.switchToPOV('terrace-open');
+      this.terraceGroup.visible = true;
+      this.boundaryGroup.visible = true;
+      this.groundLabels.visible = false;
+      this.firstLabels.visible = false;
+      if (updateCam) {
+        new TWEEN.Tween(this.camera.position).to({ x: 14.0, y: 36.0, z: 20.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+        new TWEEN.Tween(this.controls.target).to({ x: 0.0, y: 24.0, z: 0.0 }, 900).easing(TWEEN.Easing.Cubic.Out).start();
+      }
     }
   }
 
   toggleFPSMode(enable) {
-    this.isFPSMode = enable;
-    const fpsHud = document.getElementById('fps-hud');
+    this.isFPS = enable;
+    const hud = document.getElementById('fps-hud');
     if (enable) {
-      fpsHud.classList.remove('hidden');
-      this.controls.minDistance = 0.4;
-      this.controls.maxDistance = 50;
+      hud?.classList.remove('hidden');
+      document.body.classList.add('walk-mode');
+      const pov = POV_DATA[this.currentPOVKey];
+      if (pov) {
+        this.camera.position.set(pov.camPos.x, pov.camPos.y, pov.camPos.z);
+        this.controls.target.set(pov.camLook.x, pov.camLook.y, pov.camLook.z);
+      }
     } else {
-      fpsHud.classList.add('hidden');
-      this.controls.minDistance = 0.5;
-      this.controls.maxDistance = 200;
+      hud?.classList.add('hidden');
+      document.body.classList.remove('walk-mode');
     }
   }
 
   displayRoomCard(data) {
     const card = document.getElementById('room-card');
+    if (!card) return;
+    card.classList.remove('hidden');
     document.getElementById('card-floor-badge').textContent = data.floor;
     document.getElementById('card-room-title').textContent = data.name;
     document.getElementById('card-dimensions').textContent = data.dims;
     document.getElementById('card-area').textContent = data.area;
     document.getElementById('card-vastu').textContent = data.vastu;
     document.getElementById('card-description').textContent = data.desc;
-    card.classList.remove('hidden');
   }
 
   onMouseMove(e) {
-    if (this.isFPSMode) return;
-    this.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-    this.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-
-    this.raycaster.setFromCamera(this.mouse, this.camera);
-    const hits = this.raycaster.intersectObjects(this.interactiveObjects, true);
-
-    if (hits.length > 0) {
-      this.container.style.cursor = 'pointer';
-    } else {
-      this.container.style.cursor = 'default';
-    }
+    // Hover interactions if needed
   }
 
   onClick(e) {
-    if (e.target.closest('#top-bar') || e.target.closest('#left-sidebar') || e.target.closest('#room-card') || e.target.closest('#bottom-hud') || e.target.closest('#fps-hud') || e.target.closest('#minimap-container') || e.target.closest('#walk-nav-controls')) {
-      return;
-    }
-
-    this.raycaster.setFromCamera(this.mouse, this.camera);
-    const hits = this.raycaster.intersectObjects(this.interactiveObjects, true);
-
+    // Raycast on hotspots
+    const mouse = new THREE.Vector2(
+      (e.clientX / window.innerWidth) * 2 - 1,
+      -(e.clientY / window.innerHeight) * 2 + 1
+    );
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, this.camera);
+    const hits = raycaster.intersectObjects(this.hotspotMeshes || []);
     if (hits.length > 0) {
-      const obj = hits[0].object;
-      if (obj.userData.pov) {
-        this.switchToPOV(obj.userData.pov);
+      const hit = hits[0].object;
+      if (hit.userData && hit.userData.povKey) {
+        this.switchToPOV(hit.userData.povKey);
       }
     }
   }
@@ -2801,8 +1900,10 @@ class CompleteDuplexApp {
   updateCompass() {
     const needle = document.getElementById('compass-needle');
     if (!needle) return;
-    const angle = this.controls.getAzimuthalAngle();
-    needle.style.transform = `rotate(${(angle * 180) / Math.PI}deg)`;
+    const dir = new THREE.Vector3();
+    this.camera.getWorldDirection(dir);
+    const angle = Math.atan2(dir.x, -dir.z);
+    needle.style.transform = `rotate(${angle}rad)`;
   }
 
   onResize() {
@@ -2813,17 +1914,25 @@ class CompleteDuplexApp {
 
   animate() {
     requestAnimationFrame(() => this.animate());
-
     TWEEN.update();
-    this.updateFPSWalk();
+
+    const dt = this.clock.getDelta();
+
+    // Continuous keyboard motion
+    if (this.moveState.fwd) this.step('fwd');
+    if (this.moveState.bwd) this.step('bwd');
+    if (this.moveState.left) this.step('left');
+    if (this.moveState.right) this.step('right');
+    if (this.moveState.turnL) this.turn(0.04);
+    if (this.moveState.turnR) this.turn(-0.04);
+
     this.controls.update();
     this.updateCompass();
-    this.updateHotspots();
-
     this.renderer.render(this.scene, this.camera);
   }
 }
 
+// Instantiate App when DOM is ready
 window.addEventListener('DOMContentLoaded', () => {
-  window.app = new CompleteDuplexApp();
+  window.viewerApp = new HouseViewerApp();
 });

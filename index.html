@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Duplex Villa with Sky Garden - Naspur, Mancherial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>3D Duplex Villa (Ramnagar Plan) - KesariNandan Architectures</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,218 +14,260 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
 </head>
 <body>
-  <!-- 3D Canvas -->
+  <!-- 3D Canvas Container -->
   <div id="canvas-container"></div>
 
-  <!-- Top Navigation Bar -->
+  <!-- Mobile Floating Drawer Toggle Button -->
+  <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+    <span class="btn-icon">☰</span>
+    <span class="btn-text">Rooms &amp; Floors</span>
+  </button>
+
+  <!-- Sidebar Overlay Backdrop for Mobile -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+  <!-- Top Navigation Bar (Desktop First, Horizontally Scrollable on Mobile) -->
   <header id="top-bar">
     <div class="brand">
       <div class="status-indicator"></div>
       <div class="title-group">
-        <h1>PROPOSED DUPLEX VILLA &amp; SKY GARDEN</h1>
-        <p class="subtitle">Naspur, Mancherial, Telangana &bull; 33'-0" &times; 60'-0" Plot &bull; South Road Facing</p>
+        <h1>PROPOSED G+1 DUPLEX RESIDENCE</h1>
+        <p class="subtitle">Mr. Siddartha Uppugandla &bull; Ramnagar, Mancherial &bull; 33' &times; 60' Plot &bull; Er. Pawan Kumar (KesariNandan)</p>
       </div>
     </div>
 
     <!-- Mode Selector Tabs -->
     <div class="view-tabs" id="view-tabs">
-      <button class="tab-btn active" data-mode="full">
-        <span class="icon">🏛️</span> Full Villa
+      <button class="tab-btn" data-mode="full">
+        <span class="icon">🏛️</span> <span class="tab-label">Full Villa</span>
       </button>
-      <button class="tab-btn" data-mode="ground">
-        <span class="icon">🛋️</span> Ground Floor
+      <button class="tab-btn active" data-mode="ground">
+        <span class="icon">🛋️</span> <span class="tab-label">Ground Plan (3D)</span>
       </button>
       <button class="tab-btn" data-mode="first">
-        <span class="icon">🌿</span> First Floor (Duplex &amp; Garden)
+        <span class="icon">🌿</span> <span class="tab-label">First Floor (Duplex)</span>
+      </button>
+      <button class="tab-btn" data-mode="top2d">
+        <span class="icon">📐</span> <span class="tab-label">2D Top View</span>
       </button>
       <button class="tab-btn" data-mode="terrace">
-        <span class="icon">🌅</span> Terrace
+        <span class="icon">🌅</span> <span class="tab-label">Roof Terrace</span>
       </button>
       <button class="tab-btn highlight" data-mode="fps">
-        <span class="icon">🚶</span> Walk Inside (FPS)
+        <span class="icon">🚶</span> <span class="tab-label">Walk Inside</span>
       </button>
     </div>
 
     <!-- Lighting Mode -->
     <div class="lighting-controls">
-      <button class="icon-btn active" id="btn-day" title="Natural Sunlight (Listing Style)">☀️</button>
-      <button class="icon-btn" id="btn-sunset" title="Golden Hour Warm Glow">🌇</button>
-      <button class="icon-btn" id="btn-night" title="Architectural Evening Lighting">🌙</button>
+      <button class="icon-btn active" id="btn-listing" title="Architectural Listing Studio (Minimal &amp; Clean)">🏢 Studio</button>
+      <button class="icon-btn" id="btn-day" title="Natural Sunlight">☀️ Day</button>
+      <button class="icon-btn" id="btn-sunset" title="Golden Sunset Warm Glow">🌇 Sunset</button>
+      <button class="icon-btn" id="btn-night" title="Evening Architectural Warm Lights">🌙 Night</button>
     </div>
   </header>
 
   <!-- Left Sidebar: Multi-POV Room Teleporter & Navigation -->
   <aside id="left-sidebar">
+    <div class="sidebar-header-mobile">
+      <div class="mobile-sidebar-title">
+        <span class="badge">RAMNAGAR DUPLEX</span>
+        <span>Select Room / Viewpoint</span>
+      </div>
+      <button id="sidebar-close-btn" class="sidebar-close-btn" aria-label="Close sidebar">&times;</button>
+    </div>
+
     <div class="panel-section">
-      <div class="panel-label">🚪 SELECT VIEWPOINT / ROOM</div>
+      <div class="panel-label">🚪 ROOM EXPLORER &amp; VIEWPOINTS</div>
       <div class="room-selector-group">
         
-        <!-- NEW SKY GARDEN TERRACE BALCONY (HERO FEATURE) -->
-        <div class="floor-group-title highlight-title">🌿 NEW 1ST FLOOR SKY GARDEN DECK</div>
-        <button class="room-nav-btn highlight-btn" data-pov="sky-garden-sofa">
-          <span class="nav-icon">🛋️</span>
+        <!-- EXTERIOR & STREET ELEVATION -->
+        <div class="floor-group-title highlight-title">🏛️ ELEVATION &amp; OVERVIEW</div>
+        <button class="room-nav-btn highlight-btn" data-pov="south-facade">
+          <span class="nav-icon">🏠</span>
           <div class="nav-info">
-            <span class="nav-name">Sky Garden: Outdoor Lounge Sofa</span>
-            <span class="nav-dim">Deck &amp; Planter Trees</span>
+            <span class="nav-name">South Road Villa Facade</span>
+            <span class="nav-dim">33' Frontage, Kirana, Gate &amp; Balcony</span>
           </div>
         </button>
-        <button class="room-nav-btn highlight-btn" data-pov="sky-garden-view">
-          <span class="nav-icon">🌅</span>
+        <button class="room-nav-btn" data-pov="aerial-duplex">
+          <span class="nav-icon">🦅</span>
           <div class="nav-info">
-            <span class="nav-name">Sky Garden: Street Railing View</span>
-            <span class="nav-dim">Avenue Trees &amp; Glass Balustrade</span>
-          </div>
-        </button>
-        <button class="room-nav-btn" data-pov="sky-garden-door">
-          <span class="nav-icon">🚪</span>
-          <div class="nav-info">
-            <span class="nav-name">Lounge to Sky Garden Entrance</span>
-            <span class="nav-dim">Wide Glass Sliding Doors</span>
+            <span class="nav-name">Aerial Duplex Cutaway</span>
+            <span class="nav-dim">Full Architectural 3D Overview</span>
           </div>
         </button>
 
-        <!-- AUTHENTIC TELANGANA KIRANA GENERAL STORE -->
-        <div class="floor-group-title" style="margin-top: 10px;">🏪 KIRANA &amp; GENERAL STORES</div>
+        <!-- AUTHENTIC KIRANA GENERAL STORE (GROUND SOUTH-WEST) -->
+        <div class="floor-group-title" style="margin-top: 10px;">🏪 KIRANA &amp; COMMERCIAL SHUTTER</div>
         <button class="room-nav-btn highlight-btn" data-pov="shop-street">
           <span class="nav-icon">🏬</span>
           <div class="nav-info">
-            <span class="nav-name">Kirana: Street Front &amp; Board</span>
-            <span class="nav-dim">Telugu Signboard &amp; Shutter</span>
-          </div>
-        </button>
-        <button class="room-nav-btn" data-pov="shop-entrance">
-          <span class="nav-icon">🌾</span>
-          <div class="nav-info">
-            <span class="nav-name">Kirana: Grains &amp; Customer Aisle</span>
-            <span class="nav-dim">Rice Sacks, Dal &amp; Shelves</span>
+            <span class="nav-name">Kirana: Street Front &amp; Shutter</span>
+            <span class="nav-dim">16'-0" &times; 12'-6" &bull; Telugu Signboard</span>
           </div>
         </button>
         <button class="room-nav-btn highlight-btn" data-pov="shop-counter">
           <span class="nav-icon">⚖️</span>
           <div class="nav-info">
-            <span class="nav-name">Kirana: Owner Counter (Sample POV)</span>
-            <span class="nav-dim">Scale, Candy Jars &amp; Wall Racks</span>
+            <span class="nav-name">Kirana: Shopkeeper Counter (Sample POV)</span>
+            <span class="nav-dim">Digital Scale, Candy Jars &amp; Blue Racks</span>
+          </div>
+        </button>
+        <button class="room-nav-btn" data-pov="shop-entrance">
+          <span class="nav-icon">🌾</span>
+          <div class="nav-info">
+            <span class="nav-name">Kirana: Customer Aisle &amp; Grains</span>
+            <span class="nav-dim">Basmati Rice, Toor Dal &amp; Snacks</span>
           </div>
         </button>
         <button class="room-nav-btn" data-pov="shop-shelf">
           <span class="nav-icon">📦</span>
           <div class="nav-info">
-            <span class="nav-name">Kirana: Blue Wall Shelves &amp; Goods</span>
-            <span class="nav-dim">Parle-G, Maggi &amp; Masala Boxes</span>
+            <span class="nav-name">Kirana: Blue Trimmed Shelves</span>
+            <span class="nav-dim">Parle-G, Maggi &amp; Masala Packs</span>
           </div>
         </button>
 
         <!-- GROUND FLOOR RESIDENCE -->
-        <div class="floor-group-title" style="margin-top: 10px;">🛋️ GROUND FLOOR RESIDENCE</div>
-        <button class="room-nav-btn" data-pov="living-entrance">
+        <div class="floor-group-title" style="margin-top: 10px;">🛋️ GROUND FLOOR (PLINTH: 1,455 SQ.FT.)</div>
+        <button class="room-nav-btn" data-pov="car-portico">
+          <span class="nav-icon">🚗</span>
+          <div class="nav-info">
+            <span class="nav-name">Car Parking &amp; Portico</span>
+            <span class="nav-dim">12'-3" Wide Covered Parking &amp; Gate</span>
+          </div>
+        </button>
+        <button class="room-nav-btn" data-pov="entrance-lobby">
           <span class="nav-icon">🚪</span>
           <div class="nav-info">
-            <span class="nav-name">Living: Main Door View</span>
-            <span class="nav-dim">Italian Marble &amp; Houseplants</span>
+            <span class="nav-name">Entrance Lobby &amp; External Stairs</span>
+            <span class="nav-dim">Foyer, Main Double Doors &amp; Upward Flight</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="living-sofa">
+        <button class="room-nav-btn highlight-btn" data-pov="living-room">
           <span class="nav-icon">🛋️</span>
           <div class="nav-info">
-            <span class="nav-name">Living: Sectional Sofa POV</span>
-            <span class="nav-dim">Facing Fluted TV Wall</span>
+            <span class="nav-name">Living Room Hall</span>
+            <span class="nav-dim">13'-5" &times; 15'-8" &bull; Italian Marble &amp; TV</span>
           </div>
         </button>
-        <button class="room-nav-btn highlight-btn" data-pov="living-up">
+        <button class="room-nav-btn highlight-btn" data-pov="living-chandelier">
           <span class="nav-icon">✨</span>
           <div class="nav-info">
-            <span class="nav-name">Living: Look UP at Chandelier</span>
-            <span class="nav-dim">Double-Height Ceiling Void</span>
+            <span class="nav-name">Living: Look UP at Duplex Void</span>
+            <span class="nav-dim">94.47 Sq.Ft. Cutout &amp; Chandelier</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="puja">
+        <button class="room-nav-btn" data-pov="puja-room">
           <span class="nav-icon">🛕</span>
           <div class="nav-info">
             <span class="nav-name">Puja Mandir Sanctum</span>
-            <span class="nav-dim">Backlit Jali &amp; Marble Altar</span>
+            <span class="nav-dim">6'-0" &times; 5'-0" &bull; Carved Jali &amp; Marble Altar</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="dining">
-          <span class="nav-info">🍽️</span>
+        <button class="room-nav-btn" data-pov="dining-room">
+          <span class="nav-icon">🍽️</span>
           <div class="nav-info">
-            <span class="nav-name">Dining Hall View</span>
-            <span class="nav-dim">Solid Teak Table &amp; Chairs</span>
+            <span class="nav-name">Dining Hall &amp; Utility Access</span>
+            <span class="nav-dim">14'-0" &times; 8'-8" &bull; 6-Seat Teak Table</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="kitchen">
+        <button class="room-nav-btn highlight-btn" data-pov="kitchen-traditional">
           <span class="nav-icon">🍳</span>
           <div class="nav-info">
             <span class="nav-name">Traditional Indian Kitchen</span>
-            <span class="nav-dim">Cupboards, Gas Stove &amp; Mixie</span>
+            <span class="nav-dim">12'-0" &times; 9'-0" &bull; Teak Cupboards &amp; Counter</span>
           </div>
         </button>
         <button class="room-nav-btn" data-pov="master-bed-gf">
           <span class="nav-icon">🛏️</span>
           <div class="nav-info">
-            <span class="nav-name">Ground Master Bedroom</span>
-            <span class="nav-dim">King Bed &amp; Wardrobe</span>
-          </div>
-        </button>
-        <button class="room-nav-btn" data-pov="portico">
-          <span class="nav-icon">🚗</span>
-          <div class="nav-info">
-            <span class="nav-name">Car Portico &amp; Driveway</span>
-            <span class="nav-dim">Pavers &amp; SUV</span>
+            <span class="nav-name">Master Bedroom (Ground)</span>
+            <span class="nav-dim">13'-0" &times; 11'-6" + Attached Bath (4'6"&times;8'9")</span>
           </div>
         </button>
 
-        <!-- FIRST FLOOR DUPLEX -->
-        <div class="floor-group-title" style="margin-top: 10px;">🛏️ FIRST FLOOR DUPLEX</div>
+        <!-- FIRST FLOOR DUPLEX & SUITES -->
+        <div class="floor-group-title" style="margin-top: 10px;">🌿 FIRST FLOOR (SLAB: 1,568 SQ.FT.)</div>
         <button class="room-nav-btn highlight-btn" data-pov="duplex-void-overlook">
           <span class="nav-icon">🕳️</span>
           <div class="nav-info">
-            <span class="nav-name">Duplex Void Glass Railing</span>
-            <span class="nav-dim">Overlooking Living Below</span>
+            <span class="nav-name">Duplex Void: Overlooking Living</span>
+            <span class="nav-dim">Glass Balustrade Above Living Room</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="lounge">
+        <button class="room-nav-btn" data-pov="upper-lounge">
           <span class="nav-icon">🛋️</span>
           <div class="nav-info">
-            <span class="nav-name">Upper Family Lounge</span>
-            <span class="nav-dim">Landing Sofa View</span>
+            <span class="nav-name">Family Lounge &amp; Duplex Landing</span>
+            <span class="nav-dim">13'-0" &times; 9'-6" &bull; Internal Teak Stairs</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="study">
-          <span class="nav-icon">📚</span>
+        <button class="room-nav-btn highlight-btn" data-pov="front-balcony">
+          <span class="nav-icon">🌅</span>
           <div class="nav-info">
-            <span class="nav-name">Study / Home Office</span>
-            <span class="nav-dim">Desk, Monitors &amp; Bookshelf</span>
+            <span class="nav-name">Front Balcony &amp; Street View</span>
+            <span class="nav-dim">3'-6" Wide Balcony Facing South Road</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="bed1">
+        <button class="room-nav-btn" data-pov="front-suite-hall">
+          <span class="nav-icon">🛋️</span>
+          <div class="nav-info">
+            <span class="nav-name">Front Suite: Hall &amp; Pantry</span>
+            <span class="nav-dim">8'-7" &times; 9'-4" Hall + 5'&times;6' Kitchenette</span>
+          </div>
+        </button>
+        <button class="room-nav-btn" data-pov="front-suite-bed">
           <span class="nav-icon">🛏️</span>
           <div class="nav-info">
-            <span class="nav-name">Bedroom 01 (Upper Suite)</span>
-            <span class="nav-dim">Walk-In Wardrobe Suite</span>
+            <span class="nav-name">Bedroom 03 (Front Suite)</span>
+            <span class="nav-dim">12'-6" &times; 9'-0" + Attached Bath (4'&times;5'6")</span>
           </div>
         </button>
-        <button class="room-nav-btn" data-pov="bed2">
+        <button class="room-nav-btn highlight-btn" data-pov="bed1-master">
+          <span class="nav-icon">👑</span>
+          <div class="nav-info">
+            <span class="nav-name">Bedroom 01 (Upper Master)</span>
+            <span class="nav-dim">13'-0" &times; 11'-6" + Walk-In + Attached Bath</span>
+          </div>
+        </button>
+        <button class="room-nav-btn" data-pov="bed2-rear">
           <span class="nav-icon">🛏️</span>
           <div class="nav-info">
             <span class="nav-name">Bedroom 02 (Rear)</span>
-            <span class="nav-dim">Rear Balcony View</span>
+            <span class="nav-dim">12'-6" &times; 9'-0" + Attached Bath (4'6"&times;6'6")</span>
+          </div>
+        </button>
+        <button class="room-nav-btn" data-pov="study-room">
+          <span class="nav-icon">📚</span>
+          <div class="nav-info">
+            <span class="nav-name">Study / Home Office</span>
+            <span class="nav-dim">9'-0" &times; 9'-4" &bull; Desk &amp; Balcony French Doors</span>
+          </div>
+        </button>
+        <button class="room-nav-btn" data-pov="rear-balcony">
+          <span class="nav-icon">🌿</span>
+          <div class="nav-info">
+            <span class="nav-name">Rear Balcony (North)</span>
+            <span class="nav-dim">4'-0" Wide Balcony with Greenery</span>
           </div>
         </button>
 
-        <!-- TERRACE & STREET -->
-        <div class="floor-group-title" style="margin-top: 10px;">🌇 TERRACE &amp; STREET</div>
-        <button class="room-nav-btn" data-pov="terrace-open">
+        <!-- ROOF TERRACE & HEAD ROOM -->
+        <div class="floor-group-title" style="margin-top: 10px;">🌇 ROOF TERRACE &amp; HEAD ROOM</div>
+        <button class="room-nav-btn" data-pov="stair-headroom">
+          <span class="nav-icon">🏗️</span>
+          <div class="nav-info">
+            <span class="nav-name">Staircase Head Room (Mumty)</span>
+            <span class="nav-dim">13'-0" &times; 10'-0" (159.25 Sq.Ft. Slab)</span>
+          </div>
+        </button>
+        <button class="room-nav-btn highlight-btn" data-pov="roof-terrace">
           <span class="nav-icon">🌇</span>
           <div class="nav-info">
             <span class="nav-name">Open Roof Terrace</span>
-            <span class="nav-dim">Pergola, Mumty &amp; Water Tank</span>
-          </div>
-        </button>
-        <button class="room-nav-btn" data-pov="south-facade">
-          <span class="nav-icon">🏠</span>
-          <div class="nav-info">
-            <span class="nav-name">South Road Street Elevation</span>
-            <span class="nav-dim">Villa Facade &amp; Sky Garden</span>
+            <span class="nav-dim">Pergola, Solar Panels &amp; Water Tank</span>
           </div>
         </button>
       </div>
@@ -241,6 +283,11 @@
           <span class="toggle-text">Ceiling &amp; Roof Slabs</span>
         </label>
         <label class="toggle-item">
+          <input type="checkbox" id="toggle-labels" checked>
+          <span class="checkmark"></span>
+          <span class="toggle-text">Room Dimensions &amp; Badges</span>
+        </label>
+        <label class="toggle-item">
           <input type="checkbox" id="toggle-greenery" checked>
           <span class="checkmark"></span>
           <span class="toggle-text">Trees &amp; Houseplants</span>
@@ -253,7 +300,7 @@
         <label class="toggle-item">
           <input type="checkbox" id="toggle-furniture" checked>
           <span class="checkmark"></span>
-          <span class="toggle-text">Furniture &amp; Shop Goods</span>
+          <span class="toggle-text">Furniture &amp; Kirana Goods</span>
         </label>
         <label class="toggle-item">
           <input type="checkbox" id="toggle-walls-transparent">
@@ -273,24 +320,31 @@
   <div id="minimap-container">
     <div class="minimap-header">
       <span class="minimap-title">FLOOR MINI-MAP</span>
-      <span class="minimap-badge" id="minimap-floor-name">SKY GARDEN</span>
+      <span class="minimap-badge" id="minimap-floor-name">GROUND</span>
     </div>
     <div class="minimap-body">
       <canvas id="minimap-canvas" width="160" height="200"></canvas>
-      <div class="minimap-north">▲ N (REAR)</div>
+      <div class="minimap-north">▲ N (UTILITY)</div>
       <div class="minimap-south">▼ S (ROAD)</div>
     </div>
   </div>
 
-  <!-- On-Screen Navigation Arrow Controls -->
-  <div id="walk-nav-controls">
-    <button class="nav-arrow-btn" id="nav-step-fwd" title="Step Forward (W)">▲</button>
+  <!-- On-Screen Navigation & Touch D-Pad Controls (Ergonomic for Mobile & Desktop) -->
+  <div id="walk-nav-controls" class="touch-nav-controls">
+    <button class="nav-arrow-btn" id="nav-step-fwd" title="Step Forward (W / Up)">▲</button>
     <div class="nav-arrow-row">
-      <button class="nav-arrow-btn" id="nav-turn-left" title="Turn Left (A)">◀</button>
-      <button class="nav-arrow-btn center-btn" id="nav-next-pov" title="Next Room POV">👁️</button>
-      <button class="nav-arrow-btn" id="nav-turn-right" title="Turn Right (D)">▶</button>
+      <button class="nav-arrow-btn" id="nav-step-left" title="Step Left (A / Left)">◀</button>
+      <button class="nav-arrow-btn center-btn" id="nav-next-pov" title="Next Room View">👁️</button>
+      <button class="nav-arrow-btn" id="nav-step-right" title="Step Right (D / Right)">▶</button>
     </div>
-    <button class="nav-arrow-btn" id="nav-step-back" title="Step Backward (S)">▼</button>
+    <button class="nav-arrow-btn" id="nav-step-back" title="Step Backward (S / Down)">▼</button>
+  </div>
+
+  <!-- Mobile Quick Turn & Sprint Controls (Bottom Right) -->
+  <div id="mobile-turn-controls" class="mobile-turn-controls">
+    <button class="turn-btn" id="btn-turn-left" title="Rotate Camera Left">↺ Turn</button>
+    <button class="turn-btn highlight-sprint" id="btn-sprint-toggle" title="Sprint Walk">⚡ Run</button>
+    <button class="turn-btn" id="btn-turn-right" title="Rotate Camera Right">Turn ↻</button>
   </div>
 
   <!-- FPS Mode HUD Overlay -->
@@ -301,9 +355,8 @@
       <span id="fps-current-pov-label">WALKTHROUGH MODE &bull; EYE LEVEL (5'6")</span>
     </div>
     <div class="fps-instructions">
-      <span>⌨️ Walk: <b>W, A, S, D</b> or <b>Arrow Keys</b></span>
-      <span>🖱️ Look: <b>Click &amp; Drag Mouse</b></span>
-      <span>🔵 Hotspots: <b>Click Blue Floor Rings to Walk</b></span>
+      <span class="desktop-instruction">⌨️ Walk: <b>W, A, S, D</b> &bull; Drag Mouse to Look &bull; Hotspots to Teleport</span>
+      <span class="mobile-instruction">📱 Touch <b>D-Pad &amp; Turn Buttons</b> to Walk &bull; Drag Screen to Look</span>
       <button class="exit-fps-btn" id="exit-fps-btn">&times; Exit Walk Mode</button>
     </div>
   </div>
@@ -311,51 +364,50 @@
   <!-- Floating Room Details Card -->
   <div id="room-card" class="room-card hidden">
     <div class="card-header">
-      <div class="badge" id="card-floor-badge">FIRST FLOOR</div>
+      <div class="badge" id="card-floor-badge">GROUND FLOOR</div>
       <button class="close-btn" id="close-card-btn">&times;</button>
     </div>
-    <h3 id="card-room-title">Sky Garden Terrace Lounge</h3>
+    <h3 id="card-room-title">Living Room Hall</h3>
     <div class="card-specs">
       <div class="spec-item">
         <span class="spec-label">DIMENSIONS</span>
-        <span class="spec-value" id="card-dimensions">29'-0" &times; 13'-6"</span>
+        <span class="spec-value" id="card-dimensions">13'-5" &times; 15'-8"</span>
       </div>
       <div class="spec-item">
-        <span class="spec-label">TERRACE AREA</span>
-        <span class="spec-value" id="card-area">391.50 Sq.Ft.</span>
+        <span class="spec-label">ROOM AREA</span>
+        <span class="spec-value" id="card-area">210.15 Sq.Ft.</span>
       </div>
       <div class="spec-item">
         <span class="spec-label">ORIENTATION</span>
-        <span class="spec-value" id="card-vastu">South Front Avenue View</span>
+        <span class="spec-value" id="card-vastu">East Facing &bull; Duplex Void</span>
       </div>
     </div>
     <p class="card-description" id="card-description"></p>
-    <button class="teleport-room-btn" id="card-teleport-btn">🚶 Walk Out onto Sky Deck</button>
+    <button class="teleport-room-btn" id="card-teleport-btn">🚶 Walk Inside This Room</button>
   </div>
 
-  <!-- Bottom Floating Stats & Help Overlay -->
+  <!-- Bottom Floating Stats & Help Overlay (Desktop First, Compact on Mobile) -->
   <footer id="bottom-hud">
     <div class="hud-item">
-      <span class="hud-label">CURRENT POV:</span>
-      <span class="hud-value highlight-text" id="hud-current-room">Sky Garden Outdoor Lounge</span>
+      <span class="hud-label">VIEWPOINT:</span>
+      <span class="hud-value highlight-text" id="hud-current-room">South Road Villa Facade</span>
     </div>
     <div class="hud-divider"></div>
-    <div class="hud-item">
-      <span class="hud-label">SKY GARDEN DECK:</span>
-      <span class="hud-value highlight-text">29'-0" &times; 13'-6" (391 Sq.Ft.)</span>
+    <div class="hud-item hud-spec-desktop">
+      <span class="hud-label">TOTAL SLAB AREA:</span>
+      <span class="hud-value highlight-text">3,182 Sq.Ft. (G+1 Duplex)</span>
     </div>
     <div class="hud-divider"></div>
-    <div class="hud-item">
-      <span class="hud-label">ROAD:</span>
-      <span class="hud-value">30' South Road &bull; Mancherial</span>
+    <div class="hud-item hud-spec-desktop">
+      <span class="hud-label">PLOT &amp; LOCATION:</span>
+      <span class="hud-value">33' &times; 60' &bull; Ramnagar, Mancherial</span>
     </div>
 
     <div class="hud-spacer"></div>
 
     <div class="hud-controls-help">
-      <span>🖱️ Click <b>Floor Hotspots</b> to Walk</span>
-      <span>⌨️ <b>W,A,S,D</b> Walk Free</span>
-      <span>👁️ Use <b>Left Menu</b> for Instant POVs</span>
+      <span class="desktop-only">🖱️ Drag to Orbit &bull; Scroll to Zoom &bull; <b>W,A,S,D</b> to Walk</span>
+      <span class="mobile-only">👆 1 Finger Orbit &bull; Pinch Zoom &bull; Touch D-Pad</span>
     </div>
   </footer>
 
@@ -369,9 +421,14 @@
       <span class="pole east">E</span>
       <span class="pole west">W</span>
     </div>
-    <div class="compass-label">ORIENTATION</div>
+    <div class="compass-label">VASTU</div>
   </div>
 
+  <!-- Transition Fade Overlay -->
+  <div id="transition-fade"></div>
+  <div id="nav-toast"></div>
+
+  <!-- Application Scripts -->
   <script src="kirana_texture.js"></script>
   <script src="app.js"></script>
 </body>
